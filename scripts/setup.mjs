@@ -126,7 +126,7 @@ if (installSkills) {
     console.log("[dry-run] install ChromaDNA Skill via Vercel Skills CLI for: " + skillAgent.join(", "));
   } else {
     const command = process.platform === "win32" ? "npx.cmd" : "npx";
-    const args = ["--yes","skills","add",root,"--skill","chromadna","--yes","--copy"];
+    const args = ["--yes","skills","add",skillDir,"--skill","chromadna","--yes","--copy"];
     for (const agent of skillAgent) args.push("--agent",agent);
     const result = spawnSync(command,args,{cwd:root,stdio:"inherit",shell:process.platform==="win32"});
     if (result.error) throw result.error;
