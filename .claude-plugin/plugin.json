@@ -1,13 +1,13 @@
 {
   "name": "chromadna",
-  "version": "0.1.0",
-  "description": "Color DNA extraction and blending, photo matching, Lightroom XMP compilation, Before/After previews, and 3D .cube LUT export.",
+  "version": "0.2.0",
+  "description": "Extract and blend Lightroom color profiles, analyze photos, compile XMP presets, render approximate previews, and export 3D LUTs.",
   "author": {
     "name": "ThanhNguyxnOrg"
   },
   "license": "MIT",
   "skills": [
-    "./"
+    "./skills/chromadna"
   ],
   "mcpServers": "./.mcp.json"
 }
