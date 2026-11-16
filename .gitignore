@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+.DS_Store
+
+# Protect original presets from accidental publication
+raw_vault/
+output_xmp/
+*.dng
+*.DNG
