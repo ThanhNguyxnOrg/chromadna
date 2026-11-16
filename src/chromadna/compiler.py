@@ -55,7 +55,7 @@ def build_xmp_xml(dna: Dict[str, Any], preset_name: str, group_name: str = "Chro
     <rdf:Alt>
      <rdf:li xml:lang="x-default">{safe_name}</rdf:li>
     </rdf:Alt>
-   </crs:Name>
+   </crs:SortName>
    <crs:Group>
     <rdf:Alt>
      <rdf:li xml:lang="x-default">{safe_group}</rdf:li>
