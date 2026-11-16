@@ -82,7 +82,7 @@ In Claude Code, add the repository as a marketplace and install the plugin:
 /plugin install chromadna@chromadna-marketplace
 ~~~
 
-The MCP configuration uses uv to run the project from the installed plugin directory. Install uv on the host machine before enabling the plugin. The catalog path defaults to data/color_dna_catalog.json within the plugin; override CHROMADNA_CATALOG if your catalog is stored elsewhere.
+The MCP configuration uses uv to run the project from the installed plugin directory. Install uv on the host machine before enabling the plugin. The catalog path defaults to data/color_dna_catalog.json within the plugin; override CHROMADNA_CATALOG if your catalog is stored elsewhere. For Cursor, the repository also includes .cursor/mcp.json; open the repository as the workspace root and install uv before enabling the ChromaDNA server.
 
 ## MCP server
 
