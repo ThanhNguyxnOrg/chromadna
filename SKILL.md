@@ -1,10 +1,10 @@
 ---
 name: chromadna
-description: This skill extracts and blends Color DNA from Lightroom and Adobe Camera Raw presets, analyzes and matches photo color, creates Lightroom .xmp presets, renders approximate Before/After previews, and exports 3D .cube LUTs. Use it when someone asks to chỉnh màu ảnh, tạo preset Lightroom, xuất XMP, tạo LUT cho CapCut/Premiere/DaVinci Resolve, blend màu film (Kodak/Fujifilm), match màu ảnh, or mine .xmp/.dng/.lrtemplate presets.
+description: Extract and blend Lightroom and Adobe Camera Raw preset color profiles, analyze and match photo color, compile XMP presets, render approximate previews, and export 3D .cube LUTs. Use for Lightroom presets, Camera Raw looks, film emulation, photo color matching, XMP, LUT, and preset-library mining.
 license: MIT
 compatibility: Requires Python 3.10+, the ChromaDNA repository, and its Python dependencies. Photo paths must be accessible to the process running the CLI or MCP server.
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
   repository: "ThanhNguyxnOrg/chromadna"
 ---
 
@@ -14,7 +14,7 @@ Use ChromaDNA to inspect, extract, blend, match, preview, and export reusable co
 
 ## Runtime
 
-Run commands from the repository root. Prefer the installed `chromadna` executable. If it is unavailable, use the repository launcher:
+Run commands from the repository root. Prefer the installed chromadna executable. If it is unavailable, use the repository launcher:
 
 ```bash
 bash scripts/chromadna.sh list
@@ -32,7 +32,7 @@ On Windows PowerShell:
 .\scripts\chromadna.ps1 list
 ```
 
-Install the project and dependencies with `python -m pip install -e .`. The MCP server additionally requires the `mcp` dependency declared in `pyproject.toml`.
+Install the project and dependencies with python -m pip install -e . . The MCP server additionally requires the mcp dependency declared in pyproject.toml.
 
 ## Required workflow
 
@@ -45,13 +45,13 @@ chromadna list
 chromadna list --tag matte
 ```
 
-Use only exact IDs returned by `chromadna list` or present in `data/color_dna_catalog.json`. Never invent, infer, or silently rename a `dna_id`. If the catalog is missing, explain that the user must mine source presets first:
+Use only exact IDs returned by chromadna list or present in data/color_dna_catalog.json. Never invent, infer, or silently rename a dna_id. If the catalog is missing, explain that the user must mine source presets first:
 
 ```bash
 chromadna mine ./raw_vault --out data/color_dna_catalog.json
 ```
 
-Do not commit original third-party preset files; keep `raw_vault/` private and gitignored.
+Do not commit original third-party preset files; keep raw_vault/ private and gitignored.
 
 ### 2. Analyze or match a supplied photo
 
@@ -71,7 +71,7 @@ Do not guess exposure or white-balance offsets. Keep creative look selection sep
 
 ### 3. Blend, compile, or export
 
-Blend two or more profiles. The CLI accepts one `id:weight` token per profile:
+Blend two or more profiles:
 
 ```bash
 chromadna blend --mix <id-1>:0.7 <id-2>:0.3 --name "Hybrid Look" --out ./output_xmp/hybrid.xmp
@@ -96,23 +96,23 @@ chromadna lut --dna <exact-id> --name "LUT Title" --out ./output_lut/look.cube
 chromadna lut --mix <id-1>:0.65 <id-2>:0.35 --name "Hybrid LUT" --size 33 --out ./output_lut/hybrid.cube
 ```
 
-The `match` command also accepts `--lut <path>` to export a LUT from the adapted profile.
+The match command also accepts --lut <path> to export a LUT from the adapted profile.
 
 ### 4. Inspect previews honestly
 
 When a preview is generated, inspect the actual output image if the runtime provides image viewing. Check highlight clipping, crushed shadows, color casts, and skin-tone shifts. If you cannot access the output image, say so; do not claim visual verification.
 
-Consult `references/acr_pipeline_rules.md` before changing interacting Camera Raw sliders. Use only parameter names and bounds defined by the project schema. Never fabricate `crs:*` XMP properties or claim an undocumented tag is supported.
+Consult references/acr_pipeline_rules.md before changing interacting Camera Raw sliders. Use only parameter names and bounds defined by the project schema. Never fabricate crs:* XMP properties or claim an undocumented tag is supported.
 
 ## Mandatory guardrails
 
-- **Protect RAW sidecars:** never write an XMP preset beside a RAW file using the same stem (for example, `IMG_001.xmp` beside `IMG_001.CR3`). Use a dedicated output directory such as `./output_xmp/`.
-- **Grain and sharpening:** when `GrainAmount > 0`, keep `Sharpness <= 10`.
+- **Protect RAW sidecars:** never write an XMP preset beside a RAW file using the same stem (for example, IMG_001.xmp beside IMG_001.CR3). Use a dedicated output directory such as ./output_xmp/.
+- **Grain and sharpening:** when GrainAmount > 0, keep Sharpness <= 10.
 - **Avoid double saturation:** steep tone curves can increase perceived chroma; do not stack aggressive global saturation without inspecting the result.
-- **No invented IDs or schema keys:** list profiles first; inspect `references/slider_schema.json` and the implementation schema before using parameter names. Never invent `crs:*` tags.
+- **No invented IDs or schema keys:** list profiles first; inspect references/slider_schema.json and the implementation schema before using parameter names. Never invent crs:* tags.
 - **No false validation claims:** successful file generation does not prove Lightroom/ACR import compatibility or visual equivalence. State what was and was not tested.
 - **Privacy and copyright:** do not commit source photos, RAW files, or third-party preset binaries. Keep private source material outside Git.
 
 ## MCP tools
 
-When the ChromaDNA MCP server is connected, use its tools for the same workflow: call `list_color_dna` before choosing IDs; then use `analyze_photo`, `match_photo_to_dna`, `blend_color_dna`, `render_preview`, `compile_xmp_preset`, or `export_cube_lut` as appropriate. MCP image paths refer to files accessible to the server process; attaching an image in a chat does not automatically make its local path available to the server.
+When the ChromaDNA MCP server is connected, use its tools for the same workflow: call list_color_dna before choosing IDs; then use analyze_photo, match_photo_to_dna, blend_color_dna, render_preview, compile_xmp_preset, or export_cube_lut as appropriate. MCP image paths refer to files accessible to the server process; attaching an image in a chat does not automatically make its local path available to the server.
