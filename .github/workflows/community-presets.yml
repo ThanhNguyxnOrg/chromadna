@@ -17,7 +17,7 @@ jobs:
     timeout-minutes: 30
     steps:
       - name: Mint repository-scoped GitHub App installation token
-        id: agent
+        id: app_token
         uses: ThanhNguyxnOrg/.github/.github/actions/agent-token@2b5c5cad571ee93fd091e16e1734ebd819191e68
         with:
           profile: content
@@ -28,8 +28,9 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
-          token: ${{ steps.agent.outputs.token }}
+          token: ${{ steps.app_token.outputs.token }}
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -76,14 +77,14 @@ jobs:
       - name: Resolve GitHub App bot identity
         id: bot
         env:
-          GH_TOKEN: ${{ steps.agent.outputs.token }}
+          GH_TOKEN: ${{ steps.app_token.outputs.token }}
         run: |
           BOT_ID="$(gh api users/ThanhNguyxnAgent%5Bbot%5D --jq .id)"
           echo "id=$BOT_ID" >> "$GITHUB_OUTPUT"
 
       - name: Commit catalog and provenance using the GitHub App identity
         env:
-          GH_TOKEN: ${{ steps.agent.outputs.token }}
+          GH_TOKEN: ${{ steps.app_token.outputs.token }}
           BOT_ID: ${{ steps.bot.outputs.id }}
         run: |
           git config user.name "ThanhNguyxnAgent[bot]"
