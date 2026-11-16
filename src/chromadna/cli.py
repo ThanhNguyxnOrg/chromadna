@@ -9,6 +9,7 @@ from .compiler import write_xmp_atomic
 from .matcher import adapt_dna_to_image, analyze_image_metrics, recommend_dna_profiles
 from .miner import mine_directory, save_catalog
 from .previewer import render_before_after
+from .lut_exporter import write_cube_lut_atomic
 
 DEFAULT_CATALOG = Path("data/color_dna_catalog.json")
 
@@ -48,6 +49,7 @@ def main() -> None:
     p_blend.add_argument("--out", type=Path, required=True)
     p_blend.add_argument("--preview-img", type=Path, default=None)
     p_blend.add_argument("--preview-out", type=Path, default=Path("preview_blend.jpg"))
+    p_blend.add_argument("--lut", type=Path, default=None, help="Optional 3D .cube LUT output path")
     p_blend.add_argument("--catalog", type=Path, default=DEFAULT_CATALOG)
     p_ana = subparsers.add_parser("analyze", help="Analyze input photo lighting & recommend Color DNA")
     p_ana.add_argument("image", type=Path)
@@ -58,7 +60,17 @@ def main() -> None:
     p_match.add_argument("--name", type=str, default="ChromaDNA Matched")
     p_match.add_argument("--out", type=Path, required=True)
     p_match.add_argument("--preview", type=Path, default=None)
+    p_match.add_argument("--lut", type=Path, default=None, help="Optional 3D .cube LUT output path")
     p_match.add_argument("--catalog", type=Path, default=DEFAULT_CATALOG)
+
+    # Export a single profile or a blended mix as a 3D .cube LUT.
+    p_lut = subparsers.add_parser("lut", help="Export a Color DNA profile or blend as a 3D .cube LUT")
+    p_lut.add_argument("--dna", type=str, default=None, help="Single Color DNA ID from catalog")
+    p_lut.add_argument("--mix", nargs="+", default=None, help="Blend pairs id:weight")
+    p_lut.add_argument("--name", type=str, default="ChromaDNA LUT", help="LUT title inside .cube metadata")
+    p_lut.add_argument("--size", type=int, default=33, help="3D LUT grid resolution (default: 33)")
+    p_lut.add_argument("--out", type=Path, required=True, help="Output .cube file path")
+    p_lut.add_argument("--catalog", type=Path, default=DEFAULT_CATALOG)
     args = parser.parse_args()
     if args.command == "mine":
         profiles = mine_directory(args.input_dir, similarity_threshold=args.threshold)
@@ -87,6 +99,9 @@ def main() -> None:
         if args.preview_img:
             prev_file = render_before_after(args.preview_img, blended, args.preview_out)
             print(f"Rendered Before/After preview -> {prev_file}")
+        if args.lut:
+            lut_file = write_cube_lut_atomic(blended, args.lut, title=args.name)
+            print(f"Exported 33x33x33 3D LUT -> {lut_file}")
     elif args.command == "analyze":
         metrics = analyze_image_metrics(args.image)
         print(json.dumps({"metrics": metrics}, indent=2))
@@ -103,6 +118,24 @@ def main() -> None:
         if args.preview:
             prev_file = render_before_after(args.image, adapted_dna, args.preview)
             print(f"Rendered Before/After preview -> {prev_file}")
+        if args.lut:
+            lut_file = write_cube_lut_atomic(adapted_dna, args.lut, title=args.name)
+            print(f"Exported 33x33x33 3D LUT -> {lut_file}")
+
+    elif args.command == "lut":
+        profiles = load_catalog(args.catalog)
+        if bool(args.mix) == bool(args.dna):
+            raise ValueError("Specify exactly one of --dna or --mix.")
+        if args.mix:
+            weighted: List[Tuple[Dict[str, Any], float]] = []
+            for item in args.mix:
+                dna_id, weight_str = item.split(":")
+                weighted.append((find_profile_by_id(profiles, dna_id), float(weight_str)))
+            target_dna = blend_dna_profiles(weighted)
+        else:
+            target_dna = find_profile_by_id(profiles, args.dna)
+        lut_file = write_cube_lut_atomic(target_dna, args.out, title=args.name, size=args.size)
+        print(f"Exported {args.size}x{args.size}x{args.size} 3D LUT -> {lut_file}")
 
 
 if __name__ == "__main__":
