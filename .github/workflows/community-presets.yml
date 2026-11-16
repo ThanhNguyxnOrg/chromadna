@@ -1,0 +1,88 @@
+name: Community Preset Catalog Ingestion
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: chromadna-community-preset-ingestion
+  cancel-in-progress: false
+
+jobs:
+  import-community-presets:
+    name: Import pinned open-source Lightroom presets
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Mint repository-scoped ThanhNguyxnAgent token
+        id: agent
+        uses: ThanhNguyxnOrg/.github/.github/actions/agent-token@2b5c5cad571ee93fd091e16e1734ebd819191e68
+        with:
+          profile: content
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+
+      - name: Checkout main as ThanhNguyxnAgent
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ steps.agent.outputs.token }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install ChromaDNA and test dependencies
+        run: python -m pip install -e ".[dev]"
+
+      - name: Import all pinned upstream XMP presets
+        run: python scripts/import_community_presets.py
+
+      - name: Validate catalog structure and profile IDs
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          catalog = json.loads(Path("data/color_dna_catalog.json").read_text(encoding="utf-8"))
+          report = json.loads(Path("data/sources/emulsionpresets-import-report.json").read_text(encoding="utf-8"))
+          profiles = catalog["profiles"]
+          ids = [profile["id"] for profile in profiles]
+          assert catalog["total_profiles"] == 451, catalog["total_profiles"]
+          assert len(profiles) == 451
+          assert len(ids) == len(set(ids)), "duplicate profile IDs"
+          assert all(profile.get("provenance", {}).get("commit") for profile in profiles)
+          assert all(profile.get("provenance", {}).get("sha256") for profile in profiles)
+          assert report["status"] == "success"
+          assert report["imported"] == 451
+          assert not report["failures"]
+          assert all(profile.get("source_hint") != "Starter_Pack" for profile in profiles)
+          print("Catalog validation passed: 451 profiles, stable IDs, provenance, no synthetic starter records.")
+          PY
+
+      - name: Run complete test suite
+        run: python -m pytest -q
+
+      - name: Check CLI and MCP imports
+        run: |
+          chromadna --help
+          python -c "import chromadna.mcp_server"
+
+      - name: Commit catalog and provenance as ThanhNguyxnAgent
+        env:
+          GH_TOKEN: ${{ steps.agent.outputs.token }}
+        run: |
+          git config user.name "ThanhNguyxnAgent[bot]"
+          git config user.email "296222857+thanhnguyxnagent[bot]@users.noreply.github.com"
+          git add data/color_dna_catalog.json data/sources/THIRD_PARTY_NOTICES.md data/sources/emulsionpresets-import-report.json
+          if git diff --cached --quiet; then
+            echo "Community catalog is already up to date."
+            exit 0
+          fi
+          git commit -m "feat(catalog): import 451 open-source Lightroom presets"
+          git -c http.extraheader="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w 0)" push origin HEAD:main
