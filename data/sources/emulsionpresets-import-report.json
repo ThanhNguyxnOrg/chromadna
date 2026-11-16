@@ -1,0 +1,5620 @@
+{
+  "source": "peva3/EmulsionPresets",
+  "commit": "4312c978a3331ed69f87fd47c98a9c2a3caa2d26",
+  "license": "MIT",
+  "expected": 451,
+  "imported": 451,
+  "failures": [],
+  "duplicate_source_slug_groups": 7,
+  "collision_safe_profile_ids": 14,
+  "unsupported_numeric_field_occurrences": 1547,
+  "entries": [
+    {
+      "id": "emulsion_adox_color_implosion",
+      "file": "Presets/Color-Negative/Adox Color Implosion.xmp",
+      "sha256": "f32d2ef632299b0d9aea86188cd1f729362233bb80651558036bf29c61ef691a",
+      "slider_count": 39,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "adox-color-implosion"
+    },
+    {
+      "id": "emulsion_agfa_optima_100",
+      "file": "Presets/Color-Negative/Agfa Optima 100.xmp",
+      "sha256": "18439593dbdcca33ed305a398c6058a186be64529a788046a3fbf83aa9ee1c6d",
+      "slider_count": 35,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "agfa-optima-100"
+    },
+    {
+      "id": "emulsion_agfa_optima_200",
+      "file": "Presets/Color-Negative/Agfa Optima 200.xmp",
+      "sha256": "67b0ffa3606dec5c1c248d17ab09513dd53bf5df70542b4c70133154099e337f",
+      "slider_count": 36,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "agfa-optima-200"
+    },
+    {
+      "id": "emulsion_agfa_ultra_100",
+      "file": "Presets/Color-Negative/Agfa Ultra 100.xmp",
+      "sha256": "324c8ce0041b6930f4e7ceec5c0f536b8942a92a1b1ef973ac874793a1455afe",
+      "slider_count": 47,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "agfa-ultra-100"
+    },
+    {
+      "id": "emulsion_agfa_vista_100",
+      "file": "Presets/Color-Negative/Agfa Vista 100.xmp",
+      "sha256": "e8db23a0fe2963951c026996afeda18731369828ec653ff7ac0760e294cd4124",
+      "slider_count": 37,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "agfa-vista-100"
+    },
+    {
+      "id": "emulsion_agfa_vista_200",
+      "file": "Presets/Color-Negative/Agfa Vista 200.xmp",
+      "sha256": "2d56bb09e6045a45981d51380dfd68e957ebbccf7e87103b44da6c36cf688e86",
+      "slider_count": 36,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "agfa-vista-200"
+    },
+    {
+      "id": "emulsion_agfa_vista_400",
+      "file": "Presets/Color-Negative/Agfa Vista 400.xmp",
+      "sha256": "09f9794a68ff72c9a7f62ef81dfaa377a32248bfb638f7df2c51a1f89c0cbc9d",
+      "slider_count": 37,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "agfa-vista-400"
+    },
+    {
+      "id": "emulsion_c_print",
+      "file": "Presets/Color-Negative/C-Print.xmp",
+      "sha256": "248467f273fad17ab93211c30e0794765bb7a29fba9c23f58e7dfa19b6a773ca",
+      "slider_count": 37,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "c-print"
+    },
+    {
+      "id": "emulsion_cinestill_400d",
+      "file": "Presets/Color-Negative/CineStill 400D.xmp",
+      "sha256": "182dedd81407ce43b1ea5a6da9d4f1bda0345f094f9795f8b4e9551cd8aee7b9",
+      "slider_count": 47,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "cinestill-400d"
+    },
+    {
+      "id": "emulsion_cinestill_50d",
+      "file": "Presets/Color-Negative/CineStill-50D.xmp",
+      "sha256": "b6c5fb4e5868ec1abeefca2601c05c63477efec53c034e259ee2cbc19e0a4b03",
+      "slider_count": 32,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "cinestill-50d"
+    },
+    {
+      "id": "emulsion_ferrania_solaris_fg_400",
+      "file": "Presets/Color-Negative/Ferrania Solaris FG 400.xmp",
+      "sha256": "6faabd62c869d7ed33cd428debc07a7f1e6c5bdb9919d1689b23bdea93904f80",
+      "slider_count": 49,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "ferrania-solaris-fg-400"
+    },
+    {
+      "id": "emulsion_fuji_100_industrial",
+      "file": "Presets/Color-Negative/Fuji 100 Industrial.xmp",
+      "sha256": "2a19fdc661b5ba9859eca535dabb0d9ab82dd56220d4f4a50b6b22f6aac019fb",
+      "slider_count": 39,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fuji-100-industrial"
+    },
+    {
+      "id": "emulsion_fuji_nps_160_pulled",
+      "file": "Presets/Color-Negative/Fuji NPS 160 Pulled.xmp",
+      "sha256": "68b2492d670ef5bdea50a9c37424ccf5ec9db9f6eb5d8adb73be77b29ab7e103",
+      "slider_count": 41,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fuji-nps-160-pulled"
+    },
+    {
+      "id": "emulsion_fuji_natura_1600",
+      "file": "Presets/Color-Negative/Fuji Natura 1600.xmp",
+      "sha256": "94b84905d68c41b2607123076c51ed40a184eadcd35415322391830d1695dcf3",
+      "slider_count": 28,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fuji-natura-1600"
+    },
+    {
+      "id": "emulsion_fuji_pro_160c",
+      "file": "Presets/Color-Negative/Fuji Pro 160C.xmp",
+      "sha256": "c1b33e552a3b63e1059da800c634700c325ac2f931022689160b5be4ad1f5abe",
+      "slider_count": 32,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fuji-pro-160c"
+    },
+    {
+      "id": "emulsion_fuji_pro_160ns",
+      "file": "Presets/Color-Negative/Fuji Pro 160NS.xmp",
+      "sha256": "446d36f9aa1997444f9b69f74f63514d91107ef5a9fa4649c57055559c05d4bf",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fuji-pro-160ns"
+    },
+    {
+      "id": "emulsion_fuji_pro_800z",
+      "file": "Presets/Color-Negative/Fuji Pro 800Z.xmp",
+      "sha256": "bf47401684f4970ebbb0532fc4533190025c63ea7b247c1f9bcd829a19070983",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fuji-pro-800z"
+    },
+    {
+      "id": "emulsion_fuji_reala_100",
+      "file": "Presets/Color-Negative/Fuji Reala 100.xmp",
+      "sha256": "0cb9e8e58795b134dacd1eb8b1af266926a0162bdf30675152506d70956c2092",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fuji-reala-100"
+    },
+    {
+      "id": "emulsion_fuji_superia_100",
+      "file": "Presets/Color-Negative/Fuji Superia 100.xmp",
+      "sha256": "ff45424ed101e2ee0acdbb22b09a7b2e5f1d05a042899c88e83a8aa86035b439",
+      "slider_count": 30,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fuji-superia-100"
+    },
+    {
+      "id": "emulsion_fuji_superia_1600",
+      "file": "Presets/Color-Negative/Fuji Superia 1600.xmp",
+      "sha256": "9822a1170edcd4a31a63cee83d3ff3554ca8e09c70820a1fabfe718c81b58b16",
+      "slider_count": 28,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fuji-superia-1600"
+    },
+    {
+      "id": "emulsion_fuji_superia_200",
+      "file": "Presets/Color-Negative/Fuji Superia 200.xmp",
+      "sha256": "d307943e3b952055706bc2abc346a05f01d1a25ac81758379674ec7af5e88fcf",
+      "slider_count": 30,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fuji-superia-200"
+    },
+    {
+      "id": "emulsion_fuji_superia_800",
+      "file": "Presets/Color-Negative/Fuji Superia 800.xmp",
+      "sha256": "1199efef2fa3d7ff16e813ade8c50bdaf69ea2fc9738d2167585c2d9a43eeb66",
+      "slider_count": 30,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fuji-superia-800"
+    },
+    {
+      "id": "emulsion_fuji_superia_hg_1600",
+      "file": "Presets/Color-Negative/Fuji Superia HG 1600.xmp",
+      "sha256": "2926c61e556ba6302c725614ef9f110eb2134a0c8e7d6338a7961fbc6effe2d0",
+      "slider_count": 40,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fuji-superia-hg-1600"
+    },
+    {
+      "id": "emulsion_fuji_superia_x_tra_400_1",
+      "file": "Presets/Color-Negative/Fuji Superia X-TRA 400 +1.xmp",
+      "sha256": "e2041694534057bf276b3b7f8841a8241b31f2160a573d8a1f8adc785731cb0e",
+      "slider_count": 33,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fuji-superia-x-tra-400-1"
+    },
+    {
+      "id": "emulsion_fuji_superia_x_tra_400",
+      "file": "Presets/Color-Negative/Fuji Superia X-TRA 400.xmp",
+      "sha256": "3dea1765b24520873e651d1425b5ae3fbb66fd9fb79fef156c845c584f3288c3",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fuji-superia-x-tra-400"
+    },
+    {
+      "id": "emulsion_fujicolor_c200",
+      "file": "Presets/Color-Negative/Fujicolor C200.xmp",
+      "sha256": "fe9e9273ad0b8a0def78645ead72e46d4d645d8a6aedcc444173b3431b8b3307",
+      "slider_count": 48,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fujicolor-c200"
+    },
+    {
+      "id": "emulsion_fujicolor_nph",
+      "file": "Presets/Color-Negative/Fujicolor NPH.xmp",
+      "sha256": "88e2b76952c0780ca5b1da4d1a9438b5151fdedfe837b51de3a9ddf87a167ece",
+      "slider_count": 50,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fujicolor-nph"
+    },
+    {
+      "id": "emulsion_fujicolor_superia_premium_400",
+      "file": "Presets/Color-Negative/Fujicolor Superia Premium 400.xmp",
+      "sha256": "865e9bea9b27cc23acf7dc3224f5f316ae826475fd6b6104d21c3f69b978f2e4",
+      "slider_count": 50,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fujicolor-superia-premium-400"
+    },
+    {
+      "id": "emulsion_fujifilm_classic_chrome",
+      "file": "Presets/Color-Negative/Fujifilm Classic Chrome.xmp",
+      "sha256": "2f2cc9333dd3f43bcf23433e1cabee83c79d3672ebdcbfb1b4a9fe2a2d1daee2",
+      "slider_count": 49,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fujifilm-classic-chrome"
+    },
+    {
+      "id": "emulsion_fujifilm_classic_negative",
+      "file": "Presets/Color-Negative/Fujifilm Classic Negative.xmp",
+      "sha256": "4fab2718e256200450bdbca67825da02c21714081e5d8690c227202df072ac9e",
+      "slider_count": 41,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fujifilm-classic-negative"
+    },
+    {
+      "id": "emulsion_fujifilm_pro_400h",
+      "file": "Presets/Color-Negative/Fujifilm Pro 400H.xmp",
+      "sha256": "f64f6b6f5d6e220827b7e67ed42b859161e4a00b77d90e493b7cebb14ec372e9",
+      "slider_count": 30,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fujifilm-pro-400h"
+    },
+    {
+      "id": "emulsion_fujifilm_eterna",
+      "file": "Presets/Color-Negative/Fujifilm-Eterna.xmp",
+      "sha256": "268ef830d99c917b6eba7171bdd94024bbb77db92f3ad1ca326bff4b62ca4adb",
+      "slider_count": 31,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fujifilm-eterna"
+    },
+    {
+      "id": "emulsion_fujifilm_nostalgic_negative",
+      "file": "Presets/Color-Negative/Fujifilm-Nostalgic-Negative.xmp",
+      "sha256": "4d6bf530b6db84403c70dd0e6e02ee3c8c229d3fbbd8a871e0432477f003c2fa",
+      "slider_count": 32,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fujifilm-nostalgic-negative"
+    },
+    {
+      "id": "emulsion_kodacolor_vr_200",
+      "file": "Presets/Color-Negative/Kodacolor VR 200.xmp",
+      "sha256": "b3012409d9756f6a76288a723e4ce5dcdd5592752a7495f0a4138bbbfee48c33",
+      "slider_count": 47,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodacolor-vr-200"
+    },
+    {
+      "id": "emulsion_kodak_colorplus_200",
+      "file": "Presets/Color-Negative/Kodak ColorPlus 200.xmp",
+      "sha256": "467899d38da2d3554d5a3595bad1c78ea5344bb35c47a13c8a88a6804aa60997",
+      "slider_count": 32,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-colorplus-200"
+    },
+    {
+      "id": "emulsion_kodak_ektar_100_1",
+      "file": "Presets/Color-Negative/Kodak Ektar 100 +1.xmp",
+      "sha256": "fed445f76c684a17f154a2d25b15954f7cf67304f20f9d4ee05a1ad21ae0260b",
+      "slider_count": 48,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-ektar-100-1"
+    },
+    {
+      "id": "emulsion_kodak_ektar_100",
+      "file": "Presets/Color-Negative/Kodak Ektar 100.xmp",
+      "sha256": "bda8109a628bd55d05778c8132519e4bebee7b2e3535ac347ed97a805747f90d",
+      "slider_count": 47,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-ektar-100"
+    },
+    {
+      "id": "emulsion_kodak_farbwelt_200_expired",
+      "file": "Presets/Color-Negative/Kodak Farbwelt 200 Expired.xmp",
+      "sha256": "9f286546ef8f7f9a8dceede1132a1e66537e1db1f6439dbe342ee666dccc3269",
+      "slider_count": 49,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-farbwelt-200-expired"
+    },
+    {
+      "id": "emulsion_kodak_gold_200_1",
+      "file": "Presets/Color-Negative/Kodak Gold 200 +1.xmp",
+      "sha256": "0c61a966737df5a62069036c4d69f2a6dd20618596212480c2914a04e6eec011",
+      "slider_count": 47,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-gold-200-1"
+    },
+    {
+      "id": "emulsion_kodak_gold_200_2",
+      "file": "Presets/Color-Negative/Kodak Gold 200 +2.xmp",
+      "sha256": "9bd7ca6b7dc7a0f1a62bd361f00cc522229e372d7646a29df29838b86a13a258",
+      "slider_count": 47,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-gold-200-2"
+    },
+    {
+      "id": "emulsion_kodak_gold_200_expired_10yr",
+      "file": "Presets/Color-Negative/Kodak Gold 200 Expired 10yr.xmp",
+      "sha256": "ddf57790e170fadac9d8f01f34e0289357e6fd57385ec149292c1df69849c647",
+      "slider_count": 49,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-gold-200-expired-10yr"
+    },
+    {
+      "id": "emulsion_kodak_gold_200_expired_30yr",
+      "file": "Presets/Color-Negative/Kodak Gold 200 Expired 30yr.xmp",
+      "sha256": "87ccd2109b0f57a0dcf1a694fec8b6ef49c919ef63930595fa459c689519fb24",
+      "slider_count": 49,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-gold-200-expired-30yr"
+    },
+    {
+      "id": "emulsion_kodak_gold_200_frontier",
+      "file": "Presets/Color-Negative/Kodak Gold 200 Frontier.xmp",
+      "sha256": "2719c235210d4f37fe1bc35ce7e565d9ab3b359c5e933a3999f043617a07c4c6",
+      "slider_count": 47,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-gold-200-frontier"
+    },
+    {
+      "id": "emulsion_kodak_gold_200_noritsu",
+      "file": "Presets/Color-Negative/Kodak Gold 200 Noritsu.xmp",
+      "sha256": "e48bd137908bcbe88989f50253400d1b5c690204f10e7ec495b5699e210c48bc",
+      "slider_count": 47,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-gold-200-noritsu"
+    },
+    {
+      "id": "emulsion_kodak_gold_200",
+      "file": "Presets/Color-Negative/Kodak Gold 200.xmp",
+      "sha256": "a8605b25c3aa04ecd3a90533607dbba6c53eb66ec0f288668c30f4cc07db3971",
+      "slider_count": 47,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-gold-200"
+    },
+    {
+      "id": "emulsion_kodak_high_definition_plus_200",
+      "file": "Presets/Color-Negative/Kodak High Definition Plus 200.xmp",
+      "sha256": "ecace8c328720358f19e4cc09002d37a5d394ae591f6d72199a0b81dda9eb717",
+      "slider_count": 50,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-high-definition-plus-200"
+    },
+    {
+      "id": "emulsion_kodak_max_800",
+      "file": "Presets/Color-Negative/Kodak Max 800.xmp",
+      "sha256": "69f29cad2cd8faaf615bf5b34c38830c54f21c08f2a64bb92f9d146800e62748",
+      "slider_count": 50,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-max-800"
+    },
+    {
+      "id": "emulsion_kodak_portra_160",
+      "file": "Presets/Color-Negative/Kodak Portra 160.xmp",
+      "sha256": "207457bdacc50c54de2ddedb669cec0624013fc2002a140d540f1a1df1e2a065",
+      "slider_count": 45,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-portra-160"
+    },
+    {
+      "id": "emulsion_kodak_portra_160nc",
+      "file": "Presets/Color-Negative/Kodak Portra 160NC.xmp",
+      "sha256": "aa530b73b464791466bbd157d8ea98278230bf9f5644c7d25694fb7dd679d4b4",
+      "slider_count": 36,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-portra-160nc"
+    },
+    {
+      "id": "emulsion_kodak_portra_160vc",
+      "file": "Presets/Color-Negative/Kodak Portra 160VC.xmp",
+      "sha256": "14e40637d78ff7bb7ab000e9c2df0bf76820981ba368a583518ee8f3fd2a0ecb",
+      "slider_count": 41,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-portra-160vc"
+    },
+    {
+      "id": "emulsion_kodak_portra_400_1_09563056",
+      "file": "Presets/Color-Negative/Kodak Portra 400 +1.xmp",
+      "sha256": "1305fb8c9b55ea4e8ddc6108a99ce813c677f817583a9f707c55d78f88edb0a6",
+      "slider_count": 37,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-portra-400-1"
+    },
+    {
+      "id": "emulsion_kodak_portra_400_2",
+      "file": "Presets/Color-Negative/Kodak Portra 400 +2.xmp",
+      "sha256": "04fec578b197ea9d47a0565d14e3987364148064371bb00720deaa03deb42923",
+      "slider_count": 37,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-portra-400-2"
+    },
+    {
+      "id": "emulsion_kodak_portra_400_1_e5f5e21e",
+      "file": "Presets/Color-Negative/Kodak Portra 400 -1.xmp",
+      "sha256": "8f34883b2b60fdf079e4adbcb1b53f4588ece3406db95137944eab8868ea06e5",
+      "slider_count": 37,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-portra-400-1"
+    },
+    {
+      "id": "emulsion_kodak_portra_400_120",
+      "file": "Presets/Color-Negative/Kodak Portra 400 120.xmp",
+      "sha256": "aa67ff5c1aab537aec53c5d15f0900b4a7009c2fe450a2f20a840b4ce7718e5b",
+      "slider_count": 37,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-portra-400-120"
+    },
+    {
+      "id": "emulsion_kodak_portra_400_4x5",
+      "file": "Presets/Color-Negative/Kodak Portra 400 4x5.xmp",
+      "sha256": "59ec2fef5c2aefa67f3435b91dae92a280c65ef8721f5caec8cfa5f7a25ccaee",
+      "slider_count": 37,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-portra-400-4x5"
+    },
+    {
+      "id": "emulsion_kodak_portra_400_expired",
+      "file": "Presets/Color-Negative/Kodak Portra 400 Expired.xmp",
+      "sha256": "ee7cec7f6d14069b31919aff210773d2e9acf677ad92a1cc016469369075c164",
+      "slider_count": 37,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-portra-400-expired"
+    },
+    {
+      "id": "emulsion_kodak_portra_400_noritsu",
+      "file": "Presets/Color-Negative/Kodak Portra 400 Noritsu.xmp",
+      "sha256": "a142dc7574f6ffbfad0d598c884d6adef70fda6fd0f70a92345f4e38fcd11514",
+      "slider_count": 37,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-portra-400-noritsu"
+    },
+    {
+      "id": "emulsion_kodak_portra_400",
+      "file": "Presets/Color-Negative/Kodak Portra 400.xmp",
+      "sha256": "33ab8e9cf4ed8e2a4ac24c29cadce6b22216f58cd8251d1b3a314c7661dbc8bc",
+      "slider_count": 37,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-portra-400"
+    },
+    {
+      "id": "emulsion_kodak_portra_400nc",
+      "file": "Presets/Color-Negative/Kodak Portra 400NC.xmp",
+      "sha256": "ca39753de5cfa5d8729f745cd2131b94546f0861fa48b0b3d1c45b7dfd74da01",
+      "slider_count": 35,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-portra-400nc"
+    },
+    {
+      "id": "emulsion_kodak_portra_400uc",
+      "file": "Presets/Color-Negative/Kodak Portra 400UC.xmp",
+      "sha256": "ce3ffe51ba5bdedc9f3292ee44838f5070e50002f8fc28f0166760bb003259a5",
+      "slider_count": 36,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-portra-400uc"
+    },
+    {
+      "id": "emulsion_kodak_portra_400vc",
+      "file": "Presets/Color-Negative/Kodak Portra 400VC.xmp",
+      "sha256": "6a0e48a28724e5dd4725d1f6d5634d98e1ffccafcc36a2a3297efa0e05eb4e23",
+      "slider_count": 41,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-portra-400vc"
+    },
+    {
+      "id": "emulsion_kodak_portra_800_1_396bb92a",
+      "file": "Presets/Color-Negative/Kodak Portra 800 +1.xmp",
+      "sha256": "853c2bd5157916cc01214883c83faf7d5fd5ef42ececc44b5076511acc6c402d",
+      "slider_count": 43,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-portra-800-1"
+    },
+    {
+      "id": "emulsion_kodak_portra_800_1_32bbadbd",
+      "file": "Presets/Color-Negative/Kodak Portra 800 -1.xmp",
+      "sha256": "1a455e3076907b9fb3dac1c47c77afbcb566602f1bf912900c37e00408a30863",
+      "slider_count": 43,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-portra-800-1"
+    },
+    {
+      "id": "emulsion_kodak_portra_800",
+      "file": "Presets/Color-Negative/Kodak Portra 800.xmp",
+      "sha256": "182cfc53b09e287bb9eba702b073068d53f10028368be71f70c1521ea041c723",
+      "slider_count": 43,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-portra-800"
+    },
+    {
+      "id": "emulsion_kodak_pro_image_100",
+      "file": "Presets/Color-Negative/Kodak Pro Image 100.xmp",
+      "sha256": "1f30fc14c6da8fc0eb4e412a0add74231ee0b05a7e79ce4497f6a7b7db4952f7",
+      "slider_count": 47,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-pro-image-100"
+    },
+    {
+      "id": "emulsion_kodak_royal_gold_400",
+      "file": "Presets/Color-Negative/Kodak Royal Gold 400.xmp",
+      "sha256": "e275dabd45394e53641b7d0253a28b292454b27053ed8a9dbcbe9b5b73801d44",
+      "slider_count": 50,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-royal-gold-400"
+    },
+    {
+      "id": "emulsion_kodak_ultramax_400_1",
+      "file": "Presets/Color-Negative/Kodak Ultramax 400 +1.xmp",
+      "sha256": "79b0d0bcc1fddd37922542ff2632a4d333d48b983c7f573a318c202b09bff28b",
+      "slider_count": 52,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-ultramax-400-1"
+    },
+    {
+      "id": "emulsion_kodak_ultramax_400_2",
+      "file": "Presets/Color-Negative/Kodak Ultramax 400 +2.xmp",
+      "sha256": "03649701ca41e5a86c50d143608dd9a3fd5fe1a4c66e366dce9c4fc7b5136161",
+      "slider_count": 52,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-ultramax-400-2"
+    },
+    {
+      "id": "emulsion_kodak_ultramax_400",
+      "file": "Presets/Color-Negative/Kodak Ultramax 400.xmp",
+      "sha256": "80ffdf2d7127eaefc571a54a0092491f22e27ab4d56056e153cdda92fa541f4f",
+      "slider_count": 52,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-ultramax-400"
+    },
+    {
+      "id": "emulsion_kodak_vericolor_iii_160",
+      "file": "Presets/Color-Negative/Kodak Vericolor III 160.xmp",
+      "sha256": "6b68d01ae99aa339a1b4da311c8bb6be9ad0a9c807f9bfcf0762c96fd22fb8c9",
+      "slider_count": 41,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-vericolor-iii-160"
+    },
+    {
+      "id": "emulsion_kodak_vericolor_vps",
+      "file": "Presets/Color-Negative/Kodak Vericolor VPS.xmp",
+      "sha256": "c8d21f631025886edec22ab680a0d0b119c79d6018db15c36a0a24050cf13db5",
+      "slider_count": 41,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-vericolor-vps"
+    },
+    {
+      "id": "emulsion_kodak_vision3_250d_ecn_2",
+      "file": "Presets/Color-Negative/Kodak Vision3 250D ECN-2.xmp",
+      "sha256": "9b8c7c09662028d91c1f082fb723e3ddf53c248c9e87d62e676ded58454132aa",
+      "slider_count": 32,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-vision3-250d-ecn-2"
+    },
+    {
+      "id": "emulsion_kodak_vision3_250d",
+      "file": "Presets/Color-Negative/Kodak Vision3 250D.xmp",
+      "sha256": "201cf615939d9d33d4d9372638836eea3f20216cf8c860a666462762a01bf052",
+      "slider_count": 32,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-vision3-250d"
+    },
+    {
+      "id": "emulsion_kodak_vision3_500t_ecn_2",
+      "file": "Presets/Color-Negative/Kodak Vision3 500T ECN-2.xmp",
+      "sha256": "49b779dfe33117e19389adacf96bb03344f7e988c822cbd64dc568dcb8567808",
+      "slider_count": 32,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-vision3-500t-ecn-2"
+    },
+    {
+      "id": "emulsion_kodak_vision3_500t",
+      "file": "Presets/Color-Negative/Kodak Vision3 500T.xmp",
+      "sha256": "b6eaa44fdfda1f7a50fe5b1085424f2fe1220c8ff01253a06560ff4ba107897f",
+      "slider_count": 52,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-vision3-500t"
+    },
+    {
+      "id": "emulsion_kodak_vision3_50d",
+      "file": "Presets/Color-Negative/Kodak Vision3 50D.xmp",
+      "sha256": "f1bbb3ea8cae5fd5aa7b631957cfd2566e2489ece5de81c6d329b92449a30abd",
+      "slider_count": 49,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-vision3-50d"
+    },
+    {
+      "id": "emulsion_kodak_ektachrome_320t",
+      "file": "Presets/Color-Negative/Kodak-Ektachrome-320T.xmp",
+      "sha256": "0b92cf3264518e60599a3cf48effe537c6b9c2cf179bb8a5b266db16e265c091",
+      "slider_count": 33,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-ektachrome-320t"
+    },
+    {
+      "id": "emulsion_lomochrome_purple",
+      "file": "Presets/Color-Negative/Lomochrome Purple.xmp",
+      "sha256": "da87f1630e5226d747fc4405d2fb7d6a2dad9d636613013854a5cb376ba830f2",
+      "slider_count": 53,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "lomochrome-purple"
+    },
+    {
+      "id": "emulsion_lomography_color_100",
+      "file": "Presets/Color-Negative/Lomography Color 100.xmp",
+      "sha256": "cb7e14edffda5850336322610e46fb6ce9d88434ce4f09bddca6e09d84a49826",
+      "slider_count": 50,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "lomography-color-100"
+    },
+    {
+      "id": "emulsion_orwo_nc_500",
+      "file": "Presets/Color-Negative/ORWO NC 500.xmp",
+      "sha256": "4f224fc2f06f5d37910a2b3bd5e89d36bb6c43824ebd33d50ad5b3a171448c13",
+      "slider_count": 42,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "orwo-nc-500"
+    },
+    {
+      "id": "emulsion_ra_4_color_print",
+      "file": "Presets/Color-Negative/RA-4 Color Print.xmp",
+      "sha256": "e795d15436ff4346d9c7a22e76922510a3e73fac12738e8027d11315eab66477",
+      "slider_count": 38,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "ra-4-color-print"
+    },
+    {
+      "id": "emulsion_rollei_crossbird_200",
+      "file": "Presets/Color-Negative/Rollei Crossbird 200.xmp",
+      "sha256": "5370addcacb1e95a9d3cac33a13abc61801694ccc901dfd5c5838635b32c44b1",
+      "slider_count": 42,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "rollei-crossbird-200"
+    },
+    {
+      "id": "emulsion_santacolor_aerocolor",
+      "file": "Presets/Color-Negative/SantaColor Aerocolor.xmp",
+      "sha256": "389f578aa238845490b15f359e03f44f6fde2732d1a817bfd06c253683285942",
+      "slider_count": 48,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "santacolor-aerocolor"
+    },
+    {
+      "id": "emulsion_adox_silvermax_21",
+      "file": "Presets/Black-White/Adox Silvermax 21.xmp",
+      "sha256": "5264caa876676293ae744155207865e4d6fb12489dd4b2438f56ad7bd535b819",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "adox-silvermax-21"
+    },
+    {
+      "id": "emulsion_agfa_apx_100",
+      "file": "Presets/Black-White/Agfa APX 100.xmp",
+      "sha256": "5db016abb33935f260ef72bbee90e3f53806fc1f62e3f0cb8205abcb479b14c8",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "agfa-apx-100"
+    },
+    {
+      "id": "emulsion_agfa_apx_25",
+      "file": "Presets/Black-White/Agfa APX 25.xmp",
+      "sha256": "28812643679c1eb901235971513b5a952713337827453e09de7856c49980cced",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "agfa-apx-25"
+    },
+    {
+      "id": "emulsion_agfa_apx_400",
+      "file": "Presets/Black-White/Agfa APX 400.xmp",
+      "sha256": "6eada5096b4c833ab16a71a24e990cab9cbb85dda8326a2be6c5869d2e6d4c6d",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "agfa-apx-400"
+    },
+    {
+      "id": "emulsion_agfa_scala_200",
+      "file": "Presets/Black-White/Agfa Scala 200.xmp",
+      "sha256": "f132e27736e3a091c89676ab0edb40d3a6d4307a33d7d89b4f7e34f4e5b123ff",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "agfa-scala-200"
+    },
+    {
+      "id": "emulsion_bergger_pancro_400",
+      "file": "Presets/Black-White/Bergger Pancro 400.xmp",
+      "sha256": "51f45e6eb47d4091684f30205642bf277eb0c17f84b8864c1cf71455300eae76",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "bergger-pancro-400"
+    },
+    {
+      "id": "emulsion_copper_tone",
+      "file": "Presets/Black-White/Copper Tone.xmp",
+      "sha256": "392af0afe34e6c424e24020e87f09b1673ffae952d25a37c8bd1d5c99740d661",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "copper-tone"
+    },
+    {
+      "id": "emulsion_dramatic_monochrome",
+      "file": "Presets/Black-White/Dramatic Monochrome.xmp",
+      "sha256": "45a7f02b262b0af27e24cbcd0d78b34e92249d035c68582513e1a6b426c59e80",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "dramatic-monochrome"
+    },
+    {
+      "id": "emulsion_foma_fomapan_100",
+      "file": "Presets/Black-White/Foma Fomapan 100.xmp",
+      "sha256": "d916f9bba8979e9dd917a494294b01523d5e0125aa8518c83845d11644a0ec0e",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "foma-fomapan-100"
+    },
+    {
+      "id": "emulsion_foma_fomapan_200",
+      "file": "Presets/Black-White/Foma Fomapan 200.xmp",
+      "sha256": "6e762d6a520c14dd0d09f7e3e8774a6d0b5f1a77f1342679714f4341478286ad",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "foma-fomapan-200"
+    },
+    {
+      "id": "emulsion_foma_fomapan_400",
+      "file": "Presets/Black-White/Foma Fomapan 400.xmp",
+      "sha256": "bb8c2afe2469c0b461b3ba0a6e6dc1eb192904cc0acef25d5e77537c16ee1490",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "foma-fomapan-400"
+    },
+    {
+      "id": "emulsion_fuji_neopan_1600",
+      "file": "Presets/Black-White/Fuji Neopan 1600.xmp",
+      "sha256": "f95991e3e31d67f231c8477463f9f91a31d9c98358ecafcd3430784133207d30",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "fuji-neopan-1600"
+    },
+    {
+      "id": "emulsion_fuji_neopan_400",
+      "file": "Presets/Black-White/Fuji Neopan 400.xmp",
+      "sha256": "83719f31f2aca928a14f44cece7219788dcb1473cc508a99005bab634e332779",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "fuji-neopan-400"
+    },
+    {
+      "id": "emulsion_fujifilm_acros",
+      "file": "Presets/Black-White/Fujifilm Acros.xmp",
+      "sha256": "dd2a62666addfaeafa7d1e7231f829cafa8ccb072432dca0d6fa280ea9d3c18c",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "fujifilm-acros"
+    },
+    {
+      "id": "emulsion_gold_tone",
+      "file": "Presets/Black-White/Gold Tone.xmp",
+      "sha256": "eecf16ef8da83fa10403ea2e7d6bd48e1406e7d68367ec2f10d122333aee81ef",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "gold-tone"
+    },
+    {
+      "id": "emulsion_ilford_delta_100",
+      "file": "Presets/Black-White/Ilford Delta 100.xmp",
+      "sha256": "9ecde54c09427391b51f1300f4f748e30e39d616f4d99e57e72c57dbd77e1d4c",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "ilford-delta-100"
+    },
+    {
+      "id": "emulsion_ilford_delta_3200_2",
+      "file": "Presets/Black-White/Ilford Delta 3200 +2.xmp",
+      "sha256": "3b4f8cc516dd8a307ed393153977941ccb4c224ea6691939435fe0649af4ba61",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "ilford-delta-3200-2"
+    },
+    {
+      "id": "emulsion_ilford_delta_3200_microphen",
+      "file": "Presets/Black-White/Ilford Delta 3200 Microphen.xmp",
+      "sha256": "19e6bfdbcfb011f1e7ca33b57e365dfac70da752bcea0f42763b3fb5eea00f4a",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "ilford-delta-3200-microphen"
+    },
+    {
+      "id": "emulsion_ilford_delta_3200",
+      "file": "Presets/Black-White/Ilford Delta 3200.xmp",
+      "sha256": "1474c6f5dfa770883994b64534a4917b917e214a229bee54425444f5092a3f8d",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "ilford-delta-3200"
+    },
+    {
+      "id": "emulsion_ilford_delta_400",
+      "file": "Presets/Black-White/Ilford Delta 400.xmp",
+      "sha256": "6c70fdd33364664f2a29e0095002413e4360640916812aadbfcc9a27f1e59a6b",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "ilford-delta-400"
+    },
+    {
+      "id": "emulsion_ilford_fp4_plus_125",
+      "file": "Presets/Black-White/Ilford FP4 Plus 125.xmp",
+      "sha256": "62d75d36950d650f6fa50f1531ac674c80267845cc607fd8fde11bd30fb261c9",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "ilford-fp4-plus-125"
+    },
+    {
+      "id": "emulsion_ilford_hp5_plus_1_464ba8fc",
+      "file": "Presets/Black-White/Ilford HP5 Plus +1.xmp",
+      "sha256": "5858cfb572768df73879b3a0837762b92aa220f01f582bdce831b919700f9238",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "ilford-hp5-plus-1"
+    },
+    {
+      "id": "emulsion_ilford_hp5_plus_2",
+      "file": "Presets/Black-White/Ilford HP5 Plus +2.xmp",
+      "sha256": "35ac40a1c34ee1ccdbdac5da3e6351efd31c71c4e8b55013cab7271f8ef37bec",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "ilford-hp5-plus-2"
+    },
+    {
+      "id": "emulsion_ilford_hp5_plus_1_ba2ddc9d",
+      "file": "Presets/Black-White/Ilford HP5 Plus -1.xmp",
+      "sha256": "44ec3e143188d4e22e52d4558f816212164f6636a73d6005244d4cc112b96d4a",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "ilford-hp5-plus-1"
+    },
+    {
+      "id": "emulsion_ilford_hp5_plus_dd_x",
+      "file": "Presets/Black-White/Ilford HP5 Plus DD-X.xmp",
+      "sha256": "bfa647140003dac180aba9e5321c05ace60d6856a7603a8aaff9825b1521477a",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "ilford-hp5-plus-dd-x"
+    },
+    {
+      "id": "emulsion_ilford_hp5_plus_expired",
+      "file": "Presets/Black-White/Ilford HP5 Plus Expired.xmp",
+      "sha256": "0472acbe12caa9599956e923513dbaac02f5bcbf43d146e2f29e5a08eb6fb4f5",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "ilford-hp5-plus-expired"
+    },
+    {
+      "id": "emulsion_ilford_hp5_plus_stand_dev",
+      "file": "Presets/Black-White/Ilford HP5 Plus Stand Dev.xmp",
+      "sha256": "7ddc4d112d175253b8f047a808264deb267b3be1c7ceb0840da0bc9b33792a97",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "ilford-hp5-plus-stand-dev"
+    },
+    {
+      "id": "emulsion_ilford_hp5_plus",
+      "file": "Presets/Black-White/Ilford HP5 Plus.xmp",
+      "sha256": "cb3e98c89cb574158b5ac97ee53ddce29ca6ff4e074254e2e40ac1bcc01806e1",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "ilford-hp5-plus"
+    },
+    {
+      "id": "emulsion_ilford_mg_warmtone",
+      "file": "Presets/Black-White/Ilford MG Warmtone.xmp",
+      "sha256": "c323acf5bec767b50040f888ac305f431e84fbe0dadd4d34af29747d94d2d610",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "ilford-mg-warmtone"
+    },
+    {
+      "id": "emulsion_ilford_ortho_plus_80",
+      "file": "Presets/Black-White/Ilford Ortho Plus 80.xmp",
+      "sha256": "7112ea33d03fca9da6169109ba6f29a1edad84d9de9f9c097a99e7976bbd4539",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "ilford-ortho-plus-80"
+    },
+    {
+      "id": "emulsion_ilford_pan_f_plus_50",
+      "file": "Presets/Black-White/Ilford Pan F Plus 50.xmp",
+      "sha256": "02d90019747bbd46bc8b13bc0f33d7ca82e65376e0d8b8a8c19195c81cf4a0bc",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "ilford-pan-f-plus-50"
+    },
+    {
+      "id": "emulsion_ilford_sfx_200",
+      "file": "Presets/Black-White/Ilford SFX 200.xmp",
+      "sha256": "4d0e3452b0446fc3b98dfc6fc846ada9b77531a776678ee5a313a83aa0c3e34d",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "ilford-sfx-200"
+    },
+    {
+      "id": "emulsion_ilford_xp2_super",
+      "file": "Presets/Black-White/Ilford XP2 Super.xmp",
+      "sha256": "f2357f79222df9a80ec12cf92c1de31467706a9c9cd9ef0d04843efb09a1d238",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "ilford-xp2-super"
+    },
+    {
+      "id": "emulsion_kentmere_pan_400",
+      "file": "Presets/Black-White/Kentmere Pan 400.xmp",
+      "sha256": "68ff1dad63cb754e17dd70d61883477739688359a2dacab3d9ec05ae0588b1e8",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "kentmere-pan-400"
+    },
+    {
+      "id": "emulsion_kodak_panatomic_x_32",
+      "file": "Presets/Black-White/Kodak Panatomic-X 32.xmp",
+      "sha256": "8d713bd0e6ec29e96fd68828e168059a02c05ba8c1496c745b1801951e748c88",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-panatomic-x-32"
+    },
+    {
+      "id": "emulsion_kodak_plus_x_125",
+      "file": "Presets/Black-White/Kodak Plus-X 125.xmp",
+      "sha256": "1b15e205fe10cf446a8ca69dd4c4964bcdc288377ae23a81c286698c363daf92",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-plus-x-125"
+    },
+    {
+      "id": "emulsion_kodak_recording_film_2475",
+      "file": "Presets/Black-White/Kodak Recording Film 2475.xmp",
+      "sha256": "50eed9998c27afa24a5a29a16b3677997454dea20fd8fd130f270b700ed6b597",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-recording-film-2475"
+    },
+    {
+      "id": "emulsion_kodak_t_max_100",
+      "file": "Presets/Black-White/Kodak T-Max 100.xmp",
+      "sha256": "d80567b7f19575ad476b053323a6b1e589e8be9cc293c16a1b877b7698370d2c",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-t-max-100"
+    },
+    {
+      "id": "emulsion_kodak_t_max_3200_2",
+      "file": "Presets/Black-White/Kodak T-Max 3200 +2.xmp",
+      "sha256": "3ce3107423a851aaf21548b79d1c8648f301d6481f71fce2f380d5a3bc57892c",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-t-max-3200-2"
+    },
+    {
+      "id": "emulsion_kodak_t_max_3200",
+      "file": "Presets/Black-White/Kodak T-Max 3200.xmp",
+      "sha256": "c59d20bed7ffd8bb3bcd7ee5353aacebb87c8860e6e0bd15058cf90f2bd2ee13",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-t-max-3200"
+    },
+    {
+      "id": "emulsion_kodak_t_max_400",
+      "file": "Presets/Black-White/Kodak T-Max 400.xmp",
+      "sha256": "947690047b4b233557f32c0774c9c381c7bc237f18916dacd63bb78dd9789129",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-t-max-400"
+    },
+    {
+      "id": "emulsion_kodak_technical_pan",
+      "file": "Presets/Black-White/Kodak Technical Pan.xmp",
+      "sha256": "fcc73f4f583566c3a184b452b4c46d335cecc9a758da42b7e3bf78e2fbd72248",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-technical-pan"
+    },
+    {
+      "id": "emulsion_kodak_tri_x_400_1_548d3b05",
+      "file": "Presets/Black-White/Kodak Tri-X 400 +1.xmp",
+      "sha256": "999f33a60b3260e3fdd2a52737c3ae798b28f0c234b938372e67087d82585bc7",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-tri-x-400-1"
+    },
+    {
+      "id": "emulsion_kodak_tri_x_400_2",
+      "file": "Presets/Black-White/Kodak Tri-X 400 +2.xmp",
+      "sha256": "bc9dceb9a350d04ea3439fb98b2e553fd0ffffa1d13455183a8864fa67d651de",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-tri-x-400-2"
+    },
+    {
+      "id": "emulsion_kodak_tri_x_400_1_6e363c4c",
+      "file": "Presets/Black-White/Kodak Tri-X 400 -1.xmp",
+      "sha256": "50d29cca6749db68dd5a30efee8208db807a8b95db1a17eed09d286def5f7721",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-tri-x-400-1"
+    },
+    {
+      "id": "emulsion_kodak_tri_x_400_120",
+      "file": "Presets/Black-White/Kodak Tri-X 400 120.xmp",
+      "sha256": "68dae22e5a5549f56fa506bb442df28ddd42bfe397d5828c028f7661301f654d",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-tri-x-400-120"
+    },
+    {
+      "id": "emulsion_kodak_tri_x_400_expired",
+      "file": "Presets/Black-White/Kodak Tri-X 400 Expired.xmp",
+      "sha256": "97ee1fa147f040d49da1056b1a7e8979ee1782b30fe83c95d5b38f7db437f90e",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-tri-x-400-expired"
+    },
+    {
+      "id": "emulsion_kodak_tri_x_400_hc_110",
+      "file": "Presets/Black-White/Kodak Tri-X 400 HC-110.xmp",
+      "sha256": "b32f895a3a67c1f68da0d230f1b231850d8738cbda7b07a9302edfbc64d10df4",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-tri-x-400-hc-110"
+    },
+    {
+      "id": "emulsion_kodak_tri_x_400_rodinal",
+      "file": "Presets/Black-White/Kodak Tri-X 400 Rodinal.xmp",
+      "sha256": "af0442a2c932d3d5dd18129093d8e3cedde0cbf6512d79f7e0377ccaa5815bcd",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-tri-x-400-rodinal"
+    },
+    {
+      "id": "emulsion_kodak_tri_x_400",
+      "file": "Presets/Black-White/Kodak Tri-X 400.xmp",
+      "sha256": "93d02b3188e4f311bdd8f38979665cd9cca0e5989bb9b5c1cb624fc01448c9f8",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-tri-x-400"
+    },
+    {
+      "id": "emulsion_kodak_verichrome_pan",
+      "file": "Presets/Black-White/Kodak Verichrome Pan.xmp",
+      "sha256": "e8c8eeaecfb31ee3a11520aee720494caf4db9b7dd0ad713b15154330fcaa5ab",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-verichrome-pan"
+    },
+    {
+      "id": "emulsion_m645_medium_format",
+      "file": "Presets/Black-White/M645 Medium Format.xmp",
+      "sha256": "38bce1ca889d0353e1c973fe61f58188f35f8916a1ccc8565905f3dee1fd6709",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "m645-medium-format"
+    },
+    {
+      "id": "emulsion_ricoh_high_contrast_monochrome",
+      "file": "Presets/Black-White/Ricoh High-Contrast Monochrome.xmp",
+      "sha256": "0133c54f70286e5112604afc485de4dbb724d6a651a50b3a30775015e20fcafd",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "ricoh-high-contrast-monochrome"
+    },
+    {
+      "id": "emulsion_rollei_retro_400s",
+      "file": "Presets/Black-White/Rollei Retro 400S.xmp",
+      "sha256": "69e9d378bee71a8a521c4c2d7f769010794eb00054532a71a2a84ebac1eeeb28",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "rollei-retro-400s"
+    },
+    {
+      "id": "emulsion_rollei_retro_80s",
+      "file": "Presets/Black-White/Rollei Retro 80S.xmp",
+      "sha256": "4e651701377eecb17e5b3df3b9671f49f13237b5ca24a798f9c79e16955409a6",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "rollei-retro-80s"
+    },
+    {
+      "id": "emulsion_selenium_tone",
+      "file": "Presets/Black-White/Selenium Tone.xmp",
+      "sha256": "654fc23395d287dc074fccf1dc32d92f85ba41fd95a22063829269cde7943f47",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "selenium-tone"
+    },
+    {
+      "id": "emulsion_sepia_tone",
+      "file": "Presets/Black-White/Sepia Tone.xmp",
+      "sha256": "b26badb0a028ac52a563d4d94fd7b5da3692e129a445afeb2a15f43fd5144422",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "sepia-tone"
+    },
+    {
+      "id": "emulsion_split_warm_cool",
+      "file": "Presets/Black-White/Split Warm-Cool.xmp",
+      "sha256": "9fd6525f56bdb56bc316118bbd8812375dd6da246f4c1ca9fb7b3d0ed9bd3028",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "split-warm-cool"
+    },
+    {
+      "id": "emulsion_agfachrome_rs_100",
+      "file": "Presets/Slide/AgfaChrome RS 100.xmp",
+      "sha256": "51071ba3f8fc3c1b32aa9d6ec5fc8924331d78b99b6d09ebb5b35e552eb1f28c",
+      "slider_count": 32,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "agfachrome-rs-100"
+    },
+    {
+      "id": "emulsion_ektachrome_100g",
+      "file": "Presets/Slide/Ektachrome 100G.xmp",
+      "sha256": "8a752709c5296e9830fd15e0442d4beeb06a60fd78c75fde9836881937214fdb",
+      "slider_count": 35,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "ektachrome-100g"
+    },
+    {
+      "id": "emulsion_elite_chrome_200",
+      "file": "Presets/Slide/Elite Chrome 200.xmp",
+      "sha256": "f08d7f6c1b005ebbf55ecb46dc56cb6b12552fe5327ffe3f411c454144d3189f",
+      "slider_count": 35,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "elite-chrome-200"
+    },
+    {
+      "id": "emulsion_fuji_astia_100f",
+      "file": "Presets/Slide/Fuji Astia 100F.xmp",
+      "sha256": "19bc63c8ffb87617e69fd9ea1a37429e72a1eb9e62d2012f606d9bc53936d5c8",
+      "slider_count": 31,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fuji-astia-100f"
+    },
+    {
+      "id": "emulsion_fuji_fortia_sp_50",
+      "file": "Presets/Slide/Fuji Fortia SP 50.xmp",
+      "sha256": "277ac91d3891d415fd64317e931cb42f8f6507051b7c61bfdc1c9f75b478d369",
+      "slider_count": 48,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fuji-fortia-sp-50"
+    },
+    {
+      "id": "emulsion_fuji_provia_100f",
+      "file": "Presets/Slide/Fuji Provia 100F.xmp",
+      "sha256": "32a2ceacf2ce24f796deef35926de1adc691c7f406545a480c066979270666ea",
+      "slider_count": 32,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fuji-provia-100f"
+    },
+    {
+      "id": "emulsion_fuji_provia_400f",
+      "file": "Presets/Slide/Fuji Provia 400F.xmp",
+      "sha256": "7cfd1c5cd85ef6270eda353c093f403dd63f674b864329677e03cb884187acce",
+      "slider_count": 39,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fuji-provia-400f"
+    },
+    {
+      "id": "emulsion_fuji_provia_400x",
+      "file": "Presets/Slide/Fuji Provia 400X.xmp",
+      "sha256": "79de60f6f88bb255ffa559c3e54fac4e4a5cb8ceb0d94f984b42224907751597",
+      "slider_count": 31,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fuji-provia-400x"
+    },
+    {
+      "id": "emulsion_fuji_sensia_100",
+      "file": "Presets/Slide/Fuji Sensia 100.xmp",
+      "sha256": "6c7ba2fc596d4184ee770aaa6b1b00dbb0b025cc26a017b8f85ca867b3d273d6",
+      "slider_count": 33,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fuji-sensia-100"
+    },
+    {
+      "id": "emulsion_fuji_velvia_100",
+      "file": "Presets/Slide/Fuji Velvia 100.xmp",
+      "sha256": "3229c41d52803c72d879e55e05b9ae9b243392e6757c06f3d4640a3b670439f4",
+      "slider_count": 45,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fuji-velvia-100"
+    },
+    {
+      "id": "emulsion_fuji_velvia_50",
+      "file": "Presets/Slide/Fuji Velvia 50.xmp",
+      "sha256": "512cbf495c35c27ac82e02c14312e75483041eeecb49fe8bb7fde3d70c9f4d3a",
+      "slider_count": 48,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fuji-velvia-50"
+    },
+    {
+      "id": "emulsion_kodachrome_200",
+      "file": "Presets/Slide/Kodachrome 200.xmp",
+      "sha256": "2c7508d76ec60a5e90a80e85c2ca4499dd48dc4e37a378093b9d76bfb4e98f9a",
+      "slider_count": 36,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodachrome-200"
+    },
+    {
+      "id": "emulsion_kodachrome_25",
+      "file": "Presets/Slide/Kodachrome 25.xmp",
+      "sha256": "46c51d7198a5bf772bb62abd9bd87c04fe5fa5749712b497c840b0b33cd433fa",
+      "slider_count": 35,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodachrome-25"
+    },
+    {
+      "id": "emulsion_kodachrome_64",
+      "file": "Presets/Slide/Kodachrome 64.xmp",
+      "sha256": "06a2009f3f3e7bd9877265212c3262f71140edd5832f479eb8f32f8b409ade3d",
+      "slider_count": 37,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodachrome-64"
+    },
+    {
+      "id": "emulsion_kodak_ektachrome_100vs",
+      "file": "Presets/Slide/Kodak Ektachrome 100VS.xmp",
+      "sha256": "84be6a2467fc797810d3630babdd0934ab119b61a1a692bd242e14bc877bdf9e",
+      "slider_count": 41,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-ektachrome-100vs"
+    },
+    {
+      "id": "emulsion_kodak_ektachrome_200",
+      "file": "Presets/Slide/Kodak Ektachrome 200.xmp",
+      "sha256": "055ccf27bd913079d08c28796697087aa7db5a6da389ef820d3dcd0df9e188cc",
+      "slider_count": 38,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-ektachrome-200"
+    },
+    {
+      "id": "emulsion_kodak_ektachrome_400x",
+      "file": "Presets/Slide/Kodak Ektachrome 400X.xmp",
+      "sha256": "ef22e3358733ec0834908b9b2074016dce13832622b99ebd0bfbb4c626969bd2",
+      "slider_count": 39,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-ektachrome-400x"
+    },
+    {
+      "id": "emulsion_kodak_ektachrome_64",
+      "file": "Presets/Slide/Kodak Ektachrome 64.xmp",
+      "sha256": "b0dc8bfb6f1764f9ee958537e5120807a27e47608529dd9b4399a69405b5fce4",
+      "slider_count": 39,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-ektachrome-64"
+    },
+    {
+      "id": "emulsion_kodak_ektachrome_e100",
+      "file": "Presets/Slide/Kodak Ektachrome E100.xmp",
+      "sha256": "d18fa30ed922ca0a8bf02e709ff2445d1b7fe5055cd3a2e6b6c6477e6b922416",
+      "slider_count": 41,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-ektachrome-e100"
+    },
+    {
+      "id": "emulsion_kodak_elite_chrome_400",
+      "file": "Presets/Slide/Kodak Elite Chrome 400.xmp",
+      "sha256": "89bad70b18dc90add55ac85bcf96e344fefa70a6f59d0e43f3f476b79cf71a66",
+      "slider_count": 32,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-elite-chrome-400"
+    },
+    {
+      "id": "emulsion_1980s_vhs_synthwave",
+      "file": "Presets/Creative/1980s VHS Synthwave.xmp",
+      "sha256": "fa313a638da979effe3d35e1e88c8406954e65873eec7412f138495e9c4dc4bd",
+      "slider_count": 55,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "1980s-vhs-synthwave"
+    },
+    {
+      "id": "emulsion_arctic_cinematic",
+      "file": "Presets/Creative/Arctic-Cinematic.xmp",
+      "sha256": "5d5f717da2706c82365cdda9438424c4be91691944470d36597c116ed923ed7b",
+      "slider_count": 24,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "arctic-cinematic"
+    },
+    {
+      "id": "emulsion_autumn_gold",
+      "file": "Presets/Creative/Autumn-Gold.xmp",
+      "sha256": "e79317090b3b6f72f0d5c9e8f2dd6c4680fd7d080b8f33d803eecd9a508b7cd2",
+      "slider_count": 28,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "autumn-gold"
+    },
+    {
+      "id": "emulsion_beige_cream",
+      "file": "Presets/Creative/Beige-Cream.xmp",
+      "sha256": "de9f7e9caedf0efd9fbffeea18fd49fe73259712180d2186e1adfc1097075c12",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "beige-cream"
+    },
+    {
+      "id": "emulsion_bleach_bypass",
+      "file": "Presets/Creative/Bleach Bypass.xmp",
+      "sha256": "8b6f89774909f03e7b3714e78abf9e91b0cf9b12faef9ed0cb66f5680a9423dd",
+      "slider_count": 34,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "bleach-bypass"
+    },
+    {
+      "id": "emulsion_canon_color_science",
+      "file": "Presets/Creative/Canon Color Science.xmp",
+      "sha256": "974a14c09db438c391e1c02479b893e438fe2f483a406e0828c039cfeffcf19b",
+      "slider_count": 42,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "canon-color-science"
+    },
+    {
+      "id": "emulsion_cinematic_beach_teal_orange",
+      "file": "Presets/Creative/Cinematic Beach Teal & Orange.xmp",
+      "sha256": "2b1b2f7f6d036276848c06d66ed91c9f0b46feb9f7c9bdcdbade205c771ec77a",
+      "slider_count": 54,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "cinematic-beach-teal-orange"
+    },
+    {
+      "id": "emulsion_cinematic_dream_tuned",
+      "file": "Presets/Creative/Cinematic Dream - Tuned.xmp",
+      "sha256": "da21abeabb69f0b6afd0547d1bd7eb0a333706772d38538149967846bf821201",
+      "slider_count": 48,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "cinematic-dream-tuned"
+    },
+    {
+      "id": "emulsion_cinematic_dream_look",
+      "file": "Presets/Creative/Cinematic Dream Look.xmp",
+      "sha256": "94237f9a732570ab5a138356d3ff128537c0498100946314358df0bd0d84c643",
+      "slider_count": 35,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "cinematic-dream-look"
+    },
+    {
+      "id": "emulsion_cinematic_teal_and_orange",
+      "file": "Presets/Creative/Cinematic Teal and Orange.xmp",
+      "sha256": "1f95352ff18f884a9dc581182c9abb0bac301bfcb6b1050354a76395223b9855",
+      "slider_count": 30,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "cinematic-teal-and-orange"
+    },
+    {
+      "id": "emulsion_cinestill_800t",
+      "file": "Presets/Creative/Cinestill 800T.xmp",
+      "sha256": "7f875e4de5e1cde08e1341fc7340a57888e8832b2798b24a1ba8ac01e8b80087",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "cinestill-800t"
+    },
+    {
+      "id": "emulsion_classic_cuban_negative",
+      "file": "Presets/Creative/Classic Cuban Negative.xmp",
+      "sha256": "641c868e439cdf2b19d9be4f1cf4c432039f87d3ba11ce5b43fbe8b05a4af6bf",
+      "slider_count": 60,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "classic-cuban-negative"
+    },
+    {
+      "id": "emulsion_classic_portrait_glow",
+      "file": "Presets/Creative/Classic-Portrait-Glow.xmp",
+      "sha256": "e4e32d1f7ba2e07b35e5217fd22563b19a50160de53cd22dde18e6f823ab4f79",
+      "slider_count": 28,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "classic-portrait-glow"
+    },
+    {
+      "id": "emulsion_cozy_espresso",
+      "file": "Presets/Creative/Cozy-Espresso.xmp",
+      "sha256": "2e5a65db1117aa23ced66ca813963ffcfcc3adcf1e88b350df05c9a51508a7bb",
+      "slider_count": 24,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "cozy-espresso"
+    },
+    {
+      "id": "emulsion_cross_processed_velvia",
+      "file": "Presets/Creative/Cross-Processed Velvia.xmp",
+      "sha256": "8c45288e1c2327e9c4893b4ed33ec057b2d864f30c73ffa2eb8defdd4ca07f2c",
+      "slider_count": 46,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "cross-processed-velvia"
+    },
+    {
+      "id": "emulsion_cyberpunk_neon_city",
+      "file": "Presets/Creative/Cyberpunk Neon City.xmp",
+      "sha256": "0c7a3ff199e324a21d57eb437541bfb4033dc5346de851d01e8c768d64c64f32",
+      "slider_count": 33,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "cyberpunk-neon-city"
+    },
+    {
+      "id": "emulsion_deep_forest_green",
+      "file": "Presets/Creative/Deep-Forest-Green.xmp",
+      "sha256": "b1795afe37d093c2e6f3503b8a29da872f4494688a0bd88595d0a4a11d729fb3",
+      "slider_count": 28,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "deep-forest-green"
+    },
+    {
+      "id": "emulsion_deep_moody_shadow",
+      "file": "Presets/Creative/Deep-Moody-Shadow.xmp",
+      "sha256": "9aae56f44de34020dece815f69d43534eb392164e7a93eb79577a436174f1ac2",
+      "slider_count": 25,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "deep-moody-shadow"
+    },
+    {
+      "id": "emulsion_disposable_camera_flash",
+      "file": "Presets/Creative/Disposable Camera Flash.xmp",
+      "sha256": "2fa5c334b40c2628b41ebf0f9be1cd6f37d7fd27c2c23416a42aa3f77e5f8d50",
+      "slider_count": 44,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "disposable-camera-flash"
+    },
+    {
+      "id": "emulsion_eterna_summer",
+      "file": "Presets/Creative/Eterna-Summer.xmp",
+      "sha256": "0baf4cf84ae256e080fe2b1a4b12c3ac25134b3da745092e7fa576c2bb1c2f4e",
+      "slider_count": 30,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "eterna-summer"
+    },
+    {
+      "id": "emulsion_faded_summer_expired",
+      "file": "Presets/Creative/Faded Summer Expired.xmp",
+      "sha256": "b1652a6d484b7c78a7b2b7794cad1160af0949fb963f65080dcefa815da72cd6",
+      "slider_count": 49,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "faded-summer-expired"
+    },
+    {
+      "id": "emulsion_faux_infrared",
+      "file": "Presets/Creative/Faux Infrared.xmp",
+      "sha256": "1c575a42f82bc5b924c68bdcadaa270523522a6ea899c21545f8f44d85f0de2c",
+      "slider_count": 28,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "faux-infrared"
+    },
+    {
+      "id": "emulsion_fuji_soft_ember_classic_neg",
+      "file": "Presets/Creative/Fuji Soft Ember (Classic Neg).xmp",
+      "sha256": "522141df4d25dd1bbd58a735603a71e06809d442684ef37e4a8cef0fe79ad747",
+      "slider_count": 60,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fuji-soft-ember-classic-neg"
+    },
+    {
+      "id": "emulsion_fujifilm_eterna_bleach_bypass",
+      "file": "Presets/Creative/Fujifilm-Eterna-Bleach-Bypass.xmp",
+      "sha256": "bd789c01e451cfe8346b095707bae04854448cc7d6479a3dccee103ebd01bf80",
+      "slider_count": 37,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fujifilm-eterna-bleach-bypass"
+    },
+    {
+      "id": "emulsion_golden_glow",
+      "file": "Presets/Creative/Golden-Glow.xmp",
+      "sha256": "680e8391b2ae301b01560b9be2019933330839f81e1630a4cfd88364acf12402",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "golden-glow"
+    },
+    {
+      "id": "emulsion_high_key_candy_architecture",
+      "file": "Presets/Creative/High-Key Candy Architecture.xmp",
+      "sha256": "a2e5140483c4d00b4d871ec5f9471b6e0f3bd281456836952639d98d7a6df730",
+      "slider_count": 60,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "high-key-candy-architecture"
+    },
+    {
+      "id": "emulsion_kodachrome_blue",
+      "file": "Presets/Creative/Kodachrome-Blue.xmp",
+      "sha256": "f9c325a256d62ec918b977f76c57217ac0e03ac4eada5c1567383924dbce153a",
+      "slider_count": 32,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodachrome-blue"
+    },
+    {
+      "id": "emulsion_kodak_aerochrome",
+      "file": "Presets/Creative/Kodak Aerochrome.xmp",
+      "sha256": "2964750a4fceb9cb9d6b1322ae172675605d6ef31db69a1d67611468a82a0386",
+      "slider_count": 46,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-aerochrome"
+    },
+    {
+      "id": "emulsion_kodak_2383_print_film",
+      "file": "Presets/Creative/Kodak-2383-Print-Film.xmp",
+      "sha256": "d96cbff2367e717060264c067a64600aae68fb86293f7ee3bbb91605bf65b86c",
+      "slider_count": 33,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-2383-print-film"
+    },
+    {
+      "id": "emulsion_light_and_airy_fine_art",
+      "file": "Presets/Creative/Light and Airy Fine Art.xmp",
+      "sha256": "aafae6c2167bceb78f38967144e36c1094482eacf765f3106f0a0bfc2a34f3fa",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "light-and-airy-fine-art"
+    },
+    {
+      "id": "emulsion_lomography_cross_processed",
+      "file": "Presets/Creative/Lomography Cross-Processed.xmp",
+      "sha256": "00e2dd297d76254c691e390f9c939cd213f6679d530d95786c666ae6aeb9c5d6",
+      "slider_count": 53,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "lomography-cross-processed"
+    },
+    {
+      "id": "emulsion_lomography_metropolis",
+      "file": "Presets/Creative/Lomography-Metropolis.xmp",
+      "sha256": "a01cd29795cd723ca94e52e34f2d4ec85f8fe5e957ec3e1b02f008d6d0f8236e",
+      "slider_count": 31,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "lomography-metropolis"
+    },
+    {
+      "id": "emulsion_matte_fade",
+      "file": "Presets/Creative/Matte Fade.xmp",
+      "sha256": "bcbb10b3c785db25befbf053b4e2c60883d7fe4afa96fe4a2b438b84c532d8ed",
+      "slider_count": 31,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "matte-fade"
+    },
+    {
+      "id": "emulsion_mccurry_kodachrome",
+      "file": "Presets/Creative/McCurry-Kodachrome.xmp",
+      "sha256": "9943f577fbcb19d9a8fbfc099d37ae03eb062b77ad5904ac0564718e592bb3a4",
+      "slider_count": 31,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "mccurry-kodachrome"
+    },
+    {
+      "id": "emulsion_medina_teal_and_orange_tuned",
+      "file": "Presets/Creative/Medina Teal and Orange - Tuned.xmp",
+      "sha256": "65a83a2fdf1b4eadd51f22f4c910f0f1bb0b4ca75cbee99bad88e2328d394f5f",
+      "slider_count": 54,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "medina-teal-and-orange-tuned"
+    },
+    {
+      "id": "emulsion_midnight_city",
+      "file": "Presets/Creative/Midnight-City.xmp",
+      "sha256": "93c57e461223258cc7b3b32f8d674315d756f519f987cd37b446ffb1ca10d48d",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "midnight-city"
+    },
+    {
+      "id": "emulsion_moody_cinematic_film_creator_tuned",
+      "file": "Presets/Creative/Moody Cinematic Film - Creator Tuned.xmp",
+      "sha256": "68c677810606b96576d66bd07293c53746fab81259fb6f484a6ce8a13111b492",
+      "slider_count": 60,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "moody-cinematic-film-creator-tuned"
+    },
+    {
+      "id": "emulsion_moody_pnw",
+      "file": "Presets/Creative/Moody PNW.xmp",
+      "sha256": "ca46f36aedcd608db988f25300f96eb8e90c91fa1e9f97f8d02027c5bcefedd0",
+      "slider_count": 33,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "moody-pnw"
+    },
+    {
+      "id": "emulsion_pastel_anime_aethereal",
+      "file": "Presets/Creative/Pastel Anime Aethereal.xmp",
+      "sha256": "4ec50563d28f37c0889b3e8263264ce5c71cd710274ca2929eb81a24608b331b",
+      "slider_count": 36,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "pastel-anime-aethereal"
+    },
+    {
+      "id": "emulsion_pastel_summer_bronze",
+      "file": "Presets/Creative/Pastel Summer Bronze.xmp",
+      "sha256": "04328721e88e8cc65cc4681b84356dabc6cda4f41352563a010b14e598ccbb73",
+      "slider_count": 60,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "pastel-summer-bronze"
+    },
+    {
+      "id": "emulsion_polaroid_sx_70",
+      "file": "Presets/Creative/Polaroid SX-70.xmp",
+      "sha256": "9bc13dcd078233dcf940c3cc8fada12bfa1a27fe840756b9d9f929e549ac3c9c",
+      "slider_count": 50,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "polaroid-sx-70"
+    },
+    {
+      "id": "emulsion_portugal_nostalgic_fuji_sim",
+      "file": "Presets/Creative/Portugal Nostalgic (Fuji Sim).xmp",
+      "sha256": "7ce148ce09f7832a7758cb261767b17ed68a72e2a3d97876aea1d68cff5bd5a5",
+      "slider_count": 60,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "portugal-nostalgic-fuji-sim"
+    },
+    {
+      "id": "emulsion_pushed_cinestill_800t",
+      "file": "Presets/Creative/Pushed-CineStill-800T.xmp",
+      "sha256": "90d59f7db08a1e50aa7642947158947aef084cd2d47a58fcef9d0424362ec399",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "pushed-cinestill-800t"
+    },
+    {
+      "id": "emulsion_ricoh_superior_100_negative_film",
+      "file": "Presets/Creative/Ricoh Superior 100 (Negative Film).xmp",
+      "sha256": "3e32ecf16ba997dfbcc10898b921bd3953aeaf11c8d607df130d61143e83bf9f",
+      "slider_count": 50,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "ricoh-superior-100-negative-film"
+    },
+    {
+      "id": "emulsion_soft_dreamy_pastel",
+      "file": "Presets/Creative/Soft-Dreamy-Pastel.xmp",
+      "sha256": "6976a2346bf4d0abddc24d92fa7f6ad798b4ba8c106a205abea4869463e04aaf",
+      "slider_count": 24,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "soft-dreamy-pastel"
+    },
+    {
+      "id": "emulsion_stage_lights",
+      "file": "Presets/Creative/Stage-Lights.xmp",
+      "sha256": "c0336c2fcd53dbff7005122c1ef55460be98643ec33c679d369e79e17d27348f",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "stage-lights"
+    },
+    {
+      "id": "emulsion_super_8_home_movie",
+      "file": "Presets/Creative/Super 8 Home Movie.xmp",
+      "sha256": "bdb4183c5e14e4b548929b7f1b661324b01e73d7126d9b8e0f36b98754ce68b9",
+      "slider_count": 51,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "super-8-home-movie"
+    },
+    {
+      "id": "emulsion_urban_street",
+      "file": "Presets/Creative/Urban-Street.xmp",
+      "sha256": "3f8dca772135cbd2ec4d207d05d0a3774180d9a856947dff8a5077181ece7681",
+      "slider_count": 25,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "urban-street"
+    },
+    {
+      "id": "emulsion_vibrant_color_pop",
+      "file": "Presets/Creative/Vibrant-Color-Pop.xmp",
+      "sha256": "4139339c607f51294847c7a78013480839339af42cef3463c98b6b4df6111a89",
+      "slider_count": 28,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "vibrant-color-pop"
+    },
+    {
+      "id": "emulsion_wes_anderson_pastel",
+      "file": "Presets/Creative/Wes Anderson Pastel.xmp",
+      "sha256": "530008d8da2584c2e6f7ef5911f2818c86a5203785d3c8aec554a7c2dc65add8",
+      "slider_count": 50,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "wes-anderson-pastel"
+    },
+    {
+      "id": "emulsion_wong_kar_wai_80s_hong_kong",
+      "file": "Presets/Creative/Wong Kar-Wai 80s Hong Kong.xmp",
+      "sha256": "05cc8abe148aa75849c22b018d38778e621faf237600d3411b3a04204d3f5c9e",
+      "slider_count": 53,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "wong-kar-wai-80s-hong-kong"
+    },
+    {
+      "id": "emulsion_y2k_flash_digicam",
+      "file": "Presets/Creative/Y2K Flash Digicam.xmp",
+      "sha256": "97285f8ae10ebaa7a400037d8b7216e3a85e877602dbc764fa3bc86b87079912",
+      "slider_count": 47,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "y2k-flash-digicam"
+    },
+    {
+      "id": "emulsion_albumen_print",
+      "file": "Presets/Alternative-Process/Albumen Print.xmp",
+      "sha256": "c191b157fc499868992373225ef247dbe43216a2aea2fcc0ce93b224e5931de4",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "albumen-print"
+    },
+    {
+      "id": "emulsion_autochrome",
+      "file": "Presets/Alternative-Process/Autochrome.xmp",
+      "sha256": "9e284ba15c95f6b81d209abf145eab38dcd539cc3d8b313cb7ad151dbacd15e4",
+      "slider_count": 39,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "autochrome"
+    },
+    {
+      "id": "emulsion_bw_infrared",
+      "file": "Presets/Alternative-Process/BW Infrared.xmp",
+      "sha256": "d4f92e539ad3128e0217589f95b67c14b877dfd006432f93f30734b3eea258fb",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "bw-infrared"
+    },
+    {
+      "id": "emulsion_bromoil",
+      "file": "Presets/Alternative-Process/Bromoil.xmp",
+      "sha256": "529c2e1eb6cd4a510e2d55fa99d3d39cc8d4fb7b5e570331b0006b4d767e9bba",
+      "slider_count": 25,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "bromoil"
+    },
+    {
+      "id": "emulsion_calotype",
+      "file": "Presets/Alternative-Process/Calotype.xmp",
+      "sha256": "1d6f53da873a6f088846b770f8946748947d0fafe8d7e90dace12ecd043cf85b",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "calotype"
+    },
+    {
+      "id": "emulsion_cross_process_c41_e6",
+      "file": "Presets/Alternative-Process/Cross Process C41→E6.xmp",
+      "sha256": "6b87c7363238b393bba9933b08ff4b3a7613c8e29fd425259744656fd67597a1",
+      "slider_count": 36,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "cross-process-c41-e6"
+    },
+    {
+      "id": "emulsion_cross_process_e6_c41",
+      "file": "Presets/Alternative-Process/Cross Process E6→C41.xmp",
+      "sha256": "d176e073d524883a6d490529f9e3389c892c392434081bd67fef07df01ca4901",
+      "slider_count": 42,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "cross-process-e6-c41"
+    },
+    {
+      "id": "emulsion_cyanotype_classic",
+      "file": "Presets/Alternative-Process/Cyanotype Classic.xmp",
+      "sha256": "a42d6e6403d407f1a00b6fefa3f275fa3d7e63490e4c800ffd31dbc74fba590f",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "cyanotype-classic"
+    },
+    {
+      "id": "emulsion_cyanotype_tea_toned",
+      "file": "Presets/Alternative-Process/Cyanotype Tea-Toned.xmp",
+      "sha256": "ada6923f96c885c68a1cdb3f362930b3a5fe1c2224d37c1fe84a324077e1852b",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "cyanotype-tea-toned"
+    },
+    {
+      "id": "emulsion_daguerreotype",
+      "file": "Presets/Alternative-Process/Daguerreotype.xmp",
+      "sha256": "12d4af9665347ae722040ad306dedf4dec74d37e3847efd5ce058901c08f8719",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "daguerreotype"
+    },
+    {
+      "id": "emulsion_diana_f",
+      "file": "Presets/Alternative-Process/Diana F+.xmp",
+      "sha256": "148256df281e932a0fb30b93548df5cc701e81bf3631317dfbafffb40d79c3c6",
+      "slider_count": 34,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "diana-f"
+    },
+    {
+      "id": "emulsion_film_soup",
+      "file": "Presets/Alternative-Process/Film Soup.xmp",
+      "sha256": "b2f71ba25279d6d4d4b36d74babface67528604b743e209f0f9ea217ab663b89",
+      "slider_count": 47,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "film-soup"
+    },
+    {
+      "id": "emulsion_gum_bichromate",
+      "file": "Presets/Alternative-Process/Gum Bichromate.xmp",
+      "sha256": "36efce1ca086626615cc2035bf410211b6dcb9b8ff73c53ac32148aea1fd3dd4",
+      "slider_count": 28,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "gum-bichromate"
+    },
+    {
+      "id": "emulsion_holga",
+      "file": "Presets/Alternative-Process/Holga.xmp",
+      "sha256": "e7a4b4cc2257057906cd47485415904c965780e3d28b9645999baf674f2ce8cc",
+      "slider_count": 35,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "holga"
+    },
+    {
+      "id": "emulsion_lith_print",
+      "file": "Presets/Alternative-Process/Lith Print.xmp",
+      "sha256": "5dbff4fd95e5a5db9c0fe2398f72088b32f73b2e8d7b312fa4f4f703db34353f",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "lith-print"
+    },
+    {
+      "id": "emulsion_lomo_lc_a",
+      "file": "Presets/Alternative-Process/Lomo LC-A.xmp",
+      "sha256": "68277098567cc4d4bb139faf05868c511e81bba33870f614423c7346371b1f91",
+      "slider_count": 42,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "lomo-lc-a"
+    },
+    {
+      "id": "emulsion_palladium_print",
+      "file": "Presets/Alternative-Process/Palladium Print.xmp",
+      "sha256": "57b73b177df3f9f01dec22b34100749ac14d4f86f427d44e1af6f84cbeb6d13e",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "palladium-print"
+    },
+    {
+      "id": "emulsion_pinhole",
+      "file": "Presets/Alternative-Process/Pinhole.xmp",
+      "sha256": "1cc6fc2337a5d979488abf0b54f8c5710eb14e36c708df4197a75e5feaf7c924",
+      "slider_count": 28,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "pinhole"
+    },
+    {
+      "id": "emulsion_platinum_print",
+      "file": "Presets/Alternative-Process/Platinum Print.xmp",
+      "sha256": "d20bf7370e1ede6947ed0b4eeacfaf8370a4e02632c50f228f0d1b3cd8fb6c44",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "platinum-print"
+    },
+    {
+      "id": "emulsion_redscale",
+      "file": "Presets/Alternative-Process/Redscale.xmp",
+      "sha256": "61b5b205dc5bb72e79af797758d7a6afb3bf4e6e2b32fb9878339ee6f1cb70df",
+      "slider_count": 46,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "redscale"
+    },
+    {
+      "id": "emulsion_salt_print",
+      "file": "Presets/Alternative-Process/Salt Print.xmp",
+      "sha256": "d4862a333aa19848d995408503c8168379d7a94527b46fdbb6effe94e8e28a86",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "salt-print"
+    },
+    {
+      "id": "emulsion_solarization",
+      "file": "Presets/Alternative-Process/Solarization.xmp",
+      "sha256": "343c51a9fb85b6e51b2e997ac92de04354d894f1171eb45b5fb2c2aeb9c3b5f7",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "solarization"
+    },
+    {
+      "id": "emulsion_van_dyke_brown",
+      "file": "Presets/Alternative-Process/Van Dyke Brown.xmp",
+      "sha256": "749a1ae884e286961470d910eb7b2b9191ca4c649b68af8febecb911cef57b43",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "van-dyke-brown"
+    },
+    {
+      "id": "emulsion_wet_plate_ambrotype",
+      "file": "Presets/Alternative-Process/Wet Plate Ambrotype.xmp",
+      "sha256": "911d5ec3bfcd9cdeee0f3a62090f140e817d7f618c05ce33b2029f8808c5cf72",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "wet-plate-ambrotype"
+    },
+    {
+      "id": "emulsion_wet_plate_tintype",
+      "file": "Presets/Alternative-Process/Wet Plate Tintype.xmp",
+      "sha256": "862866d0f0f36a2083227f3e6fc837511246be20d378bfc502d8c0c0595f7394",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "wet-plate-tintype"
+    },
+    {
+      "id": "emulsion_astro_nr",
+      "file": "Presets/Utility/Astro NR.xmp",
+      "sha256": "c8b35fa7a3b977c9c9b88184b36d00d5657632f487ecdc051974419dec754cf5",
+      "slider_count": 2,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "LuminanceNoiseReductionDetail",
+        "ProcessVersion"
+      ],
+      "source_slug": "astro-nr"
+    },
+    {
+      "id": "emulsion_dehaze_correct",
+      "file": "Presets/Utility/Dehaze Correct.xmp",
+      "sha256": "d7ff4a900a7c64d7106c6a17595ba7f9ce642c817720a5324dfd3bff52243ecc",
+      "slider_count": 1,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "AutoLateralCA",
+        "LensProfileEnable",
+        "ProcessVersion"
+      ],
+      "source_slug": "dehaze-correct"
+    },
+    {
+      "id": "emulsion_exposure_0_30_af7e93f4",
+      "file": "Presets/Utility/Exposure +0.30.xmp",
+      "sha256": "7a7f2d4ad10b9a387d9a78743505c9a265848aa3fc05d532dcbd6827bd8a3079",
+      "slider_count": 0,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "exposure-0-30"
+    },
+    {
+      "id": "emulsion_exposure_0_70_0b5d9cf6",
+      "file": "Presets/Utility/Exposure +0.70.xmp",
+      "sha256": "b30d935da07a95f421a5ffaae54b48f0a47b8be56f12d55681f47c93c292e35a",
+      "slider_count": 0,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "exposure-0-70"
+    },
+    {
+      "id": "emulsion_exposure_1_00_4e345848",
+      "file": "Presets/Utility/Exposure +1.00.xmp",
+      "sha256": "1746ad18830ece55039580113da51ea5e93ed3fa29c0d1e257db9e1bdb0c071b",
+      "slider_count": 0,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "exposure-1-00"
+    },
+    {
+      "id": "emulsion_exposure_1_50",
+      "file": "Presets/Utility/Exposure +1.50.xmp",
+      "sha256": "bfb08ef5dba0f7b0bdd149a9e1ee4fecb60eff17e638fe0bcb6b97d210ce0271",
+      "slider_count": 0,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "exposure-1-50"
+    },
+    {
+      "id": "emulsion_exposure_2_00",
+      "file": "Presets/Utility/Exposure +2.00.xmp",
+      "sha256": "48d20491c6005f48655dbbf173a61ed030ad24af185bddd23f9b412edad38a00",
+      "slider_count": 0,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "exposure-2-00"
+    },
+    {
+      "id": "emulsion_exposure_0_30_15be8821",
+      "file": "Presets/Utility/Exposure -0.30.xmp",
+      "sha256": "02a7509d7a0b525429e6d14e3baa63aea702f1c325ecff7d3d8953ae5492cea2",
+      "slider_count": 0,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "exposure-0-30"
+    },
+    {
+      "id": "emulsion_exposure_0_70_3f797f33",
+      "file": "Presets/Utility/Exposure -0.70.xmp",
+      "sha256": "774c9ffa6209385859674d848f42c08ebd06b00f968d58365c7f80017b49ef63",
+      "slider_count": 0,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "exposure-0-70"
+    },
+    {
+      "id": "emulsion_exposure_1_00_5c520b12",
+      "file": "Presets/Utility/Exposure -1.00.xmp",
+      "sha256": "2605583ea01698df5d2d55333c3cac6e54a526bab8b00fa0146d1a4ed13ee78e",
+      "slider_count": 0,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "exposure-1-00"
+    },
+    {
+      "id": "emulsion_full_reset",
+      "file": "Presets/Utility/Full Reset.xmp",
+      "sha256": "7b01b53d97a38adf12a7e0f281fb05af67274b99324135e2378d620b2e73ecf9",
+      "slider_count": 68,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "AutoLateralCA",
+        "ColorNoiseReductionDetail",
+        "ColorNoiseReductionSmoothness",
+        "DefringeGreenAmount",
+        "DefringeGreenHue",
+        "DefringePurpleAmount",
+        "DefringePurpleHue",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "LensManualDistortionAmount",
+        "LensProfileEnable",
+        "LuminanceNoiseReductionContrast",
+        "LuminanceNoiseReductionDetail",
+        "PerspectiveUpright",
+        "PostCropVignetteStyle",
+        "ProcessVersion",
+        "VignetteAmount"
+      ],
+      "source_slug": "full-reset"
+    },
+    {
+      "id": "emulsion_grain_fine",
+      "file": "Presets/Utility/Grain - Fine.xmp",
+      "sha256": "a4bf0224ff1fd3b3731c0861c2208cc054958befb05c1462fe50dcb80c291a8f",
+      "slider_count": 5,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "grain-fine"
+    },
+    {
+      "id": "emulsion_grain_heavy",
+      "file": "Presets/Utility/Grain - Heavy.xmp",
+      "sha256": "898d618ef89f06f7702a4452da422926aabb138773ee97211b17653c2b3ce712",
+      "slider_count": 5,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "grain-heavy"
+    },
+    {
+      "id": "emulsion_grain_medium",
+      "file": "Presets/Utility/Grain - Medium.xmp",
+      "sha256": "786345530562a5ead3cee83d9140312a6086785c453d595224c4bc308f80855e",
+      "slider_count": 5,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "grain-medium"
+    },
+    {
+      "id": "emulsion_grain_pushed",
+      "file": "Presets/Utility/Grain - Pushed.xmp",
+      "sha256": "9e2008ae2f8ca40a4bd5114fc5eb4a2e51a60d2a612cdf384e40d8a248057d01",
+      "slider_count": 5,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "grain-pushed"
+    },
+    {
+      "id": "emulsion_heavy_nr",
+      "file": "Presets/Utility/Heavy NR.xmp",
+      "sha256": "9f2e5e955490ab156016c3bac532f533ada5e0d88d4f81e2796f140df80ce398",
+      "slider_count": 2,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "LuminanceNoiseReductionDetail",
+        "ProcessVersion"
+      ],
+      "source_slug": "heavy-nr"
+    },
+    {
+      "id": "emulsion_high_iso_nr",
+      "file": "Presets/Utility/High ISO NR.xmp",
+      "sha256": "01d795ae79b899131bbb1ebb59c7e2ebd3d1224052ace09844876bde548bc729",
+      "slider_count": 2,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "LuminanceNoiseReductionDetail",
+        "ProcessVersion"
+      ],
+      "source_slug": "high-iso-nr"
+    },
+    {
+      "id": "emulsion_lens_correction_disable",
+      "file": "Presets/Utility/Lens Correction - Disable.xmp",
+      "sha256": "af3e4a145f9679bbda08e1fa7638ee10b33d9fa23b51467cec9b7577e347eb0f",
+      "slider_count": 0,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "AutoLateralCA",
+        "LensProfileEnable",
+        "ProcessVersion"
+      ],
+      "source_slug": "lens-correction-disable"
+    },
+    {
+      "id": "emulsion_lens_correction_enable",
+      "file": "Presets/Utility/Lens Correction - Enable.xmp",
+      "sha256": "3206bae598ca93957aa16e2c86fe0eb509d94e11e4397075350b8b2bdc77beea",
+      "slider_count": 0,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "AutoLateralCA",
+        "LensProfileEnable",
+        "ProcessVersion"
+      ],
+      "source_slug": "lens-correction-enable"
+    },
+    {
+      "id": "emulsion_light_nr",
+      "file": "Presets/Utility/Light NR.xmp",
+      "sha256": "65dca3b9af5ddf1021f2eb8dc8da4c3d6578d978d7497f29d09d98c23774abdf",
+      "slider_count": 2,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "LuminanceNoiseReductionDetail",
+        "ProcessVersion"
+      ],
+      "source_slug": "light-nr"
+    },
+    {
+      "id": "emulsion_medium_nr",
+      "file": "Presets/Utility/Medium NR.xmp",
+      "sha256": "482ba9d8ac1717ad620e6fdb9a8c300c76271161964ee44edeecbfdc280d9d6d",
+      "slider_count": 2,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "LuminanceNoiseReductionDetail",
+        "ProcessVersion"
+      ],
+      "source_slug": "medium-nr"
+    },
+    {
+      "id": "emulsion_reset_basic",
+      "file": "Presets/Utility/Reset Basic.xmp",
+      "sha256": "66749fc68232e6e1d5df5d21026dbd9002e771413dc496b5637b7442b4bf1ecc",
+      "slider_count": 10,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "reset-basic"
+    },
+    {
+      "id": "emulsion_reset_effects_detail",
+      "file": "Presets/Utility/Reset Effects + Detail.xmp",
+      "sha256": "908ba523adcb867c7c9ddfe729e3c6c951ea06655d46d39e29712e4129a8175a",
+      "slider_count": 16,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "AutoLateralCA",
+        "ColorNoiseReductionDetail",
+        "ColorNoiseReductionSmoothness",
+        "DefringeGreenAmount",
+        "DefringeGreenHue",
+        "DefringePurpleAmount",
+        "DefringePurpleHue",
+        "LensManualDistortionAmount",
+        "LensProfileEnable",
+        "LuminanceNoiseReductionContrast",
+        "LuminanceNoiseReductionDetail",
+        "PerspectiveUpright",
+        "PostCropVignetteStyle",
+        "ProcessVersion",
+        "VignetteAmount"
+      ],
+      "source_slug": "reset-effects-detail"
+    },
+    {
+      "id": "emulsion_reset_hsl",
+      "file": "Presets/Utility/Reset HSL.xmp",
+      "sha256": "463709e30445b6fd01b7dd5d110206ac5830b6ec7f707818471d11c35da92cb7",
+      "slider_count": 38,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "reset-hsl"
+    },
+    {
+      "id": "emulsion_reset_tone_curve",
+      "file": "Presets/Utility/Reset Tone Curve.xmp",
+      "sha256": "b406660a24dc1d5d4606e1e85f53a3ee19245e6358600d6f24d46dd1762fff78",
+      "slider_count": 7,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "reset-tone-curve"
+    },
+    {
+      "id": "emulsion_sharpening_creative",
+      "file": "Presets/Utility/Sharpening - Creative.xmp",
+      "sha256": "49a175e41c4f7df984fbea96efb92fdd8b0e934ab8abfd31d866a4948f0ee669",
+      "slider_count": 4,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "sharpening-creative"
+    },
+    {
+      "id": "emulsion_sharpening_landscape",
+      "file": "Presets/Utility/Sharpening - Landscape.xmp",
+      "sha256": "78cbcc024441c98f1b247fa8398883a5a071aeba93a20d5b0f36ab5b4e8281cd",
+      "slider_count": 4,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "sharpening-landscape"
+    },
+    {
+      "id": "emulsion_sharpening_portrait",
+      "file": "Presets/Utility/Sharpening - Portrait.xmp",
+      "sha256": "5ff379428de3de062f707e4e257c606d1b35f9a34e7858afe822d08172da1fcb",
+      "slider_count": 4,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "sharpening-portrait"
+    },
+    {
+      "id": "emulsion_sharpening_print_output",
+      "file": "Presets/Utility/Sharpening - Print Output.xmp",
+      "sha256": "c0dc4359a9a2d7de6e0a84f9774f4e8d2af004e7bee5ed5635f01f0449976523",
+      "slider_count": 4,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "sharpening-print-output"
+    },
+    {
+      "id": "emulsion_sharpening_screen_output",
+      "file": "Presets/Utility/Sharpening - Screen Output.xmp",
+      "sha256": "944b92439c5df63bae5958f063a17e7bbecb456f9243ed9c0438133fa416fd7e",
+      "slider_count": 4,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "sharpening-screen-output"
+    },
+    {
+      "id": "emulsion_vignette_creative_white",
+      "file": "Presets/Utility/Vignette - Creative White.xmp",
+      "sha256": "4d5ed67e3807e59ab2b64de2972aaadfcee4b3b3344b30198bf98a619ee415cf",
+      "slider_count": 4,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "PostCropVignetteStyle",
+        "ProcessVersion"
+      ],
+      "source_slug": "vignette-creative-white"
+    },
+    {
+      "id": "emulsion_vignette_medium",
+      "file": "Presets/Utility/Vignette - Medium.xmp",
+      "sha256": "f9b37163a5defff6df80cfb3259b1afbf4d6ccbc41f9e3a15884bfd25829baad",
+      "slider_count": 4,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "PostCropVignetteStyle",
+        "ProcessVersion"
+      ],
+      "source_slug": "vignette-medium"
+    },
+    {
+      "id": "emulsion_vignette_strong",
+      "file": "Presets/Utility/Vignette - Strong.xmp",
+      "sha256": "23e2b8e4d906c07672dacd1fb5283aaabf63e939cf29b17e4459b7a309951e64",
+      "slider_count": 4,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "PostCropVignetteStyle",
+        "ProcessVersion"
+      ],
+      "source_slug": "vignette-strong"
+    },
+    {
+      "id": "emulsion_vignette_subtle",
+      "file": "Presets/Utility/Vignette - Subtle.xmp",
+      "sha256": "8a27a360e8436dba3d4493f3be45338b1a82ecf91fcf0087645f90fe8f19a5bd",
+      "slider_count": 4,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "PostCropVignetteStyle",
+        "ProcessVersion"
+      ],
+      "source_slug": "vignette-subtle"
+    },
+    {
+      "id": "emulsion_wb_cloudy",
+      "file": "Presets/Utility/WB Cloudy.xmp",
+      "sha256": "8b9a8ac510554d5455f8dd55f1d1ba153273e0f61aa7024b13a43935c68f8fcf",
+      "slider_count": 0,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "wb-cloudy"
+    },
+    {
+      "id": "emulsion_wb_daylight",
+      "file": "Presets/Utility/WB Daylight.xmp",
+      "sha256": "1e3ebb4a87400c2d72faff859aba90bf5d7cf570eead543bd8b8f31f340090db",
+      "slider_count": 0,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "wb-daylight"
+    },
+    {
+      "id": "emulsion_wb_flash",
+      "file": "Presets/Utility/WB Flash.xmp",
+      "sha256": "95c79d337c30d9bf112643ebba47ab963ee6525f221c9a2738465c02f8109e7d",
+      "slider_count": 0,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "wb-flash"
+    },
+    {
+      "id": "emulsion_wb_fluorescent",
+      "file": "Presets/Utility/WB Fluorescent.xmp",
+      "sha256": "cc38a608f29484a3a6e0871a2fb0e2dde04841d88cdfb0dd1395c8de7ebbebed",
+      "slider_count": 0,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "wb-fluorescent"
+    },
+    {
+      "id": "emulsion_wb_shade",
+      "file": "Presets/Utility/WB Shade.xmp",
+      "sha256": "2905bb310d6cc8a6aa913cbe3d5c5152f5d275bebab860063f6d5e08ecf6123e",
+      "slider_count": 0,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "wb-shade"
+    },
+    {
+      "id": "emulsion_wb_tungsten",
+      "file": "Presets/Utility/WB Tungsten.xmp",
+      "sha256": "622841f42d0ef1d0c7f96a28b97ef4b46b8ad57de189c53e2766ecb3751f18ca",
+      "slider_count": 0,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "wb-tungsten"
+    },
+    {
+      "id": "emulsion_bright_airy_wedding",
+      "file": "Presets/Genre/Bright & Airy Wedding.xmp",
+      "sha256": "cc58463a0258a3ab9589662ad0a0c8a44a88d4dffa57d17d4feb95f24ae62c08",
+      "slider_count": 28,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "bright-airy-wedding"
+    },
+    {
+      "id": "emulsion_bright_neutral_interior",
+      "file": "Presets/Genre/Bright Neutral Interior.xmp",
+      "sha256": "f4da44cf9aff852a6b6a49dba366b561b99d7a5ec0c4c247d76fcb3fba83b1e6",
+      "slider_count": 24,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "bright-neutral-interior"
+    },
+    {
+      "id": "emulsion_classic_timeless_wedding",
+      "file": "Presets/Genre/Classic Timeless Wedding.xmp",
+      "sha256": "cbe1757480a03d4e9d631ffbbb1a752bb309394c8c3ca6a68e8cd21ce15a09e8",
+      "slider_count": 25,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "classic-timeless-wedding"
+    },
+    {
+      "id": "emulsion_clean_baby_portrait",
+      "file": "Presets/Genre/Clean Baby Portrait.xmp",
+      "sha256": "f51bc884122495e02959c970bec6b77ff08279390c1ea6659d049d44c1626105",
+      "slider_count": 25,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "clean-baby-portrait"
+    },
+    {
+      "id": "emulsion_clean_bright_food",
+      "file": "Presets/Genre/Clean Bright Food.xmp",
+      "sha256": "99e0e937a85c25f72861e117dfb9f351ffbb71ef5f402db751589d8b61b68f22",
+      "slider_count": 25,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "clean-bright-food"
+    },
+    {
+      "id": "emulsion_color_decisive_moment",
+      "file": "Presets/Genre/Color Decisive Moment.xmp",
+      "sha256": "6c4ff82969b04b114b74f7c9aacb4a4310466fded7d2dd431cc2463336391aa3",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "color-decisive-moment"
+    },
+    {
+      "id": "emulsion_color_recovery",
+      "file": "Presets/Genre/Color Recovery.xmp",
+      "sha256": "8c698ad53465ef84b3f08ce0e23757cf0ceac074f54d47ee8ed3316990261185",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "color-recovery"
+    },
+    {
+      "id": "emulsion_cool_modern_interior",
+      "file": "Presets/Genre/Cool Modern Interior.xmp",
+      "sha256": "0e4bc17b5a59154a826db1e4fb4a5de4cc540dc333824734d838dadb92c67449",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "cool-modern-interior"
+    },
+    {
+      "id": "emulsion_court_action_indoor",
+      "file": "Presets/Genre/Court Action Indoor.xmp",
+      "sha256": "c27158530efb0ed8f528dc228d3b4efee5ddc90983eec299630bca9fb2ea762c",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "court-action-indoor"
+    },
+    {
+      "id": "emulsion_dark_moody_culinary",
+      "file": "Presets/Genre/Dark Moody Culinary.xmp",
+      "sha256": "50766b178261a6a45bb991c9c40af5d04d564b9cbfc902427d8e90c2852b0d75",
+      "slider_count": 33,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "dark-moody-culinary"
+    },
+    {
+      "id": "emulsion_detail_pop",
+      "file": "Presets/Genre/Detail Pop.xmp",
+      "sha256": "3aff79f7111a3f1511aed3522184786de55118d187b3c891c5add1260e1d85ca",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "detail-pop"
+    },
+    {
+      "id": "emulsion_dreamy_maternity",
+      "file": "Presets/Genre/Dreamy Maternity.xmp",
+      "sha256": "d70f641b382b9dd46047d19dedfcb06c098fa1db513f3d1f7f13b153057d99c4",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "dreamy-maternity"
+    },
+    {
+      "id": "emulsion_epic_landscape",
+      "file": "Presets/Genre/Epic Landscape.xmp",
+      "sha256": "af5e3d80656f4bd27477054f05d2ce4cd5c6a547ab2da36c68f705371fe3be59",
+      "slider_count": 28,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "epic-landscape"
+    },
+    {
+      "id": "emulsion_eye_enhance",
+      "file": "Presets/Genre/Eye Enhance.xmp",
+      "sha256": "d3da1bb9e804e48fc78df1dccea0ec74481021e748beadb748289c9e0966f978",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "eye-enhance"
+    },
+    {
+      "id": "emulsion_golden_grid_architecture",
+      "file": "Presets/Genre/Golden Grid Architecture.xmp",
+      "sha256": "d1c1bb30e1a47abbca6e22e49c8f58d483c85e7839a2aa7820385644b651f8d9",
+      "slider_count": 34,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "PostCropVignetteHighlightContrast",
+        "PostCropVignetteStyle",
+        "ProcessVersion"
+      ],
+      "source_slug": "golden-grid-architecture"
+    },
+    {
+      "id": "emulsion_grass_natural_exterior",
+      "file": "Presets/Genre/Grass Natural Exterior.xmp",
+      "sha256": "a7a8a1a412d2d5318ebfbec1e47f00f32a3b6ca4be6ce0c78ea7e070ed4c53dd",
+      "slider_count": 25,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "grass-natural-exterior"
+    },
+    {
+      "id": "emulsion_haze_removal",
+      "file": "Presets/Genre/Haze Removal.xmp",
+      "sha256": "7b3a4c51933c6630d647fb9cdc22b74d7e43a691273f22faabda482d83db7f1c",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "haze-removal"
+    },
+    {
+      "id": "emulsion_high_contrast_editorial",
+      "file": "Presets/Genre/High Contrast Editorial.xmp",
+      "sha256": "ecbba45dff9d60e28c0c03428717b6957947147d1831d53831da04e91a14b9dc",
+      "slider_count": 32,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "high-contrast-editorial"
+    },
+    {
+      "id": "emulsion_lifestyle_product",
+      "file": "Presets/Genre/Lifestyle Product.xmp",
+      "sha256": "5c1a5b33086ce31cabdde6b57316f49aa1d7c85978ac6a19e6e434a678a075b9",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "lifestyle-product"
+    },
+    {
+      "id": "emulsion_low_light_performance",
+      "file": "Presets/Genre/Low Light Performance.xmp",
+      "sha256": "cef38c57aa5e232116c6eab70a378acbb00fc28d5a9afb3710a86350f6c5276d",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "low-light-performance"
+    },
+    {
+      "id": "emulsion_milky_way_core",
+      "file": "Presets/Genre/Milky Way Core.xmp",
+      "sha256": "7d0438a549db6ec89fb1b1da68e17ed0dd7518d70c2d4023c7e51d105530ce23",
+      "slider_count": 28,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "milky-way-core"
+    },
+    {
+      "id": "emulsion_moody_editorial_wedding",
+      "file": "Presets/Genre/Moody Editorial Wedding.xmp",
+      "sha256": "513a896fc63e06b45aa84e3aaf6b96c2f3b44f38c28557f1f7ccf7b49ad9b8a7",
+      "slider_count": 33,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "moody-editorial-wedding"
+    },
+    {
+      "id": "emulsion_muted_avant_garde",
+      "file": "Presets/Genre/Muted Avant-Garde.xmp",
+      "sha256": "af4ff9bb0e75986a72c3122ee3e59cb8404ff5db21b96b1308e323875acc4e22",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "muted-avant-garde"
+    },
+    {
+      "id": "emulsion_night_sky_landscape",
+      "file": "Presets/Genre/Night Sky Landscape.xmp",
+      "sha256": "9135f693e0ae81f465dc932b9aa90d8984be95054bfe616f4a6c9664910fa1fa",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "night-sky-landscape"
+    },
+    {
+      "id": "emulsion_sky_pop_exterior",
+      "file": "Presets/Genre/Sky Pop Exterior.xmp",
+      "sha256": "5776122ed31dcad01bc1ecfe4d792d0777a01e726a0c4ac3b62b287538aa4383",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "sky-pop-exterior"
+    },
+    {
+      "id": "emulsion_soft_milky_newborn",
+      "file": "Presets/Genre/Soft Milky Newborn.xmp",
+      "sha256": "9593a4938d4a18437106d3bf6c90c22376cf7b44bf3d149dc51102c70806b7b7",
+      "slider_count": 30,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "soft-milky-newborn"
+    },
+    {
+      "id": "emulsion_stage_lighting",
+      "file": "Presets/Genre/Stage Lighting.xmp",
+      "sha256": "9bb4147cce6fdaec7667192281aac7d585bb8267da5eabd6e1b512ab7285ebb8",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "stage-lighting"
+    },
+    {
+      "id": "emulsion_star_trails",
+      "file": "Presets/Genre/Star Trails.xmp",
+      "sha256": "37eeb4ec75bcb6102d09e45dd9b2759070b5331b049a562b67c504dce25d16d7",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "star-trails"
+    },
+    {
+      "id": "emulsion_vibrant_field_action",
+      "file": "Presets/Genre/Vibrant Field Action.xmp",
+      "sha256": "b84b8c23b412f57badc954f4016e4b62825609290641366e2dd93a1bcb271a08",
+      "slider_count": 28,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "vibrant-field-action"
+    },
+    {
+      "id": "emulsion_warm_appetizing_food",
+      "file": "Presets/Genre/Warm Appetizing Food.xmp",
+      "sha256": "571dfca2f1836c38899ab8a356a44d704f50ef95086e550af5f775d1db2557c0",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "warm-appetizing-food"
+    },
+    {
+      "id": "emulsion_warm_home_interior",
+      "file": "Presets/Genre/Warm Home Interior.xmp",
+      "sha256": "3105f4892d2f29d5be594f52de310c67a2c39687cda329b0069680e52f7bd219",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "warm-home-interior"
+    },
+    {
+      "id": "emulsion_white_bg_e_commerce",
+      "file": "Presets/Genre/White BG E-Commerce.xmp",
+      "sha256": "38d6f94e1091ee290afe4d2d0b3a69160c7db7d7402e071595d9e0a8b2121541",
+      "slider_count": 24,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "white-bg-e-commerce"
+    },
+    {
+      "id": "emulsion_zone_focus_b_w",
+      "file": "Presets/Genre/Zone Focus B&W.xmp",
+      "sha256": "97da5da3da2adf840f104f1247480bc185df13e9f440ad13ecafebbfea0135c2",
+      "slider_count": 25,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "zone-focus-b-w"
+    },
+    {
+      "id": "emulsion_beach_bright",
+      "file": "Presets/Seasonal/Beach Bright.xmp",
+      "sha256": "83ba9b62a4171555dfacd0baea17f54ac7ec11d189b162123849d10e19d8709b",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "beach-bright"
+    },
+    {
+      "id": "emulsion_ceremony",
+      "file": "Presets/Seasonal/Ceremony.xmp",
+      "sha256": "0cd427aaac218863aac373d180cac6f2d626042523647583c6f118fe69e700f2",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "ceremony"
+    },
+    {
+      "id": "emulsion_cherry_blossom",
+      "file": "Presets/Seasonal/Cherry Blossom.xmp",
+      "sha256": "9eb537c44dd513a43e312bdefe34c8c26d48ae9c707be0c1c571fd71e2b0e44c",
+      "slider_count": 30,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "cherry-blossom"
+    },
+    {
+      "id": "emulsion_chinese_new_year",
+      "file": "Presets/Seasonal/Chinese New Year.xmp",
+      "sha256": "add439e20207aefda0485e5533980974e3733432e18e7729690b4f9c0d584293",
+      "slider_count": 31,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "chinese-new-year"
+    },
+    {
+      "id": "emulsion_christmas_snowy_bright",
+      "file": "Presets/Seasonal/Christmas Snowy Bright.xmp",
+      "sha256": "ea17878ef80a25584a06d9e6759429ea57c55e6abf23966f2ea75a173616c0b7",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "christmas-snowy-bright"
+    },
+    {
+      "id": "emulsion_christmas_warm_fireside",
+      "file": "Presets/Seasonal/Christmas Warm Fireside.xmp",
+      "sha256": "2590810121229ee28e976c2f72245e85f8d490d102b0aeaf0715675051d3aaa0",
+      "slider_count": 31,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "christmas-warm-fireside"
+    },
+    {
+      "id": "emulsion_diwali_festive",
+      "file": "Presets/Seasonal/Diwali Festive.xmp",
+      "sha256": "291f67f1d28fe663465b945eeef5879ffebf237edfff82a6aa925fa21c765740",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "diwali-festive"
+    },
+    {
+      "id": "emulsion_fresh_pastel",
+      "file": "Presets/Seasonal/Fresh Pastel.xmp",
+      "sha256": "4ecb8bf32abb01989536bae1479244e44c6d1a5135f088c8377e13f67d42c0ee",
+      "slider_count": 28,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fresh-pastel"
+    },
+    {
+      "id": "emulsion_getting_ready",
+      "file": "Presets/Seasonal/Getting Ready.xmp",
+      "sha256": "f3201226682f0205fc065f73b5cc00eb592ad945aceb4d0160defda49dd787f4",
+      "slider_count": 25,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "getting-ready"
+    },
+    {
+      "id": "emulsion_golden_foliage",
+      "file": "Presets/Seasonal/Golden Foliage.xmp",
+      "sha256": "f621b6890be400a8a37c9047975632e27386649f079f3583e658ba2954a7c3d0",
+      "slider_count": 30,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "golden-foliage"
+    },
+    {
+      "id": "emulsion_golden_hour_endless",
+      "file": "Presets/Seasonal/Golden Hour Endless.xmp",
+      "sha256": "0a370957965d6f93c2723a5df0d9bb8c7f140e8e41de32f344f1ab24cbf2476f",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "golden-hour-endless"
+    },
+    {
+      "id": "emulsion_graduation",
+      "file": "Presets/Seasonal/Graduation.xmp",
+      "sha256": "da18fcdfdb7e37b825fcdfb50a90d53443a05fe6af2e443b4804eccdcc10440a",
+      "slider_count": 28,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "graduation"
+    },
+    {
+      "id": "emulsion_halloween_orange_purple",
+      "file": "Presets/Seasonal/Halloween Orange-Purple.xmp",
+      "sha256": "ccc288476bfa311cee148c5b904c2a076a91d7dc2bb78878024295df3eb44190",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "halloween-orange-purple"
+    },
+    {
+      "id": "emulsion_halloween_spooky_dark",
+      "file": "Presets/Seasonal/Halloween Spooky Dark.xmp",
+      "sha256": "2598a43725aa6ee535e2c141249df40c127382fea6ee7e2d46a1ba6ff88fc604",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "halloween-spooky-dark"
+    },
+    {
+      "id": "emulsion_harvest_warm",
+      "file": "Presets/Seasonal/Harvest Warm.xmp",
+      "sha256": "f424b8a15948e2957a795d95076c4655da6fc4a35488cf528bf5d015d7faba04",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "harvest-warm"
+    },
+    {
+      "id": "emulsion_moody_fall",
+      "file": "Presets/Seasonal/Moody Fall.xmp",
+      "sha256": "65659a3394735b464fdd4d98419451a06006bc7e705303193f18322e052a53db",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "moody-fall"
+    },
+    {
+      "id": "emulsion_reception",
+      "file": "Presets/Seasonal/Reception.xmp",
+      "sha256": "80da6392cbd2fffce7bf6cc54f2e0167837b0fe10a06cdae69f97a16d619507c",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "reception"
+    },
+    {
+      "id": "emulsion_spring_garden",
+      "file": "Presets/Seasonal/Spring Garden.xmp",
+      "sha256": "859727607c14e754116f025dfe7a9d963f095d8910535acf7473b5cd9d335544",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "spring-garden"
+    },
+    {
+      "id": "emulsion_summer_vibes",
+      "file": "Presets/Seasonal/Summer Vibes.xmp",
+      "sha256": "a8e4a2d15f20f6c58dffd8ad30d38eb64dc806c14e7ea88a4a7fa95dc376fba8",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "summer-vibes"
+    },
+    {
+      "id": "emulsion_valentine_s_romantic_pink",
+      "file": "Presets/Seasonal/Valentine's Romantic Pink.xmp",
+      "sha256": "edda059f49593a6c3c944bfe6e80d4030a040ff835bfc4ae15acee00b9e8891e",
+      "slider_count": 28,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "valentine-s-romantic-pink"
+    },
+    {
+      "id": "emulsion_civil_war_era",
+      "file": "Presets/Decade/Civil War Era.xmp",
+      "sha256": "c6781635e72cb937c479c347172952f4600395f2fc469c2ddf79b4f39f9bfd59",
+      "slider_count": 35,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "civil-war-era"
+    },
+    {
+      "id": "emulsion_cross_processed",
+      "file": "Presets/Decade/Cross-Processed.xmp",
+      "sha256": "8c15532f5bc672df5fe5c36b28a4bc183d9bfbaf61daa67f73ac03d8269a84c7",
+      "slider_count": 30,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "cross-processed"
+    },
+    {
+      "id": "emulsion_diner_americana",
+      "file": "Presets/Decade/Diner Americana.xmp",
+      "sha256": "9725aa0eb50c8964b68456b53d472f00d97458061ffafa622d7ed8a7b3aa51b2",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "diner-americana"
+    },
+    {
+      "id": "emulsion_disco_warm",
+      "file": "Presets/Decade/Disco Warm.xmp",
+      "sha256": "6a3f05467e8f83f6f2908bafa78974d7035ebe361bd573fc27f50b73501c181e",
+      "slider_count": 30,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "disco-warm"
+    },
+    {
+      "id": "emulsion_dust_bowl_documentary",
+      "file": "Presets/Decade/Dust Bowl Documentary.xmp",
+      "sha256": "da18723a83be8fb9b52f7bb67227531b744354471b42b85454fb38302c9488bf",
+      "slider_count": 31,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "dust-bowl-documentary"
+    },
+    {
+      "id": "emulsion_earth_tones",
+      "file": "Presets/Decade/Earth Tones.xmp",
+      "sha256": "155949badc2270e2975fd33fd5049b9be0523b6d7e76c41a5db332dc281d3313",
+      "slider_count": 31,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "earth-tones"
+    },
+    {
+      "id": "emulsion_edwardian_pictorialist",
+      "file": "Presets/Decade/Edwardian Pictorialist.xmp",
+      "sha256": "db6f9deb822a26912c59373fb7ae2c71ec02a471b0e675a55a7b7622857c95d9",
+      "slider_count": 30,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "edwardian-pictorialist"
+    },
+    {
+      "id": "emulsion_gatsby_art_deco",
+      "file": "Presets/Decade/Gatsby Art Deco.xmp",
+      "sha256": "15207f4a3f6a471f1731205fb91ccadf28d171447b88dae493c71c4a965fdd73",
+      "slider_count": 30,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "gatsby-art-deco"
+    },
+    {
+      "id": "emulsion_grunge",
+      "file": "Presets/Decade/Grunge.xmp",
+      "sha256": "5bf7d49183a0638dea0b8a18c444cd5c1bf191ca42dc628e46e246bbc5672869",
+      "slider_count": 31,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "grunge"
+    },
+    {
+      "id": "emulsion_hip_hop_golden_era",
+      "file": "Presets/Decade/Hip Hop Golden Era.xmp",
+      "sha256": "2f4eed71d0e727692076b8d50a96130cff2d4a497923b718e606e634fdf305c2",
+      "slider_count": 30,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "hip-hop-golden-era"
+    },
+    {
+      "id": "emulsion_hollywood_glamour",
+      "file": "Presets/Decade/Hollywood Glamour.xmp",
+      "sha256": "25f4b50acd647b4fefcdaf8d5e8de96c080908328e403ec727477c7aec87b3f4",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "hollywood-glamour"
+    },
+    {
+      "id": "emulsion_indie_sleaze",
+      "file": "Presets/Decade/Indie Sleaze.xmp",
+      "sha256": "0c2e4b03443a9874ceaeddd1d2cbda082fa4c57379fc038432054e10d2df8a70",
+      "slider_count": 32,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "indie-sleaze"
+    },
+    {
+      "id": "emulsion_kodachrome_mid_century",
+      "file": "Presets/Decade/Kodachrome Mid-Century.xmp",
+      "sha256": "684359cd0f66d6557c417d4e6280c8e90e080d86153b22795113af2896502f09",
+      "slider_count": 33,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodachrome-mid-century"
+    },
+    {
+      "id": "emulsion_mcbling_heyday",
+      "file": "Presets/Decade/McBling Heyday.xmp",
+      "sha256": "0059ffa065101610f217e32c4cea4716405f52b62ce4123527c26dec69099fba",
+      "slider_count": 30,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "mcbling-heyday"
+    },
+    {
+      "id": "emulsion_miami_vice",
+      "file": "Presets/Decade/Miami Vice.xmp",
+      "sha256": "6f514b7ac19abbea35ba2b09f15c425e43f3dd82c72fc7301ddfd785c23a7384",
+      "slider_count": 28,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "miami-vice"
+    },
+    {
+      "id": "emulsion_mod_london",
+      "file": "Presets/Decade/Mod London.xmp",
+      "sha256": "ed5d081d1d271e753b497218570c2f5060eefbb34fd9ec200e7d1b6c29e42b22",
+      "slider_count": 30,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "mod-london"
+    },
+    {
+      "id": "emulsion_neon_synthwave",
+      "file": "Presets/Decade/Neon Synthwave.xmp",
+      "sha256": "fbd788ed628472b8b1eba0917f40078f6cba87604cc5026cf6a2addce55ec478",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "neon-synthwave"
+    },
+    {
+      "id": "emulsion_new_wave",
+      "file": "Presets/Decade/New Wave.xmp",
+      "sha256": "13476fa526df2b598707c8639b5cda22db9be31e7d2f8c1fa2a31ab1e9857929",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "new-wave"
+    },
+    {
+      "id": "emulsion_post_war_optimism",
+      "file": "Presets/Decade/Post-War Optimism.xmp",
+      "sha256": "77fc53d5b2c8562488d48860a9f3b544684b84a391d0930c8122cb9ed593d0c9",
+      "slider_count": 32,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "post-war-optimism"
+    },
+    {
+      "id": "emulsion_prohibition_sepia",
+      "file": "Presets/Decade/Prohibition Sepia.xmp",
+      "sha256": "a6ab307f645b085e842ec7c053b8959d017eaa4fab03c83b40d42a9e8cc2d465",
+      "slider_count": 35,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "prohibition-sepia"
+    },
+    {
+      "id": "emulsion_punk_rock",
+      "file": "Presets/Decade/Punk Rock.xmp",
+      "sha256": "2cfa5766e6fe427d616c3140c18d9446eb23ed75cfd05982f61ccbdab0752833",
+      "slider_count": 33,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "punk-rock"
+    },
+    {
+      "id": "emulsion_summer_of_love",
+      "file": "Presets/Decade/Summer of Love.xmp",
+      "sha256": "7aae7978f7d5e54c601df75d00f9b87de0209499ae714f45467b826107aa5982",
+      "slider_count": 33,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "summer-of-love"
+    },
+    {
+      "id": "emulsion_victorian_daguerreotype",
+      "file": "Presets/Decade/Victorian Daguerreotype.xmp",
+      "sha256": "51a96cbe24da97e30f4c2641c6eba95d1c14ac0fe98ca36f367c3429868d6aa3",
+      "slider_count": 36,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "victorian-daguerreotype"
+    },
+    {
+      "id": "emulsion_wwii_newsreel",
+      "file": "Presets/Decade/WWII Newsreel.xmp",
+      "sha256": "7f7232f711e26e36caa0b1cb6c83bf1558f3df1f5b016b4d2a6d11811b467ce8",
+      "slider_count": 34,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "wwii-newsreel"
+    },
+    {
+      "id": "emulsion_y2k_digicam",
+      "file": "Presets/Decade/Y2K Digicam.xmp",
+      "sha256": "7c09b07464e1144143e10052e4bb2a9605215c5274199e1425ed2a7472084d23",
+      "slider_count": 32,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "y2k-digicam"
+    },
+    {
+      "id": "emulsion_bali_tropical",
+      "file": "Presets/Geographic/Bali Tropical.xmp",
+      "sha256": "3e83fcabcfed3e93c16ad41a6dc2670874a80bd35a40ad2e857691419682fa92",
+      "slider_count": 28,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "bali-tropical"
+    },
+    {
+      "id": "emulsion_bangkok_street",
+      "file": "Presets/Geographic/Bangkok Street.xmp",
+      "sha256": "556819c06a352ff5d6bb1a31ed13b5f6f4a23f0073fb7a9d182b0c4d63127bef",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "bangkok-street"
+    },
+    {
+      "id": "emulsion_brazilian_amazon",
+      "file": "Presets/Geographic/Brazilian Amazon.xmp",
+      "sha256": "2f56a1e79832b352f38d949b45285a6d9f3f61690ba52481dfc2de6661a14565",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "brazilian-amazon"
+    },
+    {
+      "id": "emulsion_byron_bay_surf",
+      "file": "Presets/Geographic/Byron Bay Surf.xmp",
+      "sha256": "0c32140f0bb78af3890475269af4981106290c8cac90ee6f35a20ad4545051b8",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "byron-bay-surf"
+    },
+    {
+      "id": "emulsion_cccp_nostalgia",
+      "file": "Presets/Geographic/CCCP Nostalgia.xmp",
+      "sha256": "3dd0ca34013fd4416c7c22bde9cb5c25650cebcb8ad10481c2e0405d8bfd77ef",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "cccp-nostalgia"
+    },
+    {
+      "id": "emulsion_cape_town_coast",
+      "file": "Presets/Geographic/Cape Town Coast.xmp",
+      "sha256": "cbac318f101e8d93c8786d5680522baaea0f52fd4d7716d9aefa5d11f1e0a9fd",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "cape-town-coast"
+    },
+    {
+      "id": "emulsion_desert_luxury",
+      "file": "Presets/Geographic/Desert Luxury.xmp",
+      "sha256": "c48f33381404f77808a27af1ed55dad3092f45058871e9b14e1727b7107e0299",
+      "slider_count": 30,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "desert-luxury"
+    },
+    {
+      "id": "emulsion_dubai_modern",
+      "file": "Presets/Geographic/Dubai Modern.xmp",
+      "sha256": "6f3c800abbb5aa962af6fcd5270f7291aef67399993168a56fe100864b68c0f0",
+      "slider_count": 25,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "dubai-modern"
+    },
+    {
+      "id": "emulsion_english_garden",
+      "file": "Presets/Geographic/English Garden.xmp",
+      "sha256": "904cbcc46a2602bbb163390ff9a22f3d834338093186fe224b54e2064a1075ac",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "english-garden"
+    },
+    {
+      "id": "emulsion_fjord_moody",
+      "file": "Presets/Geographic/Fjord Moody.xmp",
+      "sha256": "ae97da4b54cff6ae3d087dad16674f04ab5cd5257d34ce0284159073b7d83674",
+      "slider_count": 31,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "fjord-moody"
+    },
+    {
+      "id": "emulsion_greek_islands_white_blue",
+      "file": "Presets/Geographic/Greek Islands White+Blue.xmp",
+      "sha256": "bc92741e9d5d2bd5169d281a2e531b8d0d2bbe9de99c03efd6e4f6aa827e21c9",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "greek-islands-white-blue"
+    },
+    {
+      "id": "emulsion_holi_vibrant",
+      "file": "Presets/Geographic/Holi Vibrant.xmp",
+      "sha256": "f938258f59b4f457f8e7e03729c5741cf20d74a46adce444b199a21531838602",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "holi-vibrant"
+    },
+    {
+      "id": "emulsion_italian_riviera",
+      "file": "Presets/Geographic/Italian Riviera.xmp",
+      "sha256": "bad508eacf746f88cc2db5901c9cd8671042cbb7037d525b4127baa8997f53f0",
+      "slider_count": 32,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "italian-riviera"
+    },
+    {
+      "id": "emulsion_k_drama_cinematic",
+      "file": "Presets/Geographic/K-Drama Cinematic.xmp",
+      "sha256": "cd062096eabae0adb57ad30d6c6b4df35a692d92df51066829fb3a2841c4de06",
+      "slider_count": 30,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "k-drama-cinematic"
+    },
+    {
+      "id": "emulsion_k_pop_vibrant",
+      "file": "Presets/Geographic/K-Pop Vibrant.xmp",
+      "sha256": "f4af44899871690087d4cdeb9489a108e504bb62a4e42c5f57310549c50ca751",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "k-pop-vibrant"
+    },
+    {
+      "id": "emulsion_kyoto_temple",
+      "file": "Presets/Geographic/Kyoto Temple.xmp",
+      "sha256": "7557ae1b20319b5e6749f7e8770cc1349d866a75671c81b7d1798cc35a2a6c36",
+      "slider_count": 30,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kyoto-temple"
+    },
+    {
+      "id": "emulsion_lotr_epic",
+      "file": "Presets/Geographic/LOTR Epic.xmp",
+      "sha256": "705880ea102919819f39ce0285392cde094bf537ffc1e37b1e54fe1eaa5e1704",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "lotr-epic"
+    },
+    {
+      "id": "emulsion_london_grey_overcast",
+      "file": "Presets/Geographic/London Grey Overcast.xmp",
+      "sha256": "a802110262d0c9f703a1462deda17396e8609efdc3e0552843a36386fbdc14cf",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "london-grey-overcast"
+    },
+    {
+      "id": "emulsion_marrakech_souk",
+      "file": "Presets/Geographic/Marrakech Souk.xmp",
+      "sha256": "2cc3ea6e5db13b574fdf4e17e97b0b848aca6f3088298fcafae61af5f2d1c03b",
+      "slider_count": 30,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "marrakech-souk"
+    },
+    {
+      "id": "emulsion_mexican_pueblo",
+      "file": "Presets/Geographic/Mexican Pueblo.xmp",
+      "sha256": "d8c1622602638323981ce198973394b15b28646ceb4d0adb0b6b84970bd1319f",
+      "slider_count": 28,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "mexican-pueblo"
+    },
+    {
+      "id": "emulsion_nordic_minimal",
+      "file": "Presets/Geographic/Nordic Minimal.xmp",
+      "sha256": "d6ae4e6bbfad538ebb62bd2f356de8d40374a20727fdf0a870ec69a38606b607",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "nordic-minimal"
+    },
+    {
+      "id": "emulsion_outback_red_earth",
+      "file": "Presets/Geographic/Outback Red Earth.xmp",
+      "sha256": "4c2cfcd2b8302d92a2a93bc0f47e025a5e37173c424ecd2c373747c3dca918b0",
+      "slider_count": 28,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "outback-red-earth"
+    },
+    {
+      "id": "emulsion_parisian_morning",
+      "file": "Presets/Geographic/Parisian Morning.xmp",
+      "sha256": "20ee91f43ea58fb4a384c2337b33fa57af5b14b8972950a0a03ee7014977da47",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "parisian-morning"
+    },
+    {
+      "id": "emulsion_rajasthan_golden",
+      "file": "Presets/Geographic/Rajasthan Golden.xmp",
+      "sha256": "4c1cb3f172767c5f2934e610b314e11b960660dd7c49380996cb93d5104dded2",
+      "slider_count": 30,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "rajasthan-golden"
+    },
+    {
+      "id": "emulsion_sahara_desert",
+      "file": "Presets/Geographic/Sahara Desert.xmp",
+      "sha256": "49edeac90e3c9d45c05877af2d05a1c82734c6806328585235c49034bb110d4f",
+      "slider_count": 30,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "sahara-desert"
+    },
+    {
+      "id": "emulsion_sakura_season",
+      "file": "Presets/Geographic/Sakura Season.xmp",
+      "sha256": "8f1b50744402aaeae6e2bde6055091500fe49d2f9e6fd364dc58006b6010721e",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "sakura-season"
+    },
+    {
+      "id": "emulsion_savanna_golden",
+      "file": "Presets/Geographic/Savanna Golden.xmp",
+      "sha256": "53314c4b8681ca9cb684b30d58d046ced442c4031def26c8ecccbecb4760c4d8",
+      "slider_count": 28,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "savanna-golden"
+    },
+    {
+      "id": "emulsion_south_island_fjords",
+      "file": "Presets/Geographic/South Island Fjords.xmp",
+      "sha256": "2c2eefd94497f9421c2b9964d45a04bca7f165fd027d6d4c89afaa262627f449",
+      "slider_count": 28,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "south-island-fjords"
+    },
+    {
+      "id": "emulsion_spanish_costa",
+      "file": "Presets/Geographic/Spanish Costa.xmp",
+      "sha256": "7244e3bac9be9848b1f26466e8434e3d5f67bc420e4186aa478d7d0789d3bde9",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "spanish-costa"
+    },
+    {
+      "id": "emulsion_tokyo_neon_night",
+      "file": "Presets/Geographic/Tokyo Neon Night.xmp",
+      "sha256": "aa8c9091e52cd3d10fb5bd165103214cef6d91bf9e036054f52328755b5724a1",
+      "slider_count": 33,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "tokyo-neon-night"
+    },
+    {
+      "id": "emulsion_vietnam_rice_terraces",
+      "file": "Presets/Geographic/Vietnam Rice Terraces.xmp",
+      "sha256": "e0c1ceb21dd59bc7d63977ee0ad69859c6b21cb0e628e7a181af608476d802a3",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "vietnam-rice-terraces"
+    },
+    {
+      "id": "emulsion_wabi_sabi_zen",
+      "file": "Presets/Geographic/Wabi-Sabi Zen.xmp",
+      "sha256": "302e827f3ceeab681ef002af6566c0def2bf1d82971c94a7cea93bc9cf3f349a",
+      "slider_count": 25,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "wabi-sabi-zen"
+    },
+    {
+      "id": "emulsion_bright_selfie",
+      "file": "Presets/Mobile/Bright Selfie.xmp",
+      "sha256": "0dd07f1d4a33247f82948ccd18287fbe82544c797db580bfd90db4478a9227a0",
+      "slider_count": 25,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "bright-selfie"
+    },
+    {
+      "id": "emulsion_clarendon",
+      "file": "Presets/Mobile/Clarendon.xmp",
+      "sha256": "2d40c9bfe7749bf4998dc3e3699a0a4050bb58c2ede818fd74312524f1e6fdd0",
+      "slider_count": 23,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "clarendon"
+    },
+    {
+      "id": "emulsion_coffee_shop_warm",
+      "file": "Presets/Mobile/Coffee Shop Warm.xmp",
+      "sha256": "5ae1eb447dfaf1e0d4827216632f36c7e3b5de85f8cc0aa09e435cdb70b8fa14",
+      "slider_count": 30,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "coffee-shop-warm"
+    },
+    {
+      "id": "emulsion_cozy_reading",
+      "file": "Presets/Mobile/Cozy Reading.xmp",
+      "sha256": "08cea65ebcc3ec47ebfeb2d0ed6a8c6856a418c401a56d58471ab2ad40942698",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "cozy-reading"
+    },
+    {
+      "id": "emulsion_filmic_casual",
+      "file": "Presets/Mobile/Filmic Casual.xmp",
+      "sha256": "e2099761c09d53ee2c49c42fbc15bcd28cabdb01986c9b5a0d26fd05d05c7741",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "filmic-casual"
+    },
+    {
+      "id": "emulsion_flash_neon",
+      "file": "Presets/Mobile/Flash + Neon.xmp",
+      "sha256": "98f6bf1d9d1cca12e83dbcb016e14250c89869f00e5d4612b298a8fc6464d4f6",
+      "slider_count": 28,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "flash-neon"
+    },
+    {
+      "id": "emulsion_food_flatlay",
+      "file": "Presets/Mobile/Food Flatlay.xmp",
+      "sha256": "b8bb7d92011d2900f9255b056d05a4c474de49ef0fbb627907d304b2fd72c477",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "food-flatlay"
+    },
+    {
+      "id": "emulsion_gingham",
+      "file": "Presets/Mobile/Gingham.xmp",
+      "sha256": "40176581a01ab7255a7c8fc9f29389b888976afed42cd85c55d59536830bfb94",
+      "slider_count": 23,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "gingham"
+    },
+    {
+      "id": "emulsion_golden_hour_selfie",
+      "file": "Presets/Mobile/Golden Hour Selfie.xmp",
+      "sha256": "24270c5cb3eded95aa4ef59dd1d47143296380e692f92da114d7d94fea7f40d3",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "golden-hour-selfie"
+    },
+    {
+      "id": "emulsion_high_energy_contrast",
+      "file": "Presets/Mobile/High Energy Contrast.xmp",
+      "sha256": "d43987d09150f01bc1efc8295d48b90876a05e1c911e09e07ef807a94a292d45",
+      "slider_count": 25,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "high-energy-contrast"
+    },
+    {
+      "id": "emulsion_juno",
+      "file": "Presets/Mobile/Juno.xmp",
+      "sha256": "f85692c016c6ac2b78682c09fdf0ec366041649882b70fe4a9c7bd06ac47123b",
+      "slider_count": 28,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "juno"
+    },
+    {
+      "id": "emulsion_lark",
+      "file": "Presets/Mobile/Lark.xmp",
+      "sha256": "7328bb4b0d7ca745ca645274caababd5f03ec5d86544538b2a9a3173b3f447fa",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "lark"
+    },
+    {
+      "id": "emulsion_lo_fi",
+      "file": "Presets/Mobile/Lo-Fi.xmp",
+      "sha256": "b02b0d7935ce96ea26d64afc080defd26859584c38a8edbfeabb45e93d3b9dc9",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "lo-fi"
+    },
+    {
+      "id": "emulsion_nashville",
+      "file": "Presets/Mobile/Nashville.xmp",
+      "sha256": "a6093e04ae87eb0e8a2a00afb073eeeb63c092d6c012ebafde4ce541a6a403ac",
+      "slider_count": 25,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "nashville"
+    },
+    {
+      "id": "emulsion_natural_skin",
+      "file": "Presets/Mobile/Natural Skin.xmp",
+      "sha256": "01f2a7b264b4dee917589dfcd3e5c9d95d88953bc87a5534a737bb1d4bc8f647",
+      "slider_count": 25,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "natural-skin"
+    },
+    {
+      "id": "emulsion_northern_lights_pop",
+      "file": "Presets/Mobile/Northern Lights Pop.xmp",
+      "sha256": "d4bc431233210c327752c7365c3e572b45a1567fc48e0a339afed69354c16cc0",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "northern-lights-pop"
+    },
+    {
+      "id": "emulsion_overhead_clean",
+      "file": "Presets/Mobile/Overhead Clean.xmp",
+      "sha256": "bc72f2516d1c236031a00ef79531d1f8b19540fe402e0e22f7a906a8759dce74",
+      "slider_count": 23,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "overhead-clean"
+    },
+    {
+      "id": "emulsion_showroom_reflection",
+      "file": "Presets/Mobile/Showroom Reflection.xmp",
+      "sha256": "a3d288e23f328c95f7edbf5151ffa6c9b701454fb65bc5ec3ff7310004904f41",
+      "slider_count": 25,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "showroom-reflection"
+    },
+    {
+      "id": "emulsion_streetwear_contrast",
+      "file": "Presets/Mobile/Streetwear Contrast.xmp",
+      "sha256": "a6cd7de98f364fb79a2ad4af4608a05f242a881a5c43d9e8022cd22181ed77b6",
+      "slider_count": 30,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "streetwear-contrast"
+    },
+    {
+      "id": "emulsion_thumbnail_max_pop",
+      "file": "Presets/Mobile/Thumbnail Max Pop.xmp",
+      "sha256": "62fa63ac05ce8f72960dfe1e087b9c4c32506e6e393383a495366bfc30f7e92b",
+      "slider_count": 25,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "thumbnail-max-pop"
+    },
+    {
+      "id": "emulsion_valencia",
+      "file": "Presets/Mobile/Valencia.xmp",
+      "sha256": "040dc621f09e2abd64b90480874401c866966234e0087502025646f1561a9925",
+      "slider_count": 25,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "valencia"
+    },
+    {
+      "id": "emulsion_vintage_instant",
+      "file": "Presets/Mobile/Vintage Instant.xmp",
+      "sha256": "c980358fd3b3d629edff200515041dbf7e99568eaf8ac1c708e8f00f064c3b85",
+      "slider_count": 28,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "vintage-instant"
+    },
+    {
+      "id": "emulsion_x_pro_ii",
+      "file": "Presets/Mobile/X-Pro II.xmp",
+      "sha256": "9098c0e4aa2db14836cad4a4c9d51681ac813b9845244242544999613773bf0d",
+      "slider_count": 28,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "x-pro-ii"
+    },
+    {
+      "id": "emulsion_alec_soth",
+      "file": "Presets/Photographer/Alec Soth.xmp",
+      "sha256": "6a9f154c0365677b36f176ab33e9df952bae5dad7e9f691d4a53c692a10e8a33",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "alec-soth"
+    },
+    {
+      "id": "emulsion_alex_webb",
+      "file": "Presets/Photographer/Alex Webb.xmp",
+      "sha256": "508b97c2f436e7d7bb176824349d295a9ea8bd1dee52c0f069dd3ff4e6205d23",
+      "slider_count": 35,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "alex-webb"
+    },
+    {
+      "id": "emulsion_ansel_adams_zone_system",
+      "file": "Presets/Photographer/Ansel Adams Zone System.xmp",
+      "sha256": "55d4aa55e74bda3371abefe5d38ce2d60500c3ed41cc910e3821cb5ea0080afe",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "ansel-adams-zone-system"
+    },
+    {
+      "id": "emulsion_cindy_sherman",
+      "file": "Presets/Photographer/Cindy Sherman.xmp",
+      "sha256": "1dcfae163e497dbac25d184efdca2b5862a44fbf59a88c4744f1a5bd80f5118c",
+      "slider_count": 34,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "cindy-sherman"
+    },
+    {
+      "id": "emulsion_david_lachapelle",
+      "file": "Presets/Photographer/David LaChapelle.xmp",
+      "sha256": "d94abf953d6659d2f214414177f83d8afefecc32318eb382eb12428f45832211",
+      "slider_count": 32,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "david-lachapelle"
+    },
+    {
+      "id": "emulsion_fan_ho",
+      "file": "Presets/Photographer/Fan Ho.xmp",
+      "sha256": "375149c06feda5d31760b7fbab4aeb1c00434ac36e6e39ca19c032c05e314563",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "fan-ho"
+    },
+    {
+      "id": "emulsion_gregory_crewdson",
+      "file": "Presets/Photographer/Gregory Crewdson.xmp",
+      "sha256": "8e825d82a997b3edd98ff1b799fe11d0c7ad103ba62f705bbb79525215efb772",
+      "slider_count": 30,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "gregory-crewdson"
+    },
+    {
+      "id": "emulsion_henri_cartier_bresson",
+      "file": "Presets/Photographer/Henri Cartier-Bresson.xmp",
+      "sha256": "29d17dc09f5a242658ef6741b98126ed7367baa98b5862f102659f409fff62d6",
+      "slider_count": 24,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "henri-cartier-bresson"
+    },
+    {
+      "id": "emulsion_joel_meyerowitz",
+      "file": "Presets/Photographer/Joel Meyerowitz.xmp",
+      "sha256": "0dabdd44ebe1fc03c1711884021c8e382751d67aef8c83bf204cb4a94a10c237",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "joel-meyerowitz"
+    },
+    {
+      "id": "emulsion_martin_parr",
+      "file": "Presets/Photographer/Martin Parr.xmp",
+      "sha256": "f953f5e4bd1abfb0a525ef6fe3a80c19505983795a2b8eb8ab6380c32b7bf51d",
+      "slider_count": 32,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "martin-parr"
+    },
+    {
+      "id": "emulsion_michael_kenna",
+      "file": "Presets/Photographer/Michael Kenna.xmp",
+      "sha256": "fda9513d5cd71d8b7ec5b1b6457438dbc1405823b4267d528bd75e0d4dd1c2d6",
+      "slider_count": 24,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "michael-kenna"
+    },
+    {
+      "id": "emulsion_nan_goldin",
+      "file": "Presets/Photographer/Nan Goldin.xmp",
+      "sha256": "eb0b7bdea262b44147ce2f02e9dd35563d7d53e1db31867c6fa1c0ac0bdb333f",
+      "slider_count": 35,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "nan-goldin"
+    },
+    {
+      "id": "emulsion_peter_lindbergh",
+      "file": "Presets/Photographer/Peter Lindbergh.xmp",
+      "sha256": "8331e6ab8552348e811278c97932d00500df392c5e5cc83bbcb965b32f7e7023",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "peter-lindbergh"
+    },
+    {
+      "id": "emulsion_saul_leiter",
+      "file": "Presets/Photographer/Saul Leiter.xmp",
+      "sha256": "90fec32ce246c2fefc22cd79ca74ebcb49b69d99fce4801d095a6135eb058cb5",
+      "slider_count": 32,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "saul-leiter"
+    },
+    {
+      "id": "emulsion_sebastiao_salgado",
+      "file": "Presets/Photographer/Sebastiao Salgado.xmp",
+      "sha256": "5bc5b7900b11a496e83dd5267a1656b1041030e3c7fd94c6e9728f035480dd8c",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "sebastiao-salgado"
+    },
+    {
+      "id": "emulsion_steve_mccurry",
+      "file": "Presets/Photographer/Steve McCurry.xmp",
+      "sha256": "315202a733373f0bf68f7d86524c96f5a7cb39a174666bf9db289e4989f97e74",
+      "slider_count": 33,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "steve-mccurry"
+    },
+    {
+      "id": "emulsion_tim_walker",
+      "file": "Presets/Photographer/Tim Walker.xmp",
+      "sha256": "f02a2ddb66f560c7700e98d95ec1505c455f16a386835b72e3d7927996b8792f",
+      "slider_count": 33,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "tim-walker"
+    },
+    {
+      "id": "emulsion_todd_hido",
+      "file": "Presets/Photographer/Todd Hido.xmp",
+      "sha256": "5874fcd3761aa66dfe0d7f5d30546306693cb782ffc88fc8ec3454dc2d11c4c3",
+      "slider_count": 32,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "todd-hido"
+    },
+    {
+      "id": "emulsion_vivian_maier",
+      "file": "Presets/Photographer/Vivian Maier.xmp",
+      "sha256": "1f3a4999600a5070c3e4f54e2587ca297dbf2b9c44953ab16b27bbcbcc6769b1",
+      "slider_count": 26,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "vivian-maier"
+    },
+    {
+      "id": "emulsion_william_eggleston",
+      "file": "Presets/Photographer/William Eggleston.xmp",
+      "sha256": "1466bf9746fe07b7fa6c714bca10dc80129d6379e0935cd4644f9e95bc3ff1c8",
+      "slider_count": 29,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "william-eggleston"
+    },
+    {
+      "id": "emulsion_bleach_bypass_video",
+      "file": "Presets/Video/Bleach Bypass Video.xmp",
+      "sha256": "d79c6a3e895f346a9e9d612643e1fa12d518cf35071cf745ef713f433c4a9115",
+      "slider_count": 35,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "bleach-bypass-video"
+    },
+    {
+      "id": "emulsion_cinematic_dream_look_video",
+      "file": "Presets/Video/Cinematic Dream Look Video.xmp",
+      "sha256": "929b4b5c071d090450cdc2617216505e63f35ec43d25f41c7138e3a2c6837be6",
+      "slider_count": 35,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "cinematic-dream-look-video"
+    },
+    {
+      "id": "emulsion_cinestill_800t_video",
+      "file": "Presets/Video/Cinestill 800T Video.xmp",
+      "sha256": "390b67736be30180bd132f67c109eab21f9bf073e4a6f0a066cd7c591f87ab28",
+      "slider_count": 28,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "cinestill-800t-video"
+    },
+    {
+      "id": "emulsion_cross_processed_velvia_video",
+      "file": "Presets/Video/Cross-Processed Velvia Video.xmp",
+      "sha256": "062a5571182aee30093c744e67299235d048cd392d06ecd2f0293d061aefc956",
+      "slider_count": 46,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "cross-processed-velvia-video"
+    },
+    {
+      "id": "emulsion_cyberpunk_neon_video",
+      "file": "Presets/Video/Cyberpunk Neon Video.xmp",
+      "sha256": "1f56d1b51199e709f64c7ef571bbed36b9d14d4d78ff6e5106fdd38b514a8d2d",
+      "slider_count": 33,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "cyberpunk-neon-video"
+    },
+    {
+      "id": "emulsion_ektar_100_video",
+      "file": "Presets/Video/Ektar 100 Video.xmp",
+      "sha256": "84357c75ef8ca7a0ae3fdf0dfc6fb2b03c0635d15d491cd2cd872a779ff90636",
+      "slider_count": 47,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "ektar-100-video"
+    },
+    {
+      "id": "emulsion_gold_200_video",
+      "file": "Presets/Video/Gold 200 Video.xmp",
+      "sha256": "2047ca634884bcdedd341fa5165e6daf2613425cb04b3ea612daf0bd70f67bfe",
+      "slider_count": 47,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "gold-200-video"
+    },
+    {
+      "id": "emulsion_kodachrome_64_video",
+      "file": "Presets/Video/Kodachrome 64 Video.xmp",
+      "sha256": "6fa3dbb64b7d6e5968e8a75258bdcedceb994fd9b4c65561f7c4c71915b4856a",
+      "slider_count": 38,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodachrome-64-video"
+    },
+    {
+      "id": "emulsion_kodak_aerochrome_video",
+      "file": "Presets/Video/Kodak Aerochrome Video.xmp",
+      "sha256": "ba23b0e0d7a92fb8158b8002db7a6d6c9a5a150d3a2fc61b5e377d2a84d515fb",
+      "slider_count": 49,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "kodak-aerochrome-video"
+    },
+    {
+      "id": "emulsion_moody_pnw_video",
+      "file": "Presets/Video/Moody PNW Video.xmp",
+      "sha256": "e6a920fe84e416083d101f60cafd855df58cdb50b97f5f437de68d23b8fe99bd",
+      "slider_count": 32,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "moody-pnw-video"
+    },
+    {
+      "id": "emulsion_pastel_anime_aethereal_video",
+      "file": "Presets/Video/Pastel Anime Aethereal Video.xmp",
+      "sha256": "3f0272dc4218c27597b5c006bbae51a6662cb6207aa670268837420b42c09401",
+      "slider_count": 36,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "pastel-anime-aethereal-video"
+    },
+    {
+      "id": "emulsion_polaroid_sx_70_video",
+      "file": "Presets/Video/Polaroid SX-70 Video.xmp",
+      "sha256": "224e46f571a7672a0e50b4c612047e272b0e3bbdc952d1bb06a6e56a042d885b",
+      "slider_count": 50,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "polaroid-sx-70-video"
+    },
+    {
+      "id": "emulsion_portra_400_video",
+      "file": "Presets/Video/Portra 400 Video.xmp",
+      "sha256": "562d6fddf4644b54a5e590888303e4fe31154727a0afcf77ae45fcf56ff6f6c6",
+      "slider_count": 37,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "portra-400-video"
+    },
+    {
+      "id": "emulsion_super_8_home_movie_video",
+      "file": "Presets/Video/Super 8 Home Movie Video.xmp",
+      "sha256": "174656d8dc45fc270da33af496b46b5c9acf3a85cc46b0b79d9a924f872b4ce1",
+      "slider_count": 44,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "super-8-home-movie-video"
+    },
+    {
+      "id": "emulsion_teal_orange_cinematic_video",
+      "file": "Presets/Video/Teal & Orange Cinematic Video.xmp",
+      "sha256": "db3c3ff6972d3a30f9cef3402eadf7a26bb3ff04f456180fc5bef51509930e8f",
+      "slider_count": 33,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "teal-orange-cinematic-video"
+    },
+    {
+      "id": "emulsion_tri_x_400_video",
+      "file": "Presets/Video/Tri-X 400 Video.xmp",
+      "sha256": "82fa5eebd97cbaaeb15d4fd0ef493301eb4fe7278ef93ebc2ce1040c3094e283",
+      "slider_count": 27,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "GrayMixerAqua",
+        "GrayMixerBlue",
+        "GrayMixerGreen",
+        "GrayMixerMagenta",
+        "GrayMixerOrange",
+        "GrayMixerPurple",
+        "GrayMixerRed",
+        "GrayMixerYellow",
+        "ProcessVersion"
+      ],
+      "source_slug": "tri-x-400-video"
+    },
+    {
+      "id": "emulsion_vhs_synthwave_video",
+      "file": "Presets/Video/VHS Synthwave Video.xmp",
+      "sha256": "e4157bf9753b593d050a17d50c59d29bd48f9a74a63bef97f46e7865b10747ec",
+      "slider_count": 55,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "vhs-synthwave-video"
+    },
+    {
+      "id": "emulsion_velvia_50_video",
+      "file": "Presets/Video/Velvia 50 Video.xmp",
+      "sha256": "c9664e24768445b4c726efe682dbdce866894f10b909b9502c3328d3f80972ef",
+      "slider_count": 49,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "velvia-50-video"
+    },
+    {
+      "id": "emulsion_wkw_hong_kong_video",
+      "file": "Presets/Video/WKW Hong Kong Video.xmp",
+      "sha256": "3d3daf2fdca1448d81fa51bdb98cabb3ab59580f0a1d156ebeab6e24e44fdc76",
+      "slider_count": 53,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "wkw-hong-kong-video"
+    },
+    {
+      "id": "emulsion_wes_anderson_pastel_video",
+      "file": "Presets/Video/Wes Anderson Pastel Video.xmp",
+      "sha256": "c93de062ab0e9b953ca5f954eb1fe74bb58bce2946f854546a76f1dc5ba5c169",
+      "slider_count": 49,
+      "unsupported_numeric_fields": [
+        "Amount",
+        "ProcessVersion"
+      ],
+      "source_slug": "wes-anderson-pastel-video"
+    }
+  ],
+  "status": "success"
+}
