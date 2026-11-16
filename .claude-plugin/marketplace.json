@@ -1,0 +1,23 @@
+{
+  "name": "chromadna-marketplace",
+  "owner": {
+    "name": "ThanhNguyxnOrg"
+  },
+  "metadata": {
+    "description": "ChromaDNA Agent Skill and MCP integration for Lightroom, Camera Raw, and video color grading workflows.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "chromadna",
+      "description": "Extract and blend Lightroom Color DNA, match photo lighting, render previews, compile .xmp presets, and export .cube 3D LUTs.",
+      "version": "0.1.0",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./"
+      ],
+      "homepage": "https://github.com/ThanhNguyxnOrg/chromadna"
+    }
+  ]
+}
