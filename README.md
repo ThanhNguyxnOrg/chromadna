@@ -1,30 +1,32 @@
 # ChromaDNA
 
-**Extract, analyze, blend, and compile photographic color profiles.**
+**Adobe Lightroom / Camera Raw Color DNA Miner, Mathematical Preset Blender & AI Agent Skill.**
 
-ChromaDNA is a Python toolkit for working with Adobe Camera Raw (ACR) / Lightroom-style develop settings as reusable, composable color profiles.
+ChromaDNA extracts the mathematical "Color DNA" (Tone Curves, HSL matrices, 3-Way Color Grading wheels, Camera Calibration) from `.xmp`, `.dng`, and `.lrtemplate` libraries, strips proprietary metadata/local adjustments, and empowers both CLI users and AI Agents (Claude Code, Cursor, Gemini CLI, OpenCode) to **match, blend, preview, and compile** production-ready `.xmp` presets without opening Lightroom.
 
-## Project status
+## Features
+- **Universal Preset Miner (`miner.py`):** Recursively parses `.xmp`, embedded XMP packets inside `.dng` RAW files, and legacy `.lrtemplate` Lua tables. Deduplicates identical looks using cosine similarity on normalized parameter vectors.
+- **Mathematical Curve & Slider Blender (`blender.py`):** Resamples non-uniform Tone Curves onto a uniform 32-point spline grid to smoothly interpolate between any number of presets (e.g., `70% Kodak Portra + 30% Moody Matte`).
+- **Auto Exposure & White Balance Matcher (`matcher.py`):** Separates *Technical Correction* from *Creative Look* by analyzing target image luminance and color cast before applying a Color DNA.
+- **Fast Offline Previewer (`previewer.py`):** Generates side-by-side Before/After JPEG previews using NumPy vectorized LUTs and RGB/HSL transforms.
+- **Atomic XMP Compiler (`compiler.py`):** Validates every Adobe Camera Raw parameter against strict schema bounds and writes valid RDF/XML `.xmp` files atomically.
 
-This repository is being initialized. The original implementation source is being restored into this repository incrementally; this README is an initial repository file, **not a claim that the full application has been uploaded or verified**.
+## Installation
+```bash
+pip install -e .
+```
 
-## Intended capabilities
+## Quick Start
+```bash
+# 1. Extract & deduplicate your local preset folder into Color DNA catalog
+chromadna mine ./raw_vault --out data/color_dna_catalog.json
 
-- Import develop settings from XMP sidecars and Lightroom template data.
-- Analyze and compare color adjustments.
-- Store reusable color DNA profiles in a catalog.
-- Blend profiles with weighted combinations.
-- Compile profile data back into XMP.
-- Optionally generate approximate previews and match suggestions.
+# 2. List available Color DNA profiles
+chromadna list
 
-## Important limitation
+# 3. Blend two styles (70% Warm Film + 30% Moody Teal) and compile to .xmp
+chromadna blend --mix warm_film_01:0.7 moody_teal_02:0.3 --name "Hybrid Film" --out ./output_xmp/hybrid_film.xmp
 
-Any preview renderer is an approximation. It should not be represented as pixel-identical to Adobe Camera Raw or Lightroom. Actual compatibility must be verified by importing generated XMP into the target Adobe application.
-
-## Development
-
-The package layout, CLI, schemas, tests, and CI will be documented here as the implementation is restored.
-
-## License
-
-Not yet selected.
+# 4. Auto-match a photo and render a Before/After preview
+chromadna match sample.jpg --dna warm_film_01 --preview preview.jpg --out ./output_xmp/matched.xmp
+```
