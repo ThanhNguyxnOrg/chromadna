@@ -115,7 +115,7 @@ def main():
     notices = Path("data/sources/THIRD_PARTY_NOTICES.md")
     notices.write_text("# Third-Party Preset Notices\n\n## EmulsionPresets\n\n"
       f"- Source: https://github.com/{UPSTREAM}\n- Pinned revision: {REVISION}\n"
-      "- License: MIT\n- Copyright: Copyright (c) 2026 peva3\n"
+      "- License: MIT; preserve the exact upstream LICENSE text below.\n"
       "- Imported XMP recipes remain attributed to their upstream author; ChromaDNA did not author them.\n\n"
       "Upstream MIT license text:\n\n" + license_text, encoding="utf-8")
     print(f"Imported {len(profiles)} presets from {UPSTREAM}@{REVISION}")
