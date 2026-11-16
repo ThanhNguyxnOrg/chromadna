@@ -1,32 +1,116 @@
 # ChromaDNA
 
-**Adobe Lightroom / Camera Raw Color DNA Miner, Mathematical Preset Blender & AI Agent Skill.**
+**Adobe Lightroom / Camera Raw Color DNA Miner, Mathematical Preset Blender, XMP Compiler, 3D LUT Exporter, Agent Skill & MCP Server.**
 
-ChromaDNA extracts the mathematical "Color DNA" (Tone Curves, HSL matrices, 3-Way Color Grading wheels, Camera Calibration) from `.xmp`, `.dng`, and `.lrtemplate` libraries, strips proprietary metadata/local adjustments, and empowers both CLI users and AI Agents (Claude Code, Cursor, Gemini CLI, OpenCode) to **match, blend, preview, and compile** production-ready `.xmp` presets without opening Lightroom.
+ChromaDNA extracts reusable mathematical color profiles from supported Lightroom / Camera Raw preset sources, blends profiles, estimates photo-specific exposure and white-balance adjustments, renders approximate previews, and exports XMP presets and 3D LUTs.
+
+> **Rendering scope:** the preview renderer and .cube exporter are approximations. They do not reproduce every proprietary Adobe Camera Raw operation, camera profile, local adjustment, or RAW rendering stage. Validate generated presets and LUTs in the target application before production use.
 
 ## Features
-- **Universal Preset Miner (`miner.py`):** Recursively parses `.xmp`, embedded XMP packets inside `.dng` RAW files, and legacy `.lrtemplate` Lua tables. Deduplicates identical looks using cosine similarity on normalized parameter vectors.
-- **Mathematical Curve & Slider Blender (`blender.py`):** Resamples non-uniform Tone Curves onto a uniform 32-point spline grid to smoothly interpolate between any number of presets (e.g., `70% Kodak Portra + 30% Moody Matte`).
-- **Auto Exposure & White Balance Matcher (`matcher.py`):** Separates *Technical Correction* from *Creative Look* by analyzing target image luminance and color cast before applying a Color DNA.
-- **Fast Offline Previewer (`previewer.py`):** Generates side-by-side Before/After JPEG previews using NumPy vectorized LUTs and RGB/HSL transforms.
-- **Atomic XMP Compiler (`compiler.py`):** Validates every Adobe Camera Raw parameter against strict schema bounds and writes valid RDF/XML `.xmp` files atomically.
+
+- Preset mining: parse supported .xmp, embedded XMP in .dng, and legacy .lrtemplate sources.
+- Color DNA blending: interpolate supported sliders and tone curves across weighted profiles.
+- Photo matching: estimate image-specific exposure and white-balance offsets.
+- Preview rendering: generate side-by-side Before/After JPEG previews.
+- XMP compilation and 3D LUT export.
+- Portable Agent Skill and FastMCP server with eight tools.
 
 ## Installation
-```bash
-pip install -e .
-```
 
-## Quick Start
-```bash
-# 1. Extract & deduplicate your local preset folder into Color DNA catalog
+Requires Python 3.10+. From the repository root:
+
+~~~bash
+python -m pip install -e .
+~~~
+
+This installs the chromadna and chromadna-mcp commands and dependencies declared in pyproject.toml.
+
+## Quick start
+
+~~~bash
+# Mine your own preset library into the local catalog
 chromadna mine ./raw_vault --out data/color_dna_catalog.json
 
-# 2. List available Color DNA profiles
+# Inspect available profile IDs before selecting one
 chromadna list
 
-# 3. Blend two styles (70% Warm Film + 30% Moody Teal) and compile to .xmp
+# Blend two profiles and compile an XMP preset
 chromadna blend --mix warm_film_01:0.7 moody_teal_02:0.3 --name "Hybrid Film" --out ./output_xmp/hybrid_film.xmp
 
-# 4. Auto-match a photo and render a Before/After preview
-chromadna match sample.jpg --dna warm_film_01 --preview preview.jpg --out ./output_xmp/matched.xmp
-```
+# Render a preview and export a LUT from the same blend
+chromadna blend --mix warm_film_01:0.7 moody_teal_02:0.3 --name "Hybrid Film" --out ./output_xmp/hybrid_film.xmp --preview-img ./sample.jpg --preview-out ./output_xmp/preview.jpg --lut ./output_lut/hybrid_film.cube
+
+# Match a profile to a photo
+chromadna match ./sample.jpg --dna warm_film_01 --name "Matched Film" --preview ./output_xmp/matched_preview.jpg --out ./output_xmp/matched.xmp
+
+# Export a standalone 33-cubed LUT
+chromadna lut --dna warm_film_01 --name "Warm Film" --size 33 --out ./output_lut/warm_film.cube
+~~~
+
+If the package is not installed, repository-local launchers are available:
+
+~~~bash
+./scripts/chromadna.sh list
+~~~
+
+PowerShell:
+
+~~~powershell
+.\scripts\chromadna.ps1 list
+~~~
+
+The launchers set PYTHONPATH=src; Python dependencies still need to be installed.
+
+## Agent Skill installation
+
+The root SKILL.md follows the Agent Skills format. With the Vercel Skills CLI:
+
+~~~bash
+npx skills add ThanhNguyxnOrg/chromadna --skill chromadna
+~~~
+
+The repository is currently private. Installers need GitHub access through Git credentials, GitHub CLI authentication, or SSH.
+
+## Claude Code plugin
+
+The repository includes .claude-plugin/plugin.json, .claude-plugin/marketplace.json, and a plugin-root .mcp.json.
+
+In Claude Code, add the repository as a marketplace and install the plugin:
+
+~~~text
+/plugin marketplace add ThanhNguyxnOrg/chromadna
+/plugin install chromadna@chromadna-marketplace
+~~~
+
+The MCP configuration uses uv to run the project from the installed plugin directory. Install uv on the host machine before enabling the plugin. The catalog path defaults to data/color_dna_catalog.json within the plugin; override CHROMADNA_CATALOG if your catalog is stored elsewhere.
+
+## MCP server
+
+Run the stdio server after installing the project:
+
+~~~bash
+chromadna-mcp
+~~~
+
+Available tools:
+- list_color_dna
+- inspect_color_dna
+- analyze_photo
+- blend_color_dna
+- match_photo_to_dna
+- render_preview
+- compile_xmp_preset
+- export_cube_lut
+
+For standalone MCP clients, configure command chromadna-mcp and set CHROMADNA_CATALOG to the catalog's absolute path. The MCP process can only read files accessible to the machine and user account running it; attaching an image in chat does not automatically expose its local path.
+
+## Safety and privacy
+
+- Keep source photos, RAW files, and third-party preset binaries out of Git.
+- Keep raw_vault/ and generated output files local.
+- Do not write generated presets beside RAW files using the same filename stem.
+- Do not claim compatibility until the preset or LUT has been tested in the target editor.
+
+## License
+
+MIT. See LICENSE.
