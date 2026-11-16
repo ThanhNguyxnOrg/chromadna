@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "chromadna": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--project",
+        "${workspaceFolder}",
+        "chromadna-mcp"
+      ],
+      "env": {
+        "CHROMADNA_CATALOG": "${workspaceFolder}/data/color_dna_catalog.json"
+      }
+    }
+  }
+}
