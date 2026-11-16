@@ -15,7 +15,7 @@ The repository is private and is not published to npm or PyPI. Clone it using an
 node scripts/setup.mjs --all
 ```
 
-The setup command delegates Skill installation to the Vercel Skills CLI and writes project-local MCP entries for Claude Code, Cursor, Antigravity, and VS Code / GitHub Copilot. It preserves unrelated JSON keys, backs up existing configuration files, and leaves an existing ChromaDNA entry untouched unless --force is supplied.
+The setup command requires Node.js 22.20+ and delegates Skill installation to the Vercel Skills CLI and writes project-local MCP entries for Claude Code, Cursor, Antigravity, and VS Code / GitHub Copilot. It preserves unrelated JSON keys, backs up existing configuration files, and leaves an existing ChromaDNA entry untouched unless --force is supplied.
 
 Preview changes with --dry-run. Install only one surface with --skills or --mcp. Limit MCP setup with --agent=cursor, --agent=claude-code, --agent=antigravity, or --agent=vscode.
 

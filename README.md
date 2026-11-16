@@ -19,7 +19,7 @@ ChromaDNA extracts reusable color settings from supported Lightroom / Camera Raw
 ## Requirements
 
 - Python 3.10+
-- Node.js and npm for the optional multi-agent setup command
+- Node.js 22.20+ and npm for the optional multi-agent setup command
 - uv for MCP server execution
 - Git access to this private repository
 
