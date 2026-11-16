@@ -18,6 +18,28 @@ def get(url):
     with urllib.request.urlopen(req, timeout=45) as response:
         return response.read()
 
+def normalize_slug(value):
+    return re.sub(r"[^a-z0-9]+", "_", str(value).lower()).strip("_")
+
+
+def build_profile_ids(items):
+    """Create stable IDs, suffixing only normalized-slug collisions by source path."""
+    bases = [normalize_slug(item.get("slug") or "") for item in items]
+    if any(not base for base in bases):
+        raise RuntimeError("Every upstream preset must have a non-empty slug")
+    paths = [str(item.get("file") or "") for item in items]
+    if any(not path for path in paths) or len(paths) != len(set(paths)):
+        raise RuntimeError("Every upstream preset must have a unique source file path")
+    counts = {base: bases.count(base) for base in set(bases)}
+    profile_ids = []
+    for base, path in zip(bases, paths):
+        suffix = f"_{hashlib.sha256(path.encode('utf-8')).hexdigest()[:8]}" if counts[base] > 1 else ""
+        profile_ids.append(f"emulsion_{base}{suffix}")
+    if len(profile_ids) != len(set(profile_ids)):
+        raise RuntimeError("Unable to generate unique stable profile IDs")
+    return profile_ids
+
+
 def parse_metadata(raw):
     root = ET.fromstring(raw)
     metadata, unsupported = {}, set()
@@ -61,13 +83,17 @@ def main():
     items = catalog.get("presets", [])
     if catalog.get("preset_count") != EXPECTED or len(items) != EXPECTED:
         raise RuntimeError(f"Expected {EXPECTED} upstream entries; got {len(items)}")
-    if len({x.get("slug") for x in items}) != EXPECTED:
-        raise RuntimeError("Duplicate source slugs")
+    profile_ids = build_profile_ids(items)
+    normalized_slug_counts = {}
+    for item in items:
+        normalized = normalize_slug(item.get("slug") or "")
+        normalized_slug_counts[normalized] = normalized_slug_counts.get(normalized, 0) + 1
+    duplicate_source_slug_groups = sum(1 for count in normalized_slug_counts.values() if count > 1)
     license_text = get(f"{RAW}/LICENSE").decode("utf-8")
     if "MIT License" not in license_text or "peva3" not in license_text:
         raise RuntimeError("Pinned MIT license is missing or unexpected")
     profiles, entries, failures = [], [], []
-    for item in items:
+    for item, profile_id in zip(items, profile_ids):
         try:
             path = str(item["file"])
             url = f"{RAW}/{urllib.parse.quote(path, safe='/')}"
@@ -79,8 +105,6 @@ def main():
             category = str(item.get("category") or "Uncategorized")
             utility = category == "Utility & Tools"
             video = category == "Video LUT Reference"
-            slug = re.sub(r"[^a-z0-9]+", "_", str(item["slug"]).lower()).strip("_")
-            profile_id = f"emulsion_{slug}"
             profile = {
               "id": profile_id, "name": str(item["name"]), "category": category,
               "tags": sorted(set(tags + [re.sub(r"[^a-z0-9]+","-",category.lower()).strip("-")])),
@@ -91,11 +115,12 @@ def main():
               "provenance": {"repository": "https://github.com/" + UPSTREAM, "commit": REVISION,
                 "file": path, "url": url, "license": "MIT", "sha256": hashlib.sha256(raw).hexdigest(),
                 "description": str(item.get("description") or ""), "treatment": str(item.get("treatment") or ""),
-                "unsupported_numeric_fields": unsupported}
+                "unsupported_numeric_fields": unsupported, "source_slug": str(item["slug"])}
             }
             profiles.append(profile)
             entries.append({"id": profile_id, "file": path, "sha256": profile["provenance"]["sha256"],
-                "slider_count": len(sliders), "unsupported_numeric_fields": unsupported})
+                "slider_count": len(sliders), "unsupported_numeric_fields": unsupported,
+                "source_slug": str(item["slug"])})
         except Exception as exc:
             failures.append({"file": item.get("file"), "name": item.get("name"), "error": str(exc)})
     report_path = Path("data/sources/emulsionpresets-import-report.json")
@@ -110,6 +135,8 @@ def main():
     }, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     report_path.write_text(json.dumps({"source": UPSTREAM, "commit": REVISION, "license": "MIT",
       "expected": EXPECTED, "imported": len(profiles), "failures": [],
+      "duplicate_source_slug_groups": duplicate_source_slug_groups,
+      "collision_safe_profile_ids": sum(1 for item in items if normalized_slug_counts[normalize_slug(item.get("slug") or "")] > 1),
       "unsupported_numeric_field_occurrences": sum(len(x["unsupported_numeric_fields"]) for x in entries),
       "entries": entries, "status": "success"}, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     notices = Path("data/sources/THIRD_PARTY_NOTICES.md")
