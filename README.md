@@ -1,37 +1,45 @@
 # ChromaDNA
 
-**Adobe Lightroom / Camera Raw Color DNA Miner, Mathematical Preset Blender, XMP Compiler, 3D LUT Exporter, Agent Skill & MCP Server.**
+**Adobe Lightroom / Camera Raw Color DNA Miner, Mathematical Preset Blender, XMP Compiler, 3D LUT Exporter, Agent Skill, and MCP Server.**
 
-ChromaDNA extracts reusable mathematical color profiles from supported Lightroom / Camera Raw preset sources, blends profiles, estimates photo-specific exposure and white-balance adjustments, renders approximate previews, and exports XMP presets and 3D LUTs.
+ChromaDNA extracts reusable color settings from supported Lightroom / Camera Raw preset sources, blends compatible profiles, estimates photo-specific exposure and white-balance adjustments, renders approximate previews, and exports XMP presets and 3D LUTs.
 
 > **Rendering scope:** the preview renderer and .cube exporter are approximations. They do not reproduce every proprietary Adobe Camera Raw operation, camera profile, local adjustment, or RAW rendering stage. Validate generated presets and LUTs in the target application before production use.
 
 ## Features
 
-- Preset mining: parse supported .xmp, embedded XMP in .dng, and legacy .lrtemplate sources.
-- Color DNA blending: interpolate supported sliders and tone curves across weighted profiles.
-- Photo matching: estimate image-specific exposure and white-balance offsets.
-- Preview rendering: generate side-by-side Before/After JPEG previews.
-- XMP compilation and 3D LUT export.
-- Portable Agent Skill and FastMCP server with eight tools.
+- Preset mining from supported .xmp, embedded XMP in .dng, and legacy .lrtemplate sources.
+- Color DNA blending across supported sliders and tone curves.
+- Heuristic photo analysis and image-specific exposure / white-balance estimates.
+- Approximate Before / After preview rendering.
+- XMP preset compilation and 3D .cube LUT export.
+- Agent Skill and local FastMCP server.
+- Project-local setup for Claude Code, Cursor, Antigravity, and VS Code / GitHub Copilot.
 
-## Installation
+## Requirements
 
-Requires Python 3.10+. From the repository root:
+- Python 3.10+
+- Node.js and npm for the optional multi-agent setup command
+- uv for MCP server execution
+- Git access to this private repository
 
-~~~bash
+## Install the Python project
+
+From the repository root:
+
+```bash
 python -m pip install -e .
-~~~
+```
 
-This installs the chromadna and chromadna-mcp commands and dependencies declared in pyproject.toml.
+This installs the chromadna and chromadna-mcp commands with dependencies declared in pyproject.toml.
 
 ## Quick start
 
-~~~bash
-# Mine your own preset library into the local catalog
+```bash
+# Mine your own local preset library into the catalog
 chromadna mine ./raw_vault --out data/color_dna_catalog.json
 
-# Inspect available profile IDs before selecting one
+# Inspect exact profile IDs before selecting one
 chromadna list
 
 # Blend two profiles and compile an XMP preset
@@ -45,54 +53,54 @@ chromadna match ./sample.jpg --dna warm_film_01 --name "Matched Film" --preview 
 
 # Export a standalone 33-cubed LUT
 chromadna lut --dna warm_film_01 --name "Warm Film" --size 33 --out ./output_lut/warm_film.cube
-~~~
+```
 
-If the package is not installed, repository-local launchers are available:
+If the package is not installed, use the repository launcher:
 
-~~~bash
+```bash
 bash scripts/chromadna.sh list
-~~~
+```
 
 PowerShell:
 
-~~~powershell
+```powershell
 .\scripts\chromadna.ps1 list
-~~~
+```
 
-The launchers set PYTHONPATH=src; Python dependencies still need to be installed.
+## Multi-agent setup
 
-## Agent Skill installation
+The repository is private and is not published to npm or PyPI. Clone it with an authenticated GitHub account, then run:
 
-The root SKILL.md follows the Agent Skills format. With the Vercel Skills CLI:
+```bash
+node scripts/setup.mjs --all
+```
 
-~~~bash
-npx skills add ThanhNguyxnOrg/chromadna --skill chromadna
-~~~
+The setup command installs the Agent Skill through the Vercel Skills CLI and configures project-local MCP entries for supported clients. It does not publish packages, make the repository public, or modify global configuration.
 
-The repository is currently private. Installers need GitHub access through Git credentials, GitHub CLI authentication, or SSH.
+Useful variants:
 
-## Claude Code plugin
+```bash
+node scripts/setup.mjs --all --dry-run
+node scripts/setup.mjs --skills
+node scripts/setup.mjs --mcp --agent=cursor
+```
 
-The repository includes .claude-plugin/plugin.json, .claude-plugin/marketplace.json, and a plugin-root .mcp.json.
+See [Agent and Client Compatibility](docs/COMPATIBILITY.md) for the integration matrix, cloud-client limitations, and manual adapters.
 
-In Claude Code, add the repository as a marketplace and install the plugin:
+## Agent Skill
 
-~~~text
-/plugin marketplace add ThanhNguyxnOrg/chromadna
-/plugin install chromadna@chromadna-marketplace
-~~~
-
-The MCP configuration uses uv to run the project from the installed plugin directory. Install uv on the host machine before enabling the plugin. The catalog path defaults to data/color_dna_catalog.json within the plugin; override CHROMADNA_CATALOG if your catalog is stored elsewhere. For Cursor, the repository also includes .cursor/mcp.json; open the repository as the workspace root and install uv before enabling the ChromaDNA server.
+The canonical Agent Skill is in skills/chromadna/SKILL.md. The root SKILL.md remains as a compatibility copy for tools that discover a skill from the repository root.
 
 ## MCP server
 
-Run the stdio server after installing the project:
+Run the local stdio server after installing the project:
 
-~~~bash
+```bash
 chromadna-mcp
-~~~
+```
 
 Available tools:
+
 - list_color_dna
 - inspect_color_dna
 - analyze_photo
@@ -102,15 +110,16 @@ Available tools:
 - compile_xmp_preset
 - export_cube_lut
 
-For standalone MCP clients, configure command chromadna-mcp and set CHROMADNA_CATALOG to the catalog's absolute path. The MCP process can only read files accessible to the machine and user account running it; attaching an image in chat does not automatically expose its local path.
+The MCP process can only read files accessible to the machine and user account running it. Attaching an image in a cloud chat does not automatically expose its local filesystem path. The current server is not a hosted remote MCP endpoint.
 
-## Safety and privacy
+## Privacy and safety
 
 - Keep source photos, RAW files, and third-party preset binaries out of Git.
 - Keep raw_vault/ and generated output files local.
 - Do not write generated presets beside RAW files using the same filename stem.
 - Do not claim compatibility until the preset or LUT has been tested in the target editor.
+- Do not expose the local stdio server to the public internet.
 
 ## License
 
-MIT. See LICENSE.
+MIT. See [LICENSE](LICENSE).
