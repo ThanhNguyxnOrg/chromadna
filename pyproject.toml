@@ -5,17 +5,19 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "chromadna"
 version = "0.1.0"
-description = "Adobe Lightroom / Camera Raw Color DNA Miner, Mathematical Preset Blender, XMP Compiler & AI Agent Skill"
+description = "Adobe Lightroom / Camera Raw Color DNA Miner, XMP Compiler, 3D LUT Exporter, Agent Skill & MCP Server"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
 dependencies = [
     "numpy>=1.24.0",
     "pillow>=10.0.0",
+    "mcp>=1.0.0",
 ]
 
 [project.scripts]
 chromadna = "chromadna.cli:main"
+chromadna-mcp = "chromadna.mcp_server:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
