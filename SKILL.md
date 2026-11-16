@@ -17,7 +17,7 @@ Use ChromaDNA to inspect, extract, blend, match, preview, and export reusable co
 Run commands from the repository root. Prefer the installed `chromadna` executable. If it is unavailable, use the repository launcher:
 
 ```bash
-./scripts/chromadna.sh list
+bash scripts/chromadna.sh list
 ```
 
 Or invoke the module directly (dependencies must already be installed):
