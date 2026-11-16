@@ -30,7 +30,7 @@ Preview changes with --dry-run. Install only one surface with --skills or --mcp.
 | Windsurf | Skills CLI where supported | Manual | Add local stdio server in MCP settings |
 | OpenCode | Skills CLI | Manual | Configure local stdio in OpenCode config |
 | Gemini CLI | Skills CLI | Manual | Configure MCP using Gemini CLI settings |
-| Codex | Skills CLI | Manual | Configure MCP using Codex settings |
+| Codex | Skills CLI / bundled plugin | Manual | Install the local plugin or run `codex mcp add chromadna -- uv run --project /absolute/path/to/chromadna chromadna-mcp` |
 | Cline / Roo Code | Skills CLI where supported | Manual | Configure stdio in extension MCP settings |
 | Kimi Code CLI | Skills CLI where supported | Manual | Follow the installed client MCP schema |
 | ChatGPT web | Product-surface dependent | Remote MCP only | A local stdio process is not reachable from ChatGPT web |

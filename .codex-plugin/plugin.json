@@ -6,7 +6,5 @@
     "name": "ThanhNguyxnOrg"
   },
   "license": "MIT",
-  "skills": [
-    "../skills/chromadna"
-  ]
+  "skills": "./skills/"
 }
