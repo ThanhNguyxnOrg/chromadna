@@ -95,4 +95,23 @@ jobs:
             exit 0
           fi
           git commit -m "feat(catalog): import 451 open-source Lightroom presets"
-          git -c http.extraheader="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w 0)" push origin HEAD:main
+
+          # Other repository automation may update main while the 451 XMP files
+          # are downloading. Rebase onto the newest main and retry instead of
+          # failing with a non-fast-forward push.
+          AUTH_HEADER="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w 0)"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              echo "::error::Could not rebase catalog commit onto the latest main."
+              exit 1
+            fi
+            if git -c http.extraheader="$AUTH_HEADER" push origin HEAD:main; then
+              echo "Catalog commit pushed to main."
+              exit 0
+            fi
+            echo "Push attempt $attempt was rejected; retrying after fetching main."
+            sleep "$attempt"
+          done
+          echo "::error::Could not push catalog after 5 attempts."
+          exit 1
