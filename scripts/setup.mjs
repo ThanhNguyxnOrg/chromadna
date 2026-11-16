@@ -16,7 +16,7 @@ const dryRun = has("--dry-run");
 const force = has("--force");
 const requested = argv.filter((arg) => arg.startsWith("--agent=")).map((arg) => arg.slice(8));
 const skillAgent = requested.length ? requested : ["*"];
-const knownAgents = ["claude-code","claude-desktop","cursor","antigravity","vscode","opencode","pi","gemini-cli","kimi-code-cli","cline","roo","windsurf","codex"];
+const knownAgents = ["*","aider-desk","amp","antigravity","claude-code","claude-desktop","cline","codex","cursor","gemini-cli","github-copilot","goose","kilo","kimi-code-cli","openclaw","opencode","pi","qwen-code","roo","trae","windsurf","zed"];
 const mcpTargets = ["claude-code","claude-desktop","cursor","antigravity","vscode","opencode","pi","gemini-cli","kimi-code-cli","roo","cline","windsurf"];
 const agents = requested.length ? requested : mcpTargets;
 
@@ -27,7 +27,7 @@ function usage() {
     "       node scripts/setup.mjs --skills [--agent=pi]",
     "       node scripts/setup.mjs --mcp [--agent=opencode]",
     "Options: --all --skills --mcp --agent=NAME --dry-run --force --help",
-    "Skill targets: " + knownAgents.join(", ") + " (or * for all Skills CLI targets)",
+    "Skill targets: any agent supported by the Skills CLI; common targets: " + knownAgents.filter((name) => name !== "*").join(", ") + " (or * for all)",
     "MCP adapters: " + mcpTargets.join(", "),
     "DeepSeek Harness and Groq API require their documented integration paths; see docs/COMPATIBILITY.md.",
     "Run from an authenticated checkout. No package publishing or repository visibility changes are performed."
@@ -35,10 +35,6 @@ function usage() {
 }
 if (has("--help") || has("-h")) { usage(); process.exit(0); }
 if (!installSkills && !installMcp) { usage(); process.exit(2); }
-if (requested.some((agent) => !knownAgents.includes(agent))) {
-  console.error("Unknown agent. Supported names: " + knownAgents.join(", "));
-  process.exit(2);
-}
 
 const rootPath = root.split(path.sep).join("/");
 const catalogPath = path.join(rootPath, "data", "color_dna_catalog.json").split(path.sep).join("/");
