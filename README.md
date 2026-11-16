@@ -50,7 +50,7 @@ chromadna lut --dna warm_film_01 --name "Warm Film" --size 33 --out ./output_lut
 If the package is not installed, repository-local launchers are available:
 
 ~~~bash
-./scripts/chromadna.sh list
+bash scripts/chromadna.sh list
 ~~~
 
 PowerShell:
