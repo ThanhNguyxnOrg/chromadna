@@ -1,0 +1,12 @@
+{
+  "name": "chromadna",
+  "version": "0.2.0",
+  "description": "Lightroom and Camera Raw color-profile mining, blending, XMP compilation, photo analysis, and 3D LUT export.",
+  "author": {
+    "name": "ThanhNguyxnOrg"
+  },
+  "license": "MIT",
+  "skills": [
+    "../skills/chromadna"
+  ]
+}
