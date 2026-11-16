@@ -1,5 +1,12 @@
 # ChromaDNA community preset catalog ingestion task
-# This is an execution specification for ThanhNguyxnAgent, not a GitHub Actions workflow.
+# Executable automation: .github/workflows/community-presets.yml
+# The workflow is manually dispatched and commits validated catalog updates as ThanhNguyxnAgent[bot].
+
+automation:
+  workflow: .github/workflows/community-presets.yml
+  importer: scripts/import_community_presets.py
+  trigger: workflow_dispatch
+  commit_identity: ThanhNguyxnAgent[bot]
 
 task:
   id: community-preset-catalog-ingestion
