@@ -24,10 +24,12 @@ Repository: https://github.com/ThanhNguyxnOrg/chromadna
 2. Read README.md, docs/COMPATIBILITY.md, skills/chromadna/SKILL.md, and pyproject.toml before making changes.
 3. Check for Python 3.10+, uv, Node.js 22.20+, and npm. Install only missing prerequisites when the environment and package manager permit it; otherwise give exact installation instructions. Do not replace existing runtimes or alter unrelated environment settings.
 4. From the repository root, run:
-   - node scripts/setup.mjs --all --dry-run
-   - Review the planned changes.
-   - node scripts/setup.mjs --all
-   If the user wants only this agent, use --skills --agent=<supported-agent-id> and --mcp --agent=<supported-agent-id> instead. Do not force-replace an existing ChromaDNA configuration unless the user explicitly asks.
+   - node scripts/setup.mjs --skills --dry-run
+   - Review the Skill installation plan.
+   - node scripts/setup.mjs --skills
+   - Detect which supported MCP clients are actually installed or configured. Use `node scripts/setup.mjs --mcp --dry-run --agent=<client>` for each detected client, then run the same command without `--dry-run` after reviewing the changes. Multiple `--agent` flags may be passed in one invocation.
+   - Use `node scripts/setup.mjs --all` only if the user explicitly wants configuration entries created for every supported MCP adapter, including clients that are not installed.
+   Do not force-replace an existing ChromaDNA configuration unless the user explicitly asks.
 5. The Skills CLI supports many Agent Skills-compatible coding agents. Install the Skill for the current client and other detected clients where supported. Do not claim that a model provider's consumer chat website supports local Skills just because its coding CLI does.
 6. Install MCP only through the native configuration format documented for the detected client. The setup script currently automates Claude Code/Desktop, Cursor, Antigravity, VS Code, OpenCode, Pi, Gemini CLI, Kimi Code CLI, Roo Code, Cline, and Windsurf. If another client is present, follow its official integration documentation and add it only if the format and location are verified. Preserve unrelated configuration and keep backups.
 7. For DeepSeek Harness, use its @deepseek-ai/dsh-mcp-client Cordis plugin configuration as documented in docs/COMPATIBILITY.md; do not mistake the Harness SDK/host integration for native support in the DeepSeek consumer chat website.
