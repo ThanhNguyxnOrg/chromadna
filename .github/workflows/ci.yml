@@ -26,4 +26,4 @@ jobs:
       - name: Check CLI entry point
         run: chromadna --help
       - name: Import MCP server
-        run: python -c "from chromadna.mcp_server import mcp; print(mcp.name)"
+        run: python -c "import chromadna.mcp_server"

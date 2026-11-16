@@ -43,16 +43,16 @@ chromadna mine ./raw_vault --out data/color_dna_catalog.json
 chromadna list
 
 # Blend two profiles and compile an XMP preset
-chromadna blend --mix warm_film_01:0.7 moody_teal_02:0.3 --name "Hybrid Film" --out ./output_xmp/hybrid_film.xmp
+chromadna blend --mix film_emulation_001:0.7 cinematic_teal_orange_002:0.3 --name "Hybrid Film" --out ./output_xmp/hybrid_film.xmp
 
 # Render a preview and export a LUT from the same blend
-chromadna blend --mix warm_film_01:0.7 moody_teal_02:0.3 --name "Hybrid Film" --out ./output_xmp/hybrid_film.xmp --preview-img ./sample.jpg --preview-out ./output_xmp/preview.jpg --lut ./output_lut/hybrid_film.cube
+chromadna blend --mix film_emulation_001:0.7 cinematic_teal_orange_002:0.3 --name "Hybrid Film" --out ./output_xmp/hybrid_film.xmp --preview-img ./sample.jpg --preview-out ./output_xmp/preview.jpg --lut ./output_lut/hybrid_film.cube
 
 # Match a profile to a photo
-chromadna match ./sample.jpg --dna warm_film_01 --name "Matched Film" --preview ./output_xmp/matched_preview.jpg --out ./output_xmp/matched.xmp
+chromadna match ./sample.jpg --dna film_emulation_001 --name "Matched Film" --preview ./output_xmp/matched_preview.jpg --out ./output_xmp/matched.xmp
 
 # Export a standalone 33-cubed LUT
-chromadna lut --dna warm_film_01 --name "Warm Film" --size 33 --out ./output_lut/warm_film.cube
+chromadna lut --dna film_emulation_001 --name "Warm Film" --size 33 --out ./output_lut/warm_film.cube
 ```
 
 If the package is not installed, use the repository launcher:

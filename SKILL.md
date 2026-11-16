@@ -32,7 +32,7 @@ On Windows PowerShell:
 .\scripts\chromadna.ps1 list
 ```
 
-Install the project and dependencies with python -m pip install -e . . The MCP server additionally requires the mcp dependency declared in pyproject.toml.
+Install the project and dependencies with python -m pip install -e . The MCP server additionally requires the mcp dependency declared in pyproject.toml.
 
 ## Required workflow
 
