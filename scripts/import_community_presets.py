@@ -35,18 +35,25 @@ def parse_metadata(raw):
       "PostCropVignetteMidpoint","PostCropVignetteFeather","PostCropVignetteRoundness",
       "GrainAmount","GrainSize","GrainFrequency","GrainRoughness","ShadowTint","RedHue",
       "RedSaturation","GreenHue","GreenSaturation","BlueHue","BlueSaturation"}
+    def record(name, value):
+        metadata[name] = str(value)
+        try:
+            float(value)
+            numeric = True
+        except (TypeError, ValueError):
+            numeric = False
+        if numeric and name not in known and not name.startswith(("HueAdjustment","SaturationAdjustment","LuminanceAdjustment")):
+            unsupported.add(name)
+
     for desc in root.iter(f"{RDF}Description"):
         for key, value in desc.attrib.items():
             if key.startswith(CRS):
-                name = key[len(CRS):]
-                metadata[name] = str(value)
-                try:
-                    float(value)
-                    numeric = True
-                except (TypeError, ValueError):
-                    numeric = False
-                if numeric and name not in known and not name.startswith(("HueAdjustment","SaturationAdjustment","LuminanceAdjustment")):
-                    unsupported.add(name)
+                record(key[len(CRS):], value)
+        for child in desc:
+            if child.tag.startswith(CRS):
+                name = child.tag[len(CRS):]
+                values = [li.text.strip() for li in child.iter(f"{RDF}li") if li.text and li.text.strip()]
+                record(name, values if values else (child.text.strip() if child.text else ""))
     return metadata, sorted(unsupported)
 
 def main():
