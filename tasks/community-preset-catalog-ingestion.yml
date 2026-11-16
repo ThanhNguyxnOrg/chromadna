@@ -31,7 +31,7 @@ primary_source:
   machine_catalog: https://raw.githubusercontent.com/peva3/EmulsionPresets/4312c978a3331ed69f87fd47c98a9c2a3caa2d26/presets.json
   preset_root: Presets/
   expected_catalog_count_at_pinned_commit: 451
-  raw_file_url_template: https://raw.githubusercontent.com/peva3/EmulsionPresets/4312c978a3331ed69f87fd47c98a9c2a3d2a26/{url_encoded_path}
+  raw_file_url_template: https://raw.githubusercontent.com/peva3/EmulsionPresets/4312c978a3331ed69f87fd47c98a9c2a3caa2d26/{url_encoded_path}
   attribution:
     - Copyright and license notices from the upstream LICENSE must be retained.
     - Record the upstream repository URL and exact pinned commit in every imported record or a shared provenance manifest.
