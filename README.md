@@ -75,7 +75,7 @@ The repository is private and is not published to npm or PyPI. Clone it with an 
 node scripts/setup.mjs --all
 ```
 
-The setup command installs the Agent Skill through the Vercel Skills CLI and configures project-local MCP entries for supported clients. It does not publish packages, make the repository public, or modify global configuration.
+The setup command installs the Agent Skill through the Vercel Skills CLI and configures native MCP entries for a wider set of coding agents, including OpenCode, Pi, Cline, Roo Code, Gemini CLI, Kimi Code CLI, Claude Desktop, and Windsurf. A few clients use global configuration files; existing entries are backed up and preserved. It does not publish packages or make the repository public.
 
 Useful variants:
 
@@ -85,7 +85,7 @@ node scripts/setup.mjs --skills
 node scripts/setup.mjs --mcp --agent=cursor
 ```
 
-See [Agent and Client Compatibility](docs/COMPATIBILITY.md) for the integration matrix, cloud-client limitations, and manual adapters.
+Prefer an AI to perform setup? Copy the single prompt in [Install ChromaDNA with an AI Agent](docs/INSTALL_WITH_AI.md) into any coding agent with terminal access. See [Agent and Client Compatibility](docs/COMPATIBILITY.md) for the full matrix, DeepSeek Harness and Groq API adapters, and cloud-client limitations.
 
 ## Agent Skill
 
