@@ -57,3 +57,14 @@ def test_identity_dna_preserves_rgb_lattice():
     source = np.array([[0.0, 0.25, 1.0], [0.5, 0.5, 0.5]], dtype=np.float32)
     result = transform_rgb_lattice(source, {"sliders": {}, "tone_curves": {}})
     np.testing.assert_allclose(result, source, atol=1e-5)
+
+
+def test_modern_color_grading_and_grain_fields_are_supported():
+    from chromadna.schema import SLIDER_BOUNDS
+
+    assert clamp_slider("ColorGradeShadowHue", 210) == 210
+    assert clamp_slider("ColorGradeHighlightSat", 120) == 100
+    assert clamp_slider("ColorGradeBalance", -120) == -100
+    assert clamp_slider("GrainRoughness", 45) == 45
+    assert "ColorGradeShadowHue" in SLIDER_BOUNDS
+    assert "ColorGradeHighlightLum" in SLIDER_BOUNDS
