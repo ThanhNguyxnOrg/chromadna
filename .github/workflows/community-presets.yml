@@ -12,11 +12,11 @@ concurrency:
 
 jobs:
   import-community-presets:
-    name: Import pinned open-source Lightroom presets
+    name: Run importer, validate catalog, and commit as GitHub App
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - name: Mint repository-scoped ThanhNguyxnAgent token
+      - name: Mint repository-scoped GitHub App installation token
         id: agent
         uses: ThanhNguyxnOrg/.github/.github/actions/agent-token@2b5c5cad571ee93fd091e16e1734ebd819191e68
         with:
@@ -24,7 +24,7 @@ jobs:
           app-id: ${{ vars.BOT_APP_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
 
-      - name: Checkout main as ThanhNguyxnAgent
+      - name: Checkout main using the GitHub App token
         uses: actions/checkout@v4
         with:
           ref: main
@@ -73,12 +73,21 @@ jobs:
           chromadna --help
           python -c "import chromadna.mcp_server"
 
-      - name: Commit catalog and provenance as ThanhNguyxnAgent
+      - name: Resolve GitHub App bot identity
+        id: bot
         env:
           GH_TOKEN: ${{ steps.agent.outputs.token }}
         run: |
+          BOT_ID="$(gh api users/ThanhNguyxnAgent%5Bbot%5D --jq .id)"
+          echo "id=$BOT_ID" >> "$GITHUB_OUTPUT"
+
+      - name: Commit catalog and provenance using the GitHub App identity
+        env:
+          GH_TOKEN: ${{ steps.agent.outputs.token }}
+          BOT_ID: ${{ steps.bot.outputs.id }}
+        run: |
           git config user.name "ThanhNguyxnAgent[bot]"
-          git config user.email "296222857+thanhnguyxnagent[bot]@users.noreply.github.com"
+          git config user.email "${BOT_ID}+ThanhNguyxnAgent[bot]@users.noreply.github.com"
           git add data/color_dna_catalog.json data/sources/THIRD_PARTY_NOTICES.md data/sources/emulsionpresets-import-report.json
           if git diff --cached --quiet; then
             echo "Community catalog is already up to date."
