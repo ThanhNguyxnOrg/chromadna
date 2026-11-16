@@ -3,27 +3,25 @@ param(
     [Parameter(ValueFromRemainingArguments = $true)]
     [string[]]$ChromaDNAArgs
 )
-
 $ErrorActionPreference = "Stop"
 $RepoRoot = Split-Path -Parent $PSScriptRoot
 $Python = if ($env:PYTHON) { $env:PYTHON } else { "python" }
-
 if (-not (Get-Command $Python -ErrorAction SilentlyContinue)) {
     throw "ChromaDNA requires Python 3.10+ (set PYTHON to your interpreter)."
 }
-
 $ExistingPythonPath = $env:PYTHONPATH
+$SourcePath = Join-Path $RepoRoot "src"
 $env:PYTHONPATH = if ($ExistingPythonPath) {
-    Join-Path $RepoRoot "src" + [IO.Path]::PathSeparator + $ExistingPythonPath
+    $SourcePath + [IO.Path]::PathSeparator + $ExistingPythonPath
 } else {
-    Join-Path $RepoRoot "src"
+    $SourcePath
 }
-
 Push-Location $RepoRoot
 try {
     & $Python -m chromadna.cli @ChromaDNAArgs
-    exit $LASTEXITCODE
+    $ExitCode = $LASTEXITCODE
 }
 finally {
     Pop-Location
 }
+exit $ExitCode
