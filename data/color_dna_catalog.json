@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "total_profiles": 2,
+  "profiles": [
+    {
+      "id": "film_emulation_001",
+      "category": "Film Emulation",
+      "tags": ["film-grain", "matte", "soft-highlights", "warm-golden"],
+      "source_hint": "Starter_Pack",
+      "sliders": {
+        "Contrast2012": -10, "Highlights2012": -35, "Shadows2012": 22,
+        "Whites2012": -15, "Blacks2012": 14, "Clarity2012": -8,
+        "Vibrance": 12, "Saturation": -5, "HueAdjustmentOrange": -4,
+        "HueAdjustmentYellow": -18, "HueAdjustmentGreen": -22,
+        "SaturationAdjustmentGreen": -28, "SplitToningShadowHue": 210,
+        "SplitToningShadowSaturation": 12, "SplitToningHighlightHue": 42,
+        "SplitToningHighlightSaturation": 18, "GrainAmount": 24,
+        "GrainSize": 32, "GrainFrequency": 50, "Sharpness": 8
+      },
+      "tone_curves": {
+        "ToneCurvePV2012": [[0, 14], [36, 34], [128, 132], [205, 208], [255, 244]],
+        "ToneCurvePV2012Red": [[0, 0], [128, 131], [255, 255]],
+        "ToneCurvePV2012Green": [[0, 2], [128, 128], [255, 253]],
+        "ToneCurvePV2012Blue": [[0, 8], [128, 124], [255, 246]]
+      }
+    },
+    {
+      "id": "cinematic_teal_orange_002",
+      "category": "Cinematic Teal & Orange",
+      "tags": ["high-contrast", "teal-shadows", "warm-golden"],
+      "source_hint": "Starter_Pack",
+      "sliders": {
+        "Contrast2012": 24, "Highlights2012": -45, "Shadows2012": 28,
+        "Whites2012": 10, "Blacks2012": -18, "Clarity2012": 12,
+        "Dehaze": 8, "Vibrance": 16, "Saturation": -8,
+        "HueAdjustmentBlue": -20, "SaturationAdjustmentBlue": 15,
+        "SplitToningShadowHue": 198, "SplitToningShadowSaturation": 26,
+        "SplitToningHighlightHue": 38, "SplitToningHighlightSaturation": 22,
+        "BlueHue": -24, "BlueSaturation": 18, "RedHue": 10
+      },
+      "tone_curves": {
+        "ToneCurvePV2012": [[0, 4], [58, 46], [128, 128], [196, 206], [255, 250]],
+        "ToneCurvePV2012Red": [[0, 0], [255, 255]],
+        "ToneCurvePV2012Green": [[0, 0], [255, 255]],
+        "ToneCurvePV2012Blue": [[0, 0], [255, 255]]
+      }
+    }
+  ]
+}
