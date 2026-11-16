@@ -24,9 +24,9 @@ mcp = FastMCP(
     name="ChromaDNA",
     instructions=(
         "ChromaDNA is a color grading engine for Adobe Lightroom / Camera Raw and video editors. "
-        "Always inspect available Color DNA profiles first with \`list_color_dna\`. "
-        "When a user provides an input photo, call \`analyze_photo\` or \`match_photo_to_dna\` to compensate "
-        "Exposure and White Balance before compiling an \`.xmp\` preset or \`.cube\` 3D LUT."
+        "Always inspect available Color DNA profiles first with `list_color_dna`. "
+        "When a user provides an input photo, call `analyze_photo` or `match_photo_to_dna` to compensate "
+        "Exposure and White Balance before compiling an `.xmp` preset or `.cube` 3D LUT."
     ),
 )
 
@@ -35,7 +35,7 @@ def _load_profiles(catalog_path: Optional[str] = None) -> List[Dict[str, Any]]:
     path = Path(catalog_path) if catalog_path else DEFAULT_CATALOG_PATH
     if not path.exists():
         raise FileNotFoundError(
-            f"Color DNA catalog not found at '{path}'. Run \`chromadna mine <preset_folder>\` first."
+            f"Color DNA catalog not found at '{path}'. Run `chromadna mine <preset_folder>` first."
         )
     payload = json.loads(path.read_text(encoding="utf-8"))
     return payload.get("profiles", [])
@@ -160,7 +160,7 @@ def blend_color_dna(
         catalog_path: Optional custom path to color_dna_catalog.json.
     """
     if not weights:
-        raise ValueError("Provide at least one dna_id: weight entry in \`weights\`.")
+        raise ValueError("Provide at least one dna_id: weight entry in `weights`.")
 
     profiles = _load_profiles(catalog_path)
     weighted_list: List[Tuple[Dict[str, Any], float]] = [
@@ -198,7 +198,7 @@ def match_photo_to_dna(
     catalog_path: Optional[str] = None,
 ) -> Dict[str, Any]:
     """Auto-compensate Exposure and White Balance of a Color DNA profile to match a target photo's lighting,
-    then compile a tailored \`.xmp\` preset and optional Before/After comparison image.
+    then compile a tailored `.xmp` preset and optional Before/After comparison image.
 
     Args:
         image_path: Path to the target photo (.jpg, .png, .webp).
@@ -305,7 +305,7 @@ def export_cube_lut(
 
     Args:
         output_cube_path: Destination .cube file path.
-        dna_id: Single Color DNA ID (provide either \`dna_id\` or \`weights\`).
+        dna_id: Single Color DNA ID (provide either `dna_id` or `weights`).
         weights: Optional blend weights dict e.g. {"film_emulation_001": 0.7, "cinematic_teal_orange_002": 0.3}.
         title: Title embedded inside the .cube file header.
         size: 3D LUT cube resolution (default: 33, standard for video NLEs).
@@ -319,7 +319,7 @@ def export_cube_lut(
     elif dna_id:
         target_dna = _get_profile(profiles, dna_id)
     else:
-        raise ValueError("Provide either \`dna_id\` or \`weights\` to export a 3D LUT.")
+        raise ValueError("Provide either `dna_id` or `weights` to export a 3D LUT.")
 
     target_dna = _apply_overrides(target_dna, slider_overrides)
     cube_file = write_cube_lut_atomic(target_dna, Path(output_cube_path), title=title, size=size)
