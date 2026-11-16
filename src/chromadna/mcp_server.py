@@ -166,6 +166,12 @@ def blend_color_dna(
     weighted_list: List[Tuple[Dict[str, Any], float]] = [
         (_get_profile(profiles, dna_id), float(w)) for dna_id, w in weights.items()
     ]
+    non_blendable = [dna.get("id", "unknown") for dna, _ in weighted_list if dna.get("blendable") is False]
+    if non_blendable:
+        raise ValueError(
+            "These profiles are marked non-blendable and cannot be mixed: "
+            + ", ".join(non_blendable)
+        )
 
     blended = blend_dna_profiles(weighted_list)
     blended = _apply_overrides(blended, slider_overrides)
