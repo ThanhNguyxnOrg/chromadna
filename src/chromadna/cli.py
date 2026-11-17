@@ -4,7 +4,7 @@ import argparse
 import json
 from pathlib import Path
 from typing import Any, Dict, List, Tuple
-from .blender import blend_dna_profiles
+from .blender import assert_profile_blendable, blend_dna_profiles
 from .compiler import write_xmp_atomic
 from .matcher import adapt_dna_to_image, analyze_image_metrics, recommend_dna_profiles
 from .miner import mine_directory, save_catalog
@@ -134,6 +134,7 @@ def main() -> None:
             target_dna = blend_dna_profiles(weighted)
         else:
             target_dna = find_profile_by_id(profiles, args.dna)
+            assert_profile_blendable(target_dna)
         lut_file = write_cube_lut_atomic(target_dna, args.out, title=args.name, size=args.size)
         print(f"Exported {args.size}x{args.size}x{args.size} 3D LUT -> {lut_file}")
 

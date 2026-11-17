@@ -1,0 +1,105 @@
+name: Release ChromaDNA
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Git tag to create (must match the version in pyproject.toml)"
+        required: true
+        type: string
+        default: "v0.2.1"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: chromadna-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - name: Mint repository-scoped GitHub App token
+        id: app_token
+        uses: ThanhNguyxnOrg/.github/.github/actions/agent-token@2b5c5cad571ee93fd091e16e1734ebd819191e68
+        with:
+          profile: content
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+
+      - name: Checkout main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          token: ${{ steps.app_token.outputs.token }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install uv
+        run: python -m pip install "uv==0.10.0"
+
+      - name: Verify release tag matches project version
+        env:
+          RELEASE_TAG: ${{ inputs.tag }}
+        run: |
+          VERSION="$(python -c 'import tomllib; print(tomllib.load(open("pyproject.toml", "rb"))["project"]["version"])')"
+          if [ "$RELEASE_TAG" != "v$VERSION" ]; then
+            echo "::error::Requested tag $RELEASE_TAG does not match project version v$VERSION."
+            exit 1
+          fi
+          if git ls-remote --exit-code --tags origin "refs/tags/$RELEASE_TAG" >/dev/null 2>&1; then
+            echo "::error::Tag $RELEASE_TAG already exists."
+            exit 1
+          fi
+
+      - name: Resolve dependency lock
+        run: uv lock
+
+      - name: Install locked dependencies
+        run: uv sync --locked --all-extras
+
+      - name: Run complete test suite
+        run: uv run pytest -q
+
+      - name: Build wheel and source distribution
+        run: uv build
+
+      - name: Commit dependency lock if it changed
+        env:
+          GH_TOKEN: ${{ steps.app_token.outputs.token }}
+        run: |
+          git add uv.lock
+          if git diff --cached --quiet; then
+            echo "uv.lock is already current."
+          else
+            BOT_ID="$(gh api users/ThanhNguyxnAgent%5Bbot%5D --jq .id)"
+            git config user.name "ThanhNguyxnAgent[bot]"
+            git config user.email "${BOT_ID}+ThanhNguyxnAgent[bot]@users.noreply.github.com"
+            git commit -m "build(deps): add reproducible uv lockfile"
+          fi
+          git fetch origin main
+          git rebase origin/main
+          uv sync --locked --all-extras
+          uv run pytest -q
+          uv build
+          git -c http.extraheader="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w 0)" push origin HEAD:main
+
+      - name: Publish GitHub Release and tag
+        env:
+          GH_TOKEN: ${{ steps.app_token.outputs.token }}
+          RELEASE_TAG: ${{ inputs.tag }}
+        run: |
+          gh release create "$RELEASE_TAG" dist/* \
+            --target "$(git rev-parse HEAD)" \
+            --title "ChromaDNA $RELEASE_TAG" \
+            --generate-notes

@@ -24,6 +24,9 @@ def sample_dna(name="sample", contrast=0):
 def test_clamp_slider_rejects_unknown_and_bounds_known_values():
     assert clamp_slider("NotARealSlider", 10) is None
     assert clamp_slider("Contrast2012", 1000) == 100
+    assert clamp_slider("Contrast2012", float("nan")) is None
+    assert clamp_slider("Contrast2012", float("inf")) is None
+    assert clamp_slider("Contrast2012", True) is None
 
 
 def test_blend_normalizes_weights_and_returns_valid_profile():

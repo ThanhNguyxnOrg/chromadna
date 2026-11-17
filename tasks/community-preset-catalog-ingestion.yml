@@ -1,12 +1,14 @@
 # ChromaDNA community preset catalog ingestion task
 # Executable automation: .github/workflows/community-presets.yml
-# The workflow itself downloads, parses, validates, tests, and updates the catalog.\n# ThanhNguyxnAgent is only the GitHub App used to authenticate the push and commit identity.
+# The workflow itself downloads, parses, validates, tests, and updates the catalog.
+# ThanhNguyxnAgent is only the GitHub App used to authenticate the push and commit identity.
 
 automation:
   workflow: .github/workflows/community-presets.yml
   importer: scripts/import_community_presets.py
   trigger: workflow_dispatch
-  authentication_app: ThanhNguyxnAgent\n  app_role: installation_token_for_authenticated_push_and_commit_attribution
+  authentication_app: ThanhNguyxnAgent
+  app_role: installation_token_for_authenticated_push_and_commit_attribution
 
 task:
   id: community-preset-catalog-ingestion

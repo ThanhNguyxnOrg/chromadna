@@ -9,7 +9,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 from mcp.server.fastmcp import FastMCP
 
-from .blender import blend_dna_profiles
+from .blender import assert_profile_blendable, blend_dna_profiles
 from .compiler import write_xmp_atomic
 from .lut_exporter import write_cube_lut_atomic
 from .matcher import adapt_dna_to_image, analyze_image_metrics, recommend_dna_profiles
@@ -57,8 +57,9 @@ def _apply_overrides(dna: Dict[str, Any], slider_overrides: Optional[Dict[str, f
     sliders = cloned.setdefault("sliders", {})
     for key, raw_val in slider_overrides.items():
         clamped = clamp_slider(key, raw_val)
-        if clamped is not None:
-            sliders[key] = clamped
+        if clamped is None:
+            raise ValueError(f"Unsupported or invalid slider override: {key!r}.")
+        sliders[key] = clamped
     # Enforce ACR Grain vs. Sharpness rule
     if sliders.get("GrainAmount", 0) > 0 and sliders.get("Sharpness", 0) > 10:
         sliders["Sharpness"] = 10
@@ -89,6 +90,8 @@ def list_color_dna(
             {
                 "id": p["id"],
                 "category": p.get("category", "Uncategorized"),
+                "profile_kind": p.get("profile_kind", "creative_look"),
+                "blendable": p.get("blendable", True),
                 "tags": p.get("tags", []),
                 "key_sliders": {
                     k: p["sliders"][k]
@@ -261,7 +264,9 @@ def render_preview(
         catalog_path: Optional custom path to color_dna_catalog.json.
     """
     profiles = _load_profiles(catalog_path)
-    dna = _apply_overrides(_get_profile(profiles, dna_id), slider_overrides)
+    dna = _get_profile(profiles, dna_id)
+    assert_profile_blendable(dna)
+    dna = _apply_overrides(dna, slider_overrides)
     out_file = render_before_after(Path(image_path), dna, Path(output_preview_path))
     return {"status": "success", "preview_path": str(out_file.resolve())}
 
@@ -319,13 +324,18 @@ def export_cube_lut(
         catalog_path: Optional custom path to color_dna_catalog.json.
     """
     profiles = _load_profiles(catalog_path)
-    if weights:
-        weighted_list = [(_get_profile(profiles, k), float(v)) for k, v in weights.items()]
+    has_dna_id = dna_id is not None
+    has_weights = weights is not None
+    if has_dna_id == has_weights:
+        raise ValueError("Provide exactly one of `dna_id` or `weights` to export a 3D LUT.")
+    if has_weights:
+        if not weights:
+            raise ValueError("The `weights` mapping must contain at least one profile.")
+        weighted_list = [(_get_profile(profiles, k), v) for k, v in weights.items()]
         target_dna = blend_dna_profiles(weighted_list)
-    elif dna_id:
-        target_dna = _get_profile(profiles, dna_id)
     else:
-        raise ValueError("Provide either `dna_id` or `weights` to export a 3D LUT.")
+        target_dna = _get_profile(profiles, dna_id)
+        assert_profile_blendable(target_dna)
 
     target_dna = _apply_overrides(target_dna, slider_overrides)
     cube_file = write_cube_lut_atomic(target_dna, Path(output_cube_path), title=title, size=size)

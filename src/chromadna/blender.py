@@ -1,5 +1,6 @@
 """Mathematical preset interpolation & multi-DNA blending engine."""
 
+import math
 from typing import Any, Dict, List, Tuple
 import numpy as np
 from .schema import DEFAULT_CURVE, TONE_CURVE_KEYS, clamp_slider, sanitize_curve
@@ -30,12 +31,65 @@ def simplify_curve(resampled: np.ndarray, tolerance: float = 1.2) -> List[List[i
     return sanitize_curve(kept)
 
 
+def is_blendable_profile(dna: Dict[str, Any]) -> bool:
+    """Return whether a profile represents a creative look that can be blended."""
+    return (
+        dna.get("blendable") is not False
+        and dna.get("profile_kind") not in {"utility", "video_reference"}
+    )
+
+
+def assert_profile_blendable(dna: Dict[str, Any]) -> None:
+    """Raise a useful error when a utility or video-reference profile is used as a look."""
+    if not isinstance(dna, dict):
+        raise ValueError("A Color DNA profile must be a mapping.")
+    if not is_blendable_profile(dna):
+        profile_id = dna.get("id", "unknown")
+        profile_kind = dna.get("profile_kind", "non-blendable")
+        raise ValueError(
+            f"Color DNA profile '{profile_id}' ({profile_kind}) is not a blendable creative look."
+        )
+
+
+def _normalize_weighted_profiles(
+    weighted_profiles: List[Tuple[Dict[str, Any], float]],
+) -> List[Tuple[Dict[str, Any], float]]:
+    """Validate blend inputs and return finite, non-negative, normalized weights."""
+    try:
+        entries = list(weighted_profiles)
+    except TypeError as exc:
+        raise ValueError("Provide one or more (profile, weight) pairs.") from exc
+    if not entries:
+        raise ValueError("Provide at least one profile to blend.")
+
+    parsed: List[Tuple[Dict[str, Any], float]] = []
+    for index, entry in enumerate(entries):
+        if not isinstance(entry, (tuple, list)) or len(entry) != 2:
+            raise ValueError(f"Blend item {index + 1} must contain a profile and a weight.")
+        dna, raw_weight = entry
+        assert_profile_blendable(dna)
+        if isinstance(raw_weight, bool):
+            raise ValueError(f"Blend weight {index + 1} must be a finite non-negative number.")
+        try:
+            weight = float(raw_weight)
+        except (TypeError, ValueError, OverflowError) as exc:
+            raise ValueError(f"Blend weight {index + 1} must be a finite non-negative number.") from exc
+        if not math.isfinite(weight) or weight < 0:
+            raise ValueError(f"Blend weight {index + 1} must be a finite non-negative number.")
+        parsed.append((dna, weight))
+
+    try:
+        total_weight = math.fsum(weight for _, weight in parsed)
+    except OverflowError as exc:
+        raise ValueError("Total blend weight must be finite.") from exc
+    if not math.isfinite(total_weight) or total_weight <= 0:
+        raise ValueError("Total blend weight must be finite and greater than 0.")
+    return [(dna, weight / total_weight) for dna, weight in parsed]
+
+
 def blend_dna_profiles(weighted_profiles: List[Tuple[Dict[str, Any], float]]) -> Dict[str, Any]:
-    """Blend N Color DNA dictionaries using normalized weights."""
-    total_weight = sum(w for _, w in weighted_profiles)
-    if total_weight <= 0:
-        raise ValueError("Total blend weight must be greater than 0.")
-    normalized = [(dna, w / total_weight) for dna, w in weighted_profiles]
+    """Blend N compatible Color DNA dictionaries using validated normalized weights."""
+    normalized = _normalize_weighted_profiles(weighted_profiles)
     all_slider_keys = set()
     for dna, _ in normalized:
         all_slider_keys.update(dna.get("sliders", {}).keys())

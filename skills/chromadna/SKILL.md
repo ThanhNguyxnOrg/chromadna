@@ -4,7 +4,7 @@ description: Extract and blend Lightroom and Adobe Camera Raw preset color profi
 license: MIT
 compatibility: Requires Python 3.10+, project dependencies, and access to input files on the machine running the CLI or MCP server.
 metadata:
-  version: "0.2.0"
+  version: "0.2.1"
   repository: "ThanhNguyxnOrg/chromadna"
 ---
 
@@ -12,36 +12,49 @@ metadata:
 
 ChromaDNA extracts supported color settings from Lightroom / Camera Raw preset sources, blends compatible profiles, estimates photo-specific adjustments, compiles XMP presets, renders approximate previews, and exports 3D LUTs.
 
-**Important limitation:** the preview renderer and .cube exporter are approximations. They do not reproduce Adobe Camera Raw proprietary rendering, camera profiles, local masks, RAW processing, or every slider operation. Never describe output as pixel-identical to Lightroom.
+**Important limitation:** the preview renderer and .cube exporter share an approximate RGB transform. They do not reproduce Adobe Camera Raw's proprietary rendering pipeline, camera profiles, local masks, RAW processing, spatial effects, or every slider operation. Never describe output as pixel-identical to Lightroom.
 
-## Start safely
+## Runtime and installation
 
-Run commands from the repository root. Install dependencies with:
+The GitHub repository is public. Clone it without authentication:
 
 ```bash
-python -m pip install -e .
+git clone https://github.com/ThanhNguyxnOrg/chromadna.git
+cd chromadna
+python -m pip install -e ".[dev]"
 ```
 
-Use the installed CLI or the repository launcher:
+Run commands from the repository root. On Windows PowerShell:
+
+```powershell
+.\scripts\chromadna.ps1 list
+```
+
+On macOS/Linux:
 
 ```bash
 chromadna list
 bash scripts/chromadna.sh list
 ```
 
-On Windows PowerShell:
-
-```powershell
-.\scripts\chromadna.ps1 list
-```
-
 ## Required workflow
 
-1. **Discover profiles before use.** Run chromadna list and use only exact IDs returned by the catalog. Never invent IDs.
-2. **Analyze a photo before matching.** Run chromadna analyze ./photo.jpg. Describe computed exposure and white-balance offsets as heuristic estimates, not calibrated measurements.
-3. **Blend and compile.** Use chromadna blend --mix <id>:0.7 <id>:0.3 --name "Hybrid Look" --out ./output_xmp/hybrid.xmp.
-4. **Export a LUT.** Use chromadna lut --dna <exact-id> --name "Look" --size 33 --out ./output_lut/look.cube.
-5. **Inspect generated previews.** If the output image is not accessible for visual inspection, say so. File generation alone is not visual verification.
+1. **Discover profiles before use.** Run `chromadna list` and use only exact IDs returned by the catalog. Never invent IDs.
+2. **Analyze a photo before matching.** Run `chromadna analyze ./photo.jpg`. Describe computed exposure and white-balance offsets as heuristic estimates, not calibrated measurements.
+3. **Blend compatible creative profiles only.** Example:
+   ```bash
+   chromadna blend --mix emulsion_kodak_portra_400:0.7 emulsion_cinestill_400d:0.3 --name "Hybrid Look" --out ./output_xmp/hybrid.xmp
+   ```
+   Utility/reset profiles and video-reference records are non-blendable. The engine rejects negative, non-finite, malformed, and all-zero weights.
+4. **Match a profile to a photo.**
+   ```bash
+   chromadna match ./photo.jpg --dna emulsion_kodak_portra_400 --name "Matched Look" --out ./output_xmp/matched.xmp
+   ```
+5. **Export a LUT.**
+   ```bash
+   chromadna lut --dna emulsion_kodak_portra_400 --name "Look" --size 33 --out ./output_lut/look.cube
+   ```
+6. **Inspect generated previews.** The preview renderer uses the same approximate transform kernel as the LUT exporter for supported operations. If the output image is not accessible for visual inspection, say so. File generation alone is not visual verification.
 
 ## Preset mining
 
@@ -51,17 +64,19 @@ Supported source extensions are .xmp, .dng (embedded XMP packet extraction), and
 chromadna mine ./raw_vault --out data/color_dna_catalog.json
 ```
 
-Keep original presets and RAW files outside Git. Do not upload copyrighted preset packs without permission.
+The default community catalog contains 451 profiles imported from a pinned upstream revision. Keep original presets and RAW files outside Git. Do not upload copyrighted preset packs without permission.
 
-## Safety rules
+## Safety and compatibility
 
 - Write generated XMP files to a dedicated output directory, never beside a RAW file with the same filename stem.
 - Do not invent slider keys or claim undocumented Adobe properties are supported.
 - Preserve the distinction between creative look selection and image-specific technical compensation.
-- Validate generated XMP and LUT files in the target application before production use.
+- Unknown or invalid MCP slider overrides are rejected rather than silently ignored.
+- Validate generated XMP and LUT files in their target applications before production use.
 - Treat source photos, RAW files, and user preset libraries as private. Do not commit them.
 - Do not claim that a local image attachment is available to an MCP server unless the server can access its filesystem path.
+- The local MCP server uses stdio and filesystem paths visible to its process; it is not a hosted remote endpoint.
 
-## MCP
+## MCP tools
 
-When connected, call list_color_dna before selecting a profile. Use analyze_photo, match_photo_to_dna, blend_color_dna, render_preview, compile_xmp_preset, and export_cube_lut as appropriate. The current stdio server accepts filesystem paths visible to the server process; it does not automatically receive images attached to a cloud chat.
+When connected, call `list_color_dna` before selecting a profile. Use `inspect_color_dna`, `analyze_photo`, `match_photo_to_dna`, `blend_color_dna`, `render_preview`, `compile_xmp_preset`, and `export_cube_lut` as appropriate. Check `blendable` and `profile_kind` before choosing a profile. The server rejects non-blendable profiles in blend, match, preview, and LUT operations.

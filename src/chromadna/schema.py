@@ -1,5 +1,6 @@
 """Strict Adobe Camera Raw (crs:*) schema bounds, defaults, and parameter classification."""
 
+import math
 from typing import Any, Dict, List, Tuple
 
 TECHNICAL_SLIDERS = {
@@ -62,9 +63,13 @@ def clamp_slider(name: str, value: Any) -> Any:
     if name not in SLIDER_BOUNDS:
         return None
     min_val, max_val, dtype = SLIDER_BOUNDS[name]
+    if isinstance(value, bool):
+        return None
     try:
         num = float(value)
-    except (ValueError, TypeError):
+    except (ValueError, TypeError, OverflowError):
+        return None
+    if not math.isfinite(num):
         return None
     clamped = max(min_val, min(max_val, num))
     return int(round(clamped)) if dtype is int else round(clamped, 2)

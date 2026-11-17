@@ -14,7 +14,7 @@ Intended pipeline:
 5. Render an explicitly approximate offline preview for an AI vision feedback loop.
 6. Compile safe XMP sidecars and 3D .cube LUTs.
 
-The standalone Python CLI and Agent Skill are first-class interfaces. Lightroom itself should not be required for mining, analysis, blending, preview generation, or compilation.
+The standalone Python CLI, Agent Skill, and local FastMCP stdio server are implemented first-class interfaces. Lightroom itself is not required for mining, analysis, blending, approximate preview generation, XMP compilation, or LUT export.
 
 ## 2. Ecosystem map
 
@@ -38,8 +38,8 @@ The table describes intended differentiation, not a formal benchmark. Do not ass
 - Explore CIELAB / Oklab analysis, histogram matching, and skin-tone protection.
 
 ### AI agent ecosystem
-- Keep SKILL.md accurate and document only implemented CLI commands.
-- Consider an optional FastMCP server for mining, analysis, blending, preview, and compilation.
+- Keep the root SKILL.md and canonical skills/chromadna/SKILL.md identical; both are distributed entry points.
+- The local FastMCP stdio server exposes catalog discovery, photo analysis, blending, matching, preview, XMP compilation, and LUT export.
 - A visual self-correction loop may render previews, inspect clipping / color shifts, adjust settings, and repeat. It must not claim Adobe-rendered fidelity.
 
 ### UX and community
@@ -58,7 +58,7 @@ src/chromadna/lut_exporter.py provides an initial vectorized RGB-lattice transfo
 
 The initial implementation models selected global settings, tone curves, HSL bands, split-toning-like controls, vibrance, and saturation. These are approximations, not an exact reproduction of Adobe Camera Raw. Temperature / tint, exposure, tonal recovery, HSL weighting, and color grading are simplified. Camera profiles, local adjustments, masks, grain, and spatial effects are not represented. Verify generated LUT behavior in each target application.
 
-CLI integration is a follow-up: add a lut subcommand that loads a catalog profile or blends profiles, then calls write_cube_lut_atomic. Do not document the command as available until it exists and is tested.
+The CLI exposes a `lut` subcommand for single profiles and weighted blends. The MCP server exposes `export_cube_lut`. The offline preview renderer now shares the same `transform_rgb_lattice` kernel as the LUT exporter for supported operations; both remain approximations of Adobe Camera Raw.
 
 ## 5. Roadmap
 
@@ -82,4 +82,4 @@ CLI integration is a follow-up: add a lut subcommand that loads a catalog profil
 
 ## 7. Suggested next task
 
-Integrate lut_exporter.py into the actual CLI only after inspecting cli.py. Add chromadna lut --dna <id> --out <path> and weighted --mix support, validate malformed weights and IDs, then test a small LUT size before generating the default 33-cubed output.
+Improve color fidelity with measured reference fixtures, perceptual-space transforms, and validation inside the target editors. Keep unsupported effects (such as masks, grain, and spatial corrections) explicit rather than implying they are represented by a conventional 3D LUT.

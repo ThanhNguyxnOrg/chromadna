@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Tuple
 import numpy as np
 from PIL import Image
+from .blender import assert_profile_blendable, is_blendable_profile
 
 
 def analyze_image_metrics(image_path: Path) -> Dict[str, float]:
@@ -26,6 +27,7 @@ def analyze_image_metrics(image_path: Path) -> Dict[str, float]:
 
 def adapt_dna_to_image(dna: Dict[str, Any], image_path: Path) -> Tuple[Dict[str, Any], Dict[str, float]]:
     """Compute technical Exposure & White Balance offsets so the creative Color DNA fits the photo."""
+    assert_profile_blendable(dna)
     metrics = analyze_image_metrics(image_path)
     adapted = copy.deepcopy(dna)
     sliders = adapted.setdefault("sliders", {})
@@ -46,8 +48,12 @@ def adapt_dna_to_image(dna: Dict[str, Any], image_path: Path) -> Tuple[Dict[str,
 
 def recommend_dna_profiles(metrics: Dict[str, float], catalog: List[Dict[str, Any]], top_k: int = 3) -> List[Dict[str, Any]]:
     """Score catalog profiles based on image lighting characteristics."""
+    if not isinstance(top_k, int) or isinstance(top_k, bool) or top_k < 1:
+        raise ValueError("top_k must be a positive integer.")
     scored: List[Tuple[float, Dict[str, Any]]] = []
     for prof in catalog:
+        if not is_blendable_profile(prof):
+            continue
         score = 0.0
         tags = set(prof.get("tags", []))
         if metrics["dynamic_spread"] > 0.70 and "high-contrast" in tags: score += 1.5

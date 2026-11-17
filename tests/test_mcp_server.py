@@ -3,8 +3,20 @@ import os
 from pathlib import Path
 import sys
 
+import pytest
+
+from chromadna.mcp_server import _apply_overrides
+
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
+
+
+def test_unknown_or_invalid_slider_overrides_are_rejected():
+    with pytest.raises(ValueError, match="Unsupported or invalid slider override"):
+        _apply_overrides(
+            {"id": "look", "sliders": {}, "tone_curves": {}},
+            {"NotARealSlider": 20},
+        )
 
 
 def test_stdio_server_initializes_and_exposes_all_tools():

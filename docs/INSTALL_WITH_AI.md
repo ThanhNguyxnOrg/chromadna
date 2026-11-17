@@ -20,7 +20,7 @@ Repository: https://github.com/ThanhNguyxnOrg/chromadna
 
 ### Procedure
 
-1. Inspect the current workspace and operating system. If this repository is already checked out, use that checkout. Otherwise, try to clone the repository using the user's existing Git authentication. Do not ask the user to paste passwords, access tokens, SSH private keys, or other secrets. If access is denied, explain that this repository is private and ask the user to open an authenticated checkout or grant access.
+1. Inspect the current workspace and operating system. If this repository is already checked out, use that checkout. Otherwise, clone the public repository URL without requiring GitHub authentication. Do not ask the user to paste passwords, access tokens, SSH private keys, or other secrets. If cloning fails, verify the URL, network connectivity, Git availability, and any organization-level access restrictions; do not assume the repository is private.
 2. Read README.md, docs/COMPATIBILITY.md, skills/chromadna/SKILL.md, and pyproject.toml before making changes.
 3. Check for Python 3.10+, uv, Node.js 22.20+, and npm. Install only missing prerequisites when the environment and package manager permit it; otherwise give exact installation instructions. Do not replace existing runtimes or alter unrelated environment settings.
 4. From the repository root, run:
@@ -47,7 +47,7 @@ Repository: https://github.com/ThanhNguyxnOrg/chromadna
 ### Safety and scope
 
 - Do not publish to npm or PyPI.
-- Do not make the GitHub repository public.
+- Do not change the GitHub repository visibility.
 - Do not create GitHub releases, tags, commits, branches, or pull requests.
 - Do not upload or commit user photos, RAW files, or third-party preset packs.
 - Do not overwrite unrelated settings. Back up any existing file before editing.

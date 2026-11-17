@@ -13,7 +13,7 @@ For users who prefer an AI to perform setup, copy the prompt in [Install ChromaD
 
 ## One-command local setup
 
-The repository is private and is not published to npm or PyPI. Clone it with an authenticated GitHub account, then run:
+The GitHub repository is public and can be cloned without authentication. The package is not currently published to npm or PyPI. Clone it, then run:
 
 \`\`\`bash
 node scripts/setup.mjs --all
