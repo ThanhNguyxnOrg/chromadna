@@ -112,7 +112,7 @@ A future cloud service needs authenticated users, upload handling, per-user isol
 ## Installation and verification requirements
 
 - Python 3.10+, \`uv\`, Node.js 22.20+, and npm.
-- The GitHub repository is private. Users need existing GitHub access to clone it.
+- The GitHub repository is public; cloning does not require GitHub authentication.
 - The setup script does not publish packages, create releases, make the repository public, or change Git history.
 - It does not install client applications that are missing.
 - JSON settings are merged and backed up. Existing ChromaDNA entries are preserved unless \`--force\` is supplied.
