@@ -120,7 +120,7 @@ jobs:
           git fetch origin main
           git rebase origin/main
           uv sync --locked --all-extras
-          uv run pytest -q
+          PYTHONPATH=. uv run pytest -q
           uv build
           uv run python scripts/smoke_test_wheel.py
           git -c http.extraheader="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w 0)" push origin HEAD:main
