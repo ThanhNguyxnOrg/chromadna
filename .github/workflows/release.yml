@@ -93,7 +93,7 @@ jobs:
 
       - name: Run complete test suite
         if: steps.version.outputs.already_released != 'true'
-        run: uv run pytest -q
+        run: PYTHONPATH=. uv run pytest -q
 
       - name: Build wheel and source distribution
         if: steps.version.outputs.already_released != 'true'
