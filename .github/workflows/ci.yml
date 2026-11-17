@@ -35,7 +35,7 @@ jobs:
         shell: bash
         run: |
           if [ -f uv.lock ]; then
-            uv run pytest -q
+            PYTHONPATH=. uv run pytest -q
           else
             python -m pytest -q
           fi
