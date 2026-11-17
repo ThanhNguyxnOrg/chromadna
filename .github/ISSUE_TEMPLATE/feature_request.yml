@@ -1,0 +1,53 @@
+name: Feature request
+description: Propose an improvement to ChromaDNA.
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Explain the user problem first. Please search existing issues before submitting.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: What is difficult or impossible today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the workflow or behavior you would like.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Other approaches or workarounds you have tried.
+    validations:
+      required: false
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Python library / color engine
+        - CLI
+        - MCP server
+        - Agent Skill / setup
+        - Catalog / preset provenance
+        - Documentation
+        - Packaging / release
+        - Other
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched for an existing request.
+          required: true
+        - label: This proposal does not depend on redistributing unlicensed presets, photos, or RAW files.
+          required: true

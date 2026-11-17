@@ -87,6 +87,12 @@ node scripts/setup.mjs --mcp --agent=cursor
 
 Prefer an AI to perform setup? Copy the single prompt in [Install ChromaDNA with an AI Agent](docs/INSTALL_WITH_AI.md) into any coding agent with terminal access. See [Agent and Client Compatibility](docs/COMPATIBILITY.md) for the full matrix, DeepSeek Harness and Groq API adapters, and cloud-client limitations.
 
+## Community preset catalog
+
+The default catalog contains 451 profiles imported from the pinned [EmulsionPresets](https://github.com/peva3/EmulsionPresets) source revision. The imported records retain their source paths, revision, file hashes, and license information. ChromaDNA does not claim authorship of those preset recipes.
+
+The catalog is **not refreshed automatically**. Maintainers can review and run the pinned importer manually; see [Community Catalog Maintenance](docs/COMMUNITY_CATALOG.md). Third-party notices and the import report live in `data/sources/`.
+
 ## Releases
 
 The project version is `0.2.1`. Use **Actions → Release ChromaDNA → Run workflow** to generate/commit `uv.lock`, run the test and build checks, create the matching `v0.2.1` Git tag, and publish a GitHub Release with wheel and source archives. The workflow does not publish to PyPI or npm.
@@ -123,6 +129,10 @@ The MCP process can only read files accessible to the machine and user account r
 - Do not write generated presets beside RAW files using the same filename stem.
 - Do not claim compatibility until the preset or LUT has been tested in the target editor.
 - Do not expose the local stdio server to the public internet.
+
+## Contributing
+
+Contributions are welcome. Start with [CONTRIBUTING.md](CONTRIBUTING.md), read the [Code of Conduct](CODE_OF_CONDUCT.md), and review [Security](SECURITY.md) before reporting a vulnerability.
 
 ## License
 

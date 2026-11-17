@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/ThanhNguyxnOrg/chromadna/security/advisories/new
+    about: Report security issues privately. Do not create a public issue for vulnerabilities.
+  - name: Contribution guide
+    url: https://github.com/ThanhNguyxnOrg/chromadna/blob/main/CONTRIBUTING.md
+    about: Read the contribution requirements, development setup, and testing steps before submitting changes.
