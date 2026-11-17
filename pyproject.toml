@@ -24,3 +24,6 @@ chromadna-mcp = "chromadna.mcp_server:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.data-files]
+"share/chromadna" = ["data/color_dna_catalog.json"]

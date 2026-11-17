@@ -64,7 +64,7 @@ Supported source extensions are .xmp, .dng (embedded XMP packet extraction), and
 chromadna mine ./raw_vault --out data/color_dna_catalog.json
 ```
 
-The default community catalog contains 451 profiles imported from a pinned upstream revision. Keep original presets and RAW files outside Git. Do not upload copyrighted preset packs without permission.
+The default community catalog contains 451 profiles imported from a pinned upstream revision. Release wheels bundle the catalog and can run outside the source checkout. Keep original presets and RAW files outside Git. Do not upload copyrighted preset packs without permission.
 
 ## Safety and compatibility
 

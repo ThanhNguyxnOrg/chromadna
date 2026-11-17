@@ -2,6 +2,7 @@
 
 import argparse
 import json
+import sysconfig
 from pathlib import Path
 from typing import Any, Dict, List, Tuple
 from .blender import assert_profile_blendable, blend_dna_profiles
@@ -11,7 +12,21 @@ from .miner import mine_directory, save_catalog
 from .previewer import render_before_after
 from .lut_exporter import write_cube_lut_atomic
 
-DEFAULT_CATALOG = Path("data/color_dna_catalog.json")
+def resolve_default_catalog_path() -> Path:
+    """Prefer the checkout catalog, then the bundled catalog in an installed wheel."""
+    checkout_catalog = Path("data") / "color_dna_catalog.json"
+    if checkout_catalog.is_file():
+        return checkout_catalog
+    return (
+        Path(sysconfig.get_path("data"))
+        / "share"
+        / "chromadna"
+        / "color_dna_catalog.json"
+    )
+
+
+DEFAULT_CATALOG = resolve_default_catalog_path()
+DEFAULT_OUTPUT_CATALOG = Path("data") / "color_dna_catalog.json"
 
 
 def load_catalog(catalog_path: Path) -> List[Dict[str, Any]]:
@@ -33,7 +48,7 @@ def main() -> None:
     subparsers = parser.add_subparsers(dest="command", required=True)
     p_mine = subparsers.add_parser("mine", help="Extract & deduplicate Color DNA from local .xmp/.dng/.lrtemplate folder")
     p_mine.add_argument("input_dir", type=Path)
-    p_mine.add_argument("--out", type=Path, default=DEFAULT_CATALOG)
+    p_mine.add_argument("--out", type=Path, default=DEFAULT_OUTPUT_CATALOG)
     p_mine.add_argument("--threshold", type=float, default=0.992)
     p_list = subparsers.add_parser("list", help="List extracted Color DNA profiles")
     p_list.add_argument("--catalog", type=Path, default=DEFAULT_CATALOG)

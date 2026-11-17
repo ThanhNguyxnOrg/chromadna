@@ -61,3 +61,4 @@ jobs:
             python -c "import chromadna.mcp_server"
             python -m build
           fi
+          python scripts/smoke_test_wheel.py

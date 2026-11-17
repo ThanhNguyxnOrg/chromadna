@@ -4,6 +4,7 @@ Before/After preview rendering, XMP compilation, and 3D LUT (.cube) export to AI
 
 import json
 import os
+import sysconfig
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
@@ -16,9 +17,26 @@ from .matcher import adapt_dna_to_image, analyze_image_metrics, recommend_dna_pr
 from .previewer import render_before_after
 from .schema import clamp_slider
 
-# Resolve default catalog path relative to repo root or environment override
+# Prefer an explicit override, then the checkout catalog, then wheel-installed data.
 REPO_ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_CATALOG_PATH = Path(os.environ.get("CHROMADNA_CATALOG", REPO_ROOT / "data" / "color_dna_catalog.json"))
+
+
+def resolve_default_catalog_path() -> Path:
+    configured = os.environ.get("CHROMADNA_CATALOG")
+    if configured:
+        return Path(configured).expanduser()
+    checkout_catalog = REPO_ROOT / "data" / "color_dna_catalog.json"
+    if checkout_catalog.is_file():
+        return checkout_catalog
+    return (
+        Path(sysconfig.get_path("data"))
+        / "share"
+        / "chromadna"
+        / "color_dna_catalog.json"
+    )
+
+
+DEFAULT_CATALOG_PATH = resolve_default_catalog_path()
 
 mcp = FastMCP(
     name="ChromaDNA",

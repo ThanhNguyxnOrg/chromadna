@@ -31,7 +31,7 @@ From the repository root:
 python -m pip install -e .
 ```
 
-This installs the chromadna and chromadna-mcp commands with dependencies declared in pyproject.toml.
+This installs the chromadna and chromadna-mcp commands with dependencies declared in pyproject.toml. The built wheel also bundles the default community catalog, so installed CLI/MCP commands can run outside the source checkout.
 
 ## Quick start
 

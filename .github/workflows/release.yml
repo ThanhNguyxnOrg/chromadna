@@ -74,6 +74,9 @@ jobs:
       - name: Build wheel and source distribution
         run: uv build
 
+      - name: Verify installed wheel and bundled catalog
+        run: uv run python scripts/smoke_test_wheel.py
+
       - name: Commit dependency lock if it changed
         env:
           GH_TOKEN: ${{ steps.app_token.outputs.token }}
@@ -92,6 +95,7 @@ jobs:
           uv sync --locked --all-extras
           uv run pytest -q
           uv build
+          uv run python scripts/smoke_test_wheel.py
           git -c http.extraheader="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w 0)" push origin HEAD:main
 
       - name: Publish GitHub Release and tag

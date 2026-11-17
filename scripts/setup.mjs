@@ -30,7 +30,7 @@ function usage() {
     "Skill targets: any agent supported by the Skills CLI; common targets: " + knownAgents.filter((name) => name !== "*").join(", ") + " (or * for all)",
     "MCP adapters: " + mcpTargets.join(", "),
     "DeepSeek Harness and Groq API require their documented integration paths; see docs/COMPATIBILITY.md.",
-    "Run from an authenticated checkout. No package publishing or repository visibility changes are performed."
+    "Run from a local checkout; the public repository can be cloned without authentication. No package publishing or repository visibility changes are performed."
   ].join("\n"));
 }
 if (has("--help") || has("-h")) { usage(); process.exit(0); }
