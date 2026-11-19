@@ -1,4 +1,5 @@
 import numpy as np
+import pytest
 from PIL import Image
 
 from chromadna.lut_exporter import transform_rgb_lattice
@@ -63,3 +64,24 @@ def test_identity_preview_preserves_source_pixels_in_after_panel(tmp_path):
     rendered = np.asarray(Image.open(output_path).convert("RGB"))
 
     np.testing.assert_array_equal(rendered[40, 48 + 8 + 20], source[40, 20])
+
+
+@pytest.mark.parametrize("orientation", [3, 6, 8])
+def test_preview_respects_exif_orientation(tmp_path, orientation):
+    # Stored raw image is 40x20 (landscape); orientations 6 and 8 rotate it to 20x40 (portrait).
+    raw = np.zeros((20, 40, 3), dtype=np.uint8)
+    raw[:, :] = (30, 140, 220)
+    img = Image.fromarray(raw)
+    exif = img.getexif()
+    exif[0x0112] = orientation
+    image_path = tmp_path / f"orient_{orientation}.jpg"
+    output_path = tmp_path / f"preview_{orientation}.jpg"
+    img.save(image_path, exif=exif.tobytes())
+
+    render_before_after(image_path, {"sliders": {}, "tone_curves": {}}, output_path)
+    rendered = Image.open(output_path)
+    if orientation in (6, 8):
+        # Portrait 20x40 -> side-by-side canvas is (20*2 + 8) x 40 = 48 x 40
+        assert rendered.size == (48, 40)
+    else:
+        assert rendered.size == (88, 20)
