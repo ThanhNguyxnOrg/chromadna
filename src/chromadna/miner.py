@@ -6,7 +6,15 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 import numpy as np
-from .schema import DEFAULT_CURVE, SLIDER_BOUNDS, TECHNICAL_SLIDERS, TONE_CURVE_KEYS, clamp_slider, sanitize_curve
+from .schema import (
+    DEFAULT_CURVE,
+    SLIDER_BOUNDS,
+    TECHNICAL_SLIDERS,
+    TONE_CURVE_KEYS,
+    clamp_slider,
+    get_slider_default,
+    sanitize_curve,
+)
 
 CRS_NS = "{http://ns.adobe.com/camera-raw-settings/1.0/}"
 RDF_NS = "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}"
@@ -118,13 +126,16 @@ def dna_to_vector(dna: Dict[str, Any]) -> np.ndarray:
         if key in TECHNICAL_SLIDERS:
             continue
         min_v, max_v, _ = SLIDER_BOUNDS[key]
-        val = float(sliders.get(key, 0.0))
+        default_v = float(get_slider_default(key))
+        val = float(sliders.get(key, default_v))
         span = max(1e-6, float(max_v - min_v))
-        vec.append(val / span)
-    rgb = np.array(dna["tone_curves"].get("ToneCurvePV2012", DEFAULT_CURVE), dtype=float)
+        vec.append((val - default_v) / span)
     xs = np.linspace(0, 255, 8)
-    ys = np.interp(xs, rgb[:, 0], rgb[:, 1]) / 255.0
-    vec.extend(ys.tolist())
+    identity = xs / 255.0
+    for ck in TONE_CURVE_KEYS:
+        curve = np.array(dna.get("tone_curves", {}).get(ck, DEFAULT_CURVE), dtype=float)
+        ys = np.interp(xs, curve[:, 0], curve[:, 1]) / 255.0
+        vec.extend((ys - identity).tolist())
     return np.array(vec, dtype=np.float32)
 
 
@@ -146,7 +157,13 @@ def mine_directory(input_dir: Path, similarity_threshold: float = 0.992) -> List
                 parsed = parse_lrtemplate_string(fpath.read_text(encoding="utf-8", errors="ignore"))
         except Exception:
             continue
-        if not parsed or (not parsed["sliders"] and parsed["tone_curves"]["ToneCurvePV2012"] == DEFAULT_CURVE):
+        if not parsed:
+            continue
+        has_custom_curve = any(
+            parsed["tone_curves"].get(ck, DEFAULT_CURVE) != DEFAULT_CURVE
+            for ck in TONE_CURVE_KEYS
+        )
+        if not parsed["sliders"] and not has_custom_curve:
             continue
         vec = dna_to_vector(parsed)
         norm = np.linalg.norm(vec)

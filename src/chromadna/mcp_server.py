@@ -37,6 +37,7 @@ def resolve_default_catalog_path() -> Path:
 
 
 DEFAULT_CATALOG_PATH = resolve_default_catalog_path()
+_CATALOG_CACHE: Dict[Path, Tuple[int, List[Dict[str, Any]]]] = {}
 
 mcp = FastMCP(
     name="ChromaDNA",
@@ -50,13 +51,20 @@ mcp = FastMCP(
 
 
 def _load_profiles(catalog_path: Optional[str] = None) -> List[Dict[str, Any]]:
-    path = Path(catalog_path) if catalog_path else DEFAULT_CATALOG_PATH
+    path = Path(catalog_path).expanduser() if catalog_path else resolve_default_catalog_path()
     if not path.exists():
         raise FileNotFoundError(
             f"Color DNA catalog not found at '{path}'. Run `chromadna mine <preset_folder>` first."
         )
-    payload = json.loads(path.read_text(encoding="utf-8"))
-    return payload.get("profiles", [])
+    resolved = path.resolve()
+    mtime_ns = resolved.stat().st_mtime_ns
+    cached = _CATALOG_CACHE.get(resolved)
+    if cached is not None and cached[0] == mtime_ns:
+        return cached[1]
+    payload = json.loads(resolved.read_text(encoding="utf-8"))
+    profiles = payload.get("profiles", [])
+    _CATALOG_CACHE[resolved] = (mtime_ns, profiles)
+    return profiles
 
 
 def _get_profile(profiles: List[Dict[str, Any]], dna_id: str) -> Dict[str, Any]:
@@ -126,7 +134,7 @@ def inspect_color_dna(dna_id: str, catalog_path: Optional[str] = None) -> Dict[s
     """Inspect the full mathematical sliders and Tone Curves of a specific Color DNA profile.
 
     Args:
-        dna_id: The exact Color DNA ID (e.g., "film_emulation_001").
+        dna_id: The exact Color DNA ID (e.g., "emulsion_kodak_portra_400").
         catalog_path: Optional custom path to color_dna_catalog.json.
     """
     profiles = _load_profiles(catalog_path)
@@ -172,7 +180,7 @@ def blend_color_dna(
     and compile the hybrid style into an Adobe Lightroom .xmp preset.
 
     Args:
-        weights: Mapping of Color DNA ID to weight, e.g. {"film_emulation_001": 0.7, "cinematic_teal_orange_002": 0.3}.
+        weights: Mapping of Color DNA ID to weight, e.g. {"emulsion_kodak_portra_400": 0.7, "emulsion_cinestill_400d": 0.3}.
         preset_name: Display name of the preset inside Lightroom.
         output_xmp_path: Destination path for the compiled .xmp file.
         slider_overrides: Optional dict of slider tweaks applied after blending (e.g., {"GrainAmount": 12}).
@@ -185,14 +193,8 @@ def blend_color_dna(
 
     profiles = _load_profiles(catalog_path)
     weighted_list: List[Tuple[Dict[str, Any], float]] = [
-        (_get_profile(profiles, dna_id), float(w)) for dna_id, w in weights.items()
+        (_get_profile(profiles, dna_id), w) for dna_id, w in weights.items()
     ]
-    non_blendable = [dna.get("id", "unknown") for dna, _ in weighted_list if dna.get("blendable") is False]
-    if non_blendable:
-        raise ValueError(
-            "These profiles are marked non-blendable and cannot be mixed: "
-            + ", ".join(non_blendable)
-        )
 
     blended = blend_dna_profiles(weighted_list)
     blended = _apply_overrides(blended, slider_overrides)
@@ -222,10 +224,11 @@ def match_photo_to_dna(
     preset_name: str = "ChromaDNA Matched",
     slider_overrides: Optional[Dict[str, float]] = None,
     preview_output_path: Optional[str] = None,
+    output_cube_path: Optional[str] = None,
     catalog_path: Optional[str] = None,
 ) -> Dict[str, Any]:
     """Auto-compensate Exposure and White Balance of a Color DNA profile to match a target photo's lighting,
-    then compile a tailored `.xmp` preset and optional Before/After comparison image.
+    then compile a tailored `.xmp` preset, optional Before/After comparison image, and optional 3D `.cube` LUT.
 
     Args:
         image_path: Path to the target photo (.jpg, .png, .webp).
@@ -234,6 +237,7 @@ def match_photo_to_dna(
         preset_name: Display name inside Lightroom.
         slider_overrides: Optional manual slider adjustments applied after auto-matching.
         preview_output_path: Optional destination path for the Before/After JPEG comparison.
+        output_cube_path: Optional destination path for an exported 3D .cube LUT.
         catalog_path: Optional custom path to color_dna_catalog.json.
     """
     img_file = Path(image_path)
@@ -260,6 +264,10 @@ def match_photo_to_dna(
     if preview_output_path:
         rendered = render_before_after(img_file, adapted_dna, Path(preview_output_path))
         result["preview_path"] = str(rendered.resolve())
+
+    if output_cube_path:
+        cube_file = write_cube_lut_atomic(adapted_dna, Path(output_cube_path), title=preset_name)
+        result["cube_path"] = str(cube_file.resolve())
 
     return result
 
@@ -335,7 +343,7 @@ def export_cube_lut(
     Args:
         output_cube_path: Destination .cube file path.
         dna_id: Single Color DNA ID (provide either `dna_id` or `weights`).
-        weights: Optional blend weights dict e.g. {"film_emulation_001": 0.7, "cinematic_teal_orange_002": 0.3}.
+        weights: Optional blend weights dict e.g. {"emulsion_kodak_portra_400": 0.7, "emulsion_cinestill_400d": 0.3}.
         title: Title embedded inside the .cube file header.
         size: 3D LUT cube resolution (default: 33, standard for video NLEs).
         slider_overrides: Optional slider adjustments applied before baking the LUT.

@@ -55,7 +55,7 @@ def _hsl_to_rgb_vec(hue: np.ndarray, sat: np.ndarray, lum: np.ndarray) -> np.nda
     g1[masks[2]], b1[masks[2]] = c[masks[2]], x[masks[2]]
     g1[masks[3]], b1[masks[3]] = x[masks[3]], c[masks[3]]
     r1[masks[4]], b1[masks[4]] = x[masks[4]], c[masks[4]]
-    r1[masks[5]], g1[masks[5]] = c[masks[5]], x[masks[5]]
+    r1[masks[5]], b1[masks[5]] = c[masks[5]], x[masks[5]]
     return np.clip(np.stack([r1 + m, g1 + m, b1 + m], axis=-1), 0.0, 1.0)
 
 
@@ -156,21 +156,86 @@ def transform_rgb_lattice(lattice: np.ndarray, dna: Dict[str, Any]) -> np.ndarra
         lightness = np.clip(lightness + d_lum, 0.0, 1.0)
         rgb = _hsl_to_rgb_vec(hue, sat, lightness)
 
-    # 7. Simplified split-toning / color-grading tint.
+    # 7. Legacy Split Toning + modern 3-way Color Grading approximation.
     shadow_hue = float(sliders.get("SplitToningShadowHue", 0))
     shadow_sat = float(sliders.get("SplitToningShadowSaturation", 0)) / 100.0
     highlight_hue = float(sliders.get("SplitToningHighlightHue", 0))
     highlight_sat = float(sliders.get("SplitToningHighlightSaturation", 0)) / 100.0
-    if shadow_sat > 0.0 or highlight_sat > 0.0:
+    st_balance = float(sliders.get("SplitToningBalance", 0)) / 100.0
+
+    cg_shadow_hue = float(sliders.get("ColorGradeShadowHue", 0))
+    cg_shadow_sat = float(sliders.get("ColorGradeShadowSat", 0)) / 100.0
+    cg_shadow_lum = float(sliders.get("ColorGradeShadowLum", 0)) / 100.0
+
+    cg_mid_hue = float(sliders.get("ColorGradeMidtoneHue", 0))
+    cg_mid_sat = float(sliders.get("ColorGradeMidtoneSat", 0)) / 100.0
+    cg_mid_lum = float(sliders.get("ColorGradeMidtoneLum", 0)) / 100.0
+
+    cg_hi_hue = float(sliders.get("ColorGradeHighlightHue", 0))
+    cg_hi_sat = float(sliders.get("ColorGradeHighlightSat", 0)) / 100.0
+    cg_hi_lum = float(sliders.get("ColorGradeHighlightLum", 0)) / 100.0
+
+    cg_glob_hue = float(sliders.get("ColorGradeGlobalHue", 0))
+    cg_glob_sat = float(sliders.get("ColorGradeGlobalSat", 0)) / 100.0
+    cg_glob_lum = float(sliders.get("ColorGradeGlobalLum", 0)) / 100.0
+    cg_balance = float(sliders.get("ColorGradeBalance", 0)) / 100.0
+
+    has_grading = any(
+        val != 0.0
+        for val in (
+            shadow_sat,
+            highlight_sat,
+            cg_shadow_sat,
+            cg_shadow_lum,
+            cg_mid_sat,
+            cg_mid_lum,
+            cg_hi_sat,
+            cg_hi_lum,
+            cg_glob_sat,
+            cg_glob_lum,
+        )
+    )
+    if has_grading:
         lum_st = 0.2126 * rgb[:, 0] + 0.7152 * rgb[:, 1] + 0.0722 * rgb[:, 2]
+        st_pivot = np.clip(0.5 - st_balance * 0.25, 0.15, 0.85)
+        cg_pivot = np.clip(0.5 - cg_balance * 0.25, 0.15, 0.85)
+        st_shadow_mask = np.clip((st_pivot - lum_st) / max(1e-6, st_pivot), 0.0, 1.0) ** 2
+        st_hi_mask = np.clip((lum_st - st_pivot) / max(1e-6, 1.0 - st_pivot), 0.0, 1.0) ** 2
+        cg_shadow_mask = np.clip((cg_pivot - lum_st) / max(1e-6, cg_pivot), 0.0, 1.0) ** 2
+        cg_hi_mask = np.clip((lum_st - cg_pivot) / max(1e-6, 1.0 - cg_pivot), 0.0, 1.0) ** 2
+        cg_mid_mask = np.clip(4.0 * lum_st * (1.0 - lum_st), 0.0, 1.0) ** 1.5
+
         if shadow_sat > 0.0:
             tint_rgb = _hue_to_rgb_unit(shadow_hue) - 0.5
-            weight = (1.0 - lum_st) ** 2 * (shadow_sat * 0.35)
-            rgb += weight[:, None] * tint_rgb[None, :]
+            rgb += (st_shadow_mask * (shadow_sat * 0.35))[:, None] * tint_rgb[None, :]
         if highlight_sat > 0.0:
             tint_rgb = _hue_to_rgb_unit(highlight_hue) - 0.5
-            weight = lum_st ** 2 * (highlight_sat * 0.35)
-            rgb += weight[:, None] * tint_rgb[None, :]
+            rgb += (st_hi_mask * (highlight_sat * 0.35))[:, None] * tint_rgb[None, :]
+
+        if cg_shadow_sat > 0.0:
+            tint_rgb = _hue_to_rgb_unit(cg_shadow_hue) - 0.5
+            rgb += (cg_shadow_mask * (cg_shadow_sat * 0.35))[:, None] * tint_rgb[None, :]
+        if cg_shadow_lum != 0.0:
+            rgb += (cg_shadow_mask * (cg_shadow_lum * 0.15))[:, None]
+
+        if cg_mid_sat > 0.0:
+            tint_rgb = _hue_to_rgb_unit(cg_mid_hue) - 0.5
+            rgb += (cg_mid_mask * (cg_mid_sat * 0.30))[:, None] * tint_rgb[None, :]
+        if cg_mid_lum != 0.0:
+            rgb += (cg_mid_mask * (cg_mid_lum * 0.12))[:, None]
+
+        if cg_hi_sat > 0.0:
+            tint_rgb = _hue_to_rgb_unit(cg_hi_hue) - 0.5
+            rgb += (cg_hi_mask * (cg_hi_sat * 0.35))[:, None] * tint_rgb[None, :]
+        if cg_hi_lum != 0.0:
+            rgb += (cg_hi_mask * (cg_hi_lum * 0.15))[:, None]
+
+        if cg_glob_sat > 0.0:
+            tint_rgb = _hue_to_rgb_unit(cg_glob_hue) - 0.5
+            rgb += (cg_glob_sat * 0.25) * tint_rgb[None, :]
+        if cg_glob_lum != 0.0:
+            rgb += cg_glob_lum * 0.12
+
         rgb = np.clip(rgb, 0.0, 1.0)
 
     # 8. Global vibrance and saturation.

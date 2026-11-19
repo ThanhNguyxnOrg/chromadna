@@ -41,17 +41,7 @@
 
 ChromaDNA extracts reusable color settings from supported Lightroom / Camera Raw preset sources, blends compatible profiles, estimates photo-specific exposure and white-balance adjustments, renders approximate previews, and exports XMP presets and 3D LUTs.
 
-> **Rendering scope:** the preview renderer and .cube exporter are approximations. They do not reproduce every proprietary Adobe Camera Raw operation, camera profile, local adjustment, or RAW rendering stage. Validate generated presets and LUTs in the target application before production use.
-
-## Features
-
-- Preset mining from supported .xmp, embedded XMP in .dng, and legacy .lrtemplate sources.
-- Color DNA blending across supported sliders and tone curves.
-- Heuristic photo analysis and image-specific exposure / white-balance estimates.
-- Approximate Before / After preview rendering.
-- XMP preset compilation and 3D .cube LUT export.
-- Agent Skill and local FastMCP server.
-- Project-local setup for Claude Code, Cursor, Antigravity, and VS Code / GitHub Copilot.
+**Important limitation:** the preview renderer and `.cube` LUT exporter share an approximate RGB transform. They do not reproduce Adobe Camera Raw's proprietary rendering pipeline, camera profiles, local masks, RAW demosaicing/tone mapping, spatial effects, or every slider operation.
 
 ## Requirements
 
@@ -73,11 +63,14 @@ This installs the `chromadna` and `chromadna-mcp` commands with dependencies dec
 ## Quick start
 
 ```bash
-# Mine your own local preset library into the catalog
+# Optional: extract & deduplicate Color DNA from local .xmp, .dng, and .lrtemplate files
 chromadna mine ./raw_vault --out data/color_dna_catalog.json
 
-# Inspect exact profile IDs before selecting one
+# List available Color DNA IDs
 chromadna list
+
+# Inspect a profile's full sliders and tone curves
+chromadna inspect emulsion_kodak_portra_400
 
 # Blend two profiles and compile an XMP preset
 chromadna blend --mix emulsion_kodak_portra_400:0.7 emulsion_cinestill_400d:0.3 --name "Hybrid Film" --out ./output_xmp/hybrid_film.xmp
@@ -112,13 +105,11 @@ ChromaDNA is distributed from GitHub. It is not currently published to PyPI or n
 node scripts/setup.mjs --all
 ```
 
-The setup command installs the Agent Skill through the Vercel Skills CLI and configures native MCP entries for a wider set of coding agents, including OpenCode, Pi, Cline, Roo Code, Gemini CLI, Kimi Code CLI, Claude Desktop, and Windsurf. A few clients use global configuration files; existing entries are backed up and preserved. It does not publish packages or make the repository public.
-
-Useful variants:
+Common flags:
 
 ```bash
-node scripts/setup.mjs --all --dry-run
-node scripts/setup.mjs --skills
+node scripts/setup.mjs --dry-run
+node scripts/setup.mjs --skills --agent=claude-code
 node scripts/setup.mjs --mcp --agent=cursor
 ```
 
@@ -126,13 +117,13 @@ Prefer an AI to perform setup? Copy the single prompt in [Install ChromaDNA with
 
 ## Community preset catalog
 
-The default catalog contains 451 profiles imported from the pinned [EmulsionPresets](https://github.com/peva3/EmulsionPresets) source revision. The imported records retain their source paths, revision, file hashes, and license information. ChromaDNA does not claim authorship of those preset recipes.
+ChromaDNA includes 451 imported creative commons presets in `data/color_dna_catalog.json`. See [Community Catalog Provenance](docs/COMMUNITY_CATALOG.md) for upstream source details, pinned revision, hashes, and license notices.
 
-The catalog is **not refreshed automatically**. Maintainers can review and run the pinned importer manually; see [Community Catalog Maintenance](docs/COMMUNITY_CATALOG.md). Third-party notices and the import report live in `data/sources/`.
+The catalog is **not refreshed automatically**. Maintainers can review and run the manual workflow in `.github/workflows/community-presets.yml` when they choose to update from upstream.
 
 ## Releases
 
-The repository is prepared for **ChromaDNA 1.0.0**. Use **Actions → Release ChromaDNA → Run workflow** and enter `v1.0.0`. The workflow resolves and commits `uv.lock`, runs the test and packaging checks, creates the matching Git tag, and publishes a GitHub Release with wheel and source archives. It does not publish to PyPI or npm.
+The current release series is **ChromaDNA 1.0.x** (version in `pyproject.toml`). Pushing version updates to `main`—or running **Actions → Release ChromaDNA → Run workflow**—regenerates `uv.lock`, runs tests and wheel smoke checks, creates the matching Git tag, and publishes a GitHub Release with wheel and source archives. It does not publish to PyPI or npm.
 
 ## Agent Skill
 
@@ -140,7 +131,7 @@ The canonical Agent Skill is in `skills/chromadna/SKILL.md`. The root `SKILL.md`
 
 ## MCP server
 
-Run the local stdio server after installing the project:
+Start the local stdio MCP server:
 
 ```bash
 chromadna-mcp
@@ -157,7 +148,7 @@ Available tools:
 - `compile_xmp_preset`
 - `export_cube_lut`
 
-The MCP process can only read files accessible to the machine and user account running it. Attaching an image in a cloud chat does not automatically expose its local filesystem path. The current server is not a hosted remote MCP endpoint.
+The MCP process can only read files accessible to the machine and user account running it. Attaching an image in a cloud chat does not automatically expose its local filesystem path. The current server is not a hosted remote endpoint.
 
 ## Privacy and safety
 
@@ -166,11 +157,3 @@ The MCP process can only read files accessible to the machine and user account r
 - Do not write generated presets beside RAW files using the same filename stem.
 - Do not claim compatibility until the preset or LUT has been tested in the target editor.
 - Do not expose the local stdio server to the public internet.
-
-## Contributing
-
-Contributions are welcome. Start with [CONTRIBUTING.md](CONTRIBUTING.md), read the [Code of Conduct](CODE_OF_CONDUCT.md), and review [Security](SECURITY.md) before reporting a vulnerability.
-
-## License
-
-MIT. See [LICENSE](LICENSE).

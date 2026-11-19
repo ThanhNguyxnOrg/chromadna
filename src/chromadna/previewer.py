@@ -4,7 +4,7 @@ from pathlib import Path
 from typing import Any, Dict
 
 import numpy as np
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageOps
 
 from .lut_exporter import transform_rgb_lattice
 
@@ -16,7 +16,8 @@ def render_before_after(
     max_width: int = 800,
 ) -> Path:
     """Render a side-by-side approximation using the same transform kernel as .cube export."""
-    original = Image.open(image_path).convert("RGB")
+    with Image.open(image_path) as opened:
+        original = ImageOps.exif_transpose(opened).convert("RGB")
     if original.width > max_width:
         ratio = max_width / float(original.width)
         original = original.resize(

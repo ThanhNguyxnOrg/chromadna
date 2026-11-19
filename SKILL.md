@@ -4,7 +4,7 @@ description: Extract and blend Lightroom and Adobe Camera Raw preset color profi
 license: MIT
 compatibility: Requires Python 3.10+, project dependencies, and access to input files on the machine running the CLI or MCP server.
 metadata:
-  version: "0.2.1"
+  version: "1.0.1"
   repository: "ThanhNguyxnOrg/chromadna"
 ---
 
