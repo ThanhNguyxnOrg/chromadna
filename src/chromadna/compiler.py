@@ -26,6 +26,8 @@ def build_xmp_xml(dna: Dict[str, Any], preset_name: str, group_name: str = "Chro
         '   crs:ContactInfo=""', '   crs:Version="15.0"', '   crs:ProcessVersion="15.4"',
         '   crs:HasSettings="True"',
     ]
+    if any(k in sliders for k in ("Temperature", "Tint", "IncrementalTemperature", "IncrementalTint")):
+        attr_lines.append('   crs:WhiteBalance="Custom"')
     for key in sorted(sliders.keys()):
         val = clamp_slider(key, sliders[key])
         if val is not None:
@@ -77,6 +79,7 @@ def build_xmp_xml(dna: Dict[str, Any], preset_name: str, group_name: str = "Chro
 
 def write_xmp_atomic(dna: Dict[str, Any], output_path: Path, preset_name: str, group_name: str = "ChromaDNA") -> Path:
     """Safely write an .xmp file atomically, preventing accidental overwrite of RAW sidecar files."""
+    output_path = Path(output_path)
     if output_path.suffix.lower() != ".xmp":
         output_path = output_path.with_suffix(".xmp")
     for raw_ext in RAW_EXTENSIONS:
@@ -88,6 +91,10 @@ def write_xmp_atomic(dna: Dict[str, Any], output_path: Path, preset_name: str, g
     xml_str = build_xmp_xml(dna, preset_name=preset_name, group_name=group_name)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     tmp_path = output_path.with_suffix(f".{uuid.uuid4().hex[:8]}.tmp")
-    tmp_path.write_text(xml_str, encoding="utf-8")
-    os.replace(tmp_path, output_path)
+    try:
+        tmp_path.write_text(xml_str, encoding="utf-8")
+        os.replace(tmp_path, output_path)
+    finally:
+        if tmp_path.exists():
+            tmp_path.unlink()
     return output_path

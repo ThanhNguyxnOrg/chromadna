@@ -3,7 +3,16 @@
 import math
 from typing import Any, Dict, List, Tuple
 import numpy as np
-from .schema import DEFAULT_CURVE, TONE_CURVE_KEYS, clamp_slider, sanitize_curve
+from .schema import (
+    DEFAULT_CURVE,
+    HUE_SATURATION_PAIRS,
+    TONE_CURVE_KEYS,
+    clamp_slider,
+    get_slider_default,
+    sanitize_curve,
+)
+
+HUE_TO_SAT_KEY: Dict[str, str] = dict(HUE_SATURATION_PAIRS)
 
 
 def resample_curve(points: List[List[int]], grid_size: int = 16) -> np.ndarray:
@@ -87,6 +96,43 @@ def _normalize_weighted_profiles(
     return [(dna, weight / total_weight) for dna, weight in parsed]
 
 
+def _blend_circular_hue(
+    normalized: List[Tuple[Dict[str, Any], float]],
+    hue_key: str,
+    sat_key: str,
+) -> float:
+    """Compute saturation-weighted circular mean for a 0..360 degree hue slider."""
+    sin_sum = 0.0
+    cos_sum = 0.0
+    dominant_hue = 0.0
+    dominant_mass = -1.0
+
+    for dna, weight in normalized:
+        sliders = dna.get("sliders", {})
+        raw_sat = sliders.get(sat_key, 0.0)
+        sat = max(0.0, float(raw_sat)) if raw_sat is not None else 0.0
+        mass = weight * sat
+        if mass <= 0.0:
+            continue
+        hue = float(sliders.get(hue_key, 0.0)) % 360.0
+        rad = math.radians(hue)
+        sin_sum += mass * math.sin(rad)
+        cos_sum += mass * math.cos(rad)
+        if mass > dominant_mass:
+            dominant_mass = mass
+            dominant_hue = hue
+
+    if dominant_mass <= 0.0:
+        return 0.0
+    if math.hypot(sin_sum, cos_sum) < 1e-6:
+        angle = dominant_hue
+    else:
+        angle = math.degrees(math.atan2(sin_sum, cos_sum)) % 360.0
+    if angle >= 359.5 or abs(angle - 360.0) < 1e-6:
+        return 0.0
+    return angle
+
+
 def blend_dna_profiles(weighted_profiles: List[Tuple[Dict[str, Any], float]]) -> Dict[str, Any]:
     """Blend N compatible Color DNA dictionaries using validated normalized weights."""
     normalized = _normalize_weighted_profiles(weighted_profiles)
@@ -95,9 +141,26 @@ def blend_dna_profiles(weighted_profiles: List[Tuple[Dict[str, Any], float]]) ->
         all_slider_keys.update(dna.get("sliders", {}).keys())
     blended_sliders: Dict[str, Any] = {}
     for key in sorted(all_slider_keys):
-        acc = sum(float(dna.get("sliders", {}).get(key, 0.0)) * weight for dna, weight in normalized)
+        if key in HUE_TO_SAT_KEY:
+            acc = _blend_circular_hue(normalized, key, HUE_TO_SAT_KEY[key])
+            clamped = clamp_slider(key, acc)
+            if clamped is not None:
+                sat_key = HUE_TO_SAT_KEY[key]
+                has_sat = any(
+                    float(dna.get("sliders", {}).get(sat_key, 0.0)) > 0.0 and w > 0.0
+                    for dna, w in normalized
+                )
+                if clamped != 0 or has_sat:
+                    blended_sliders[key] = clamped
+            continue
+
+        default_val = float(get_slider_default(key))
+        acc = math.fsum(
+            float(dna.get("sliders", {}).get(key, default_val)) * weight
+            for dna, weight in normalized
+        )
         clamped = clamp_slider(key, acc)
-        if clamped is not None and clamped != 0:
+        if clamped is not None and clamped != get_slider_default(key):
             blended_sliders[key] = clamped
     if blended_sliders.get("GrainAmount", 0) > 0 and blended_sliders.get("Sharpness", 0) > 10:
         blended_sliders["Sharpness"] = 10

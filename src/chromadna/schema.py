@@ -54,8 +54,42 @@ SLIDER_BOUNDS: Dict[str, Tuple[float, float, type]] = {
     "BlueSaturation": (-100, 100, int),
 }
 
+# Explicit Adobe Camera Raw defaults for sliders whose neutral state is non-zero.
+SLIDER_DEFAULTS: Dict[str, Any] = {
+    "Temperature": 5500,
+    "ParametricShadowSplit": 25,
+    "ParametricMidtoneSplit": 50,
+    "ParametricHighlightSplit": 75,
+    "ColorGradeBlending": 50,
+    "SharpenRadius": 1.0,
+    "SharpenDetail": 25,
+    "PostCropVignetteMidpoint": 50,
+    "PostCropVignetteFeather": 50,
+    "GrainSize": 25,
+    "GrainFrequency": 50,
+    "GrainRoughness": 50,
+}
+
+# Circular hue sliders (0..360 deg) paired with their accompanying saturation slider.
+HUE_SATURATION_PAIRS: Tuple[Tuple[str, str], ...] = (
+    ("SplitToningShadowHue", "SplitToningShadowSaturation"),
+    ("SplitToningHighlightHue", "SplitToningHighlightSaturation"),
+    ("ColorGradeShadowHue", "ColorGradeShadowSat"),
+    ("ColorGradeMidtoneHue", "ColorGradeMidtoneSat"),
+    ("ColorGradeHighlightHue", "ColorGradeHighlightSat"),
+    ("ColorGradeGlobalHue", "ColorGradeGlobalSat"),
+)
+
 TONE_CURVE_KEYS = ["ToneCurvePV2012", "ToneCurvePV2012Red", "ToneCurvePV2012Green", "ToneCurvePV2012Blue"]
 DEFAULT_CURVE: List[List[int]] = [[0, 0], [255, 255]]
+
+
+def get_slider_default(name: str) -> Any:
+    """Return the neutral Adobe Camera Raw default for a slider."""
+    if name in SLIDER_DEFAULTS:
+        return SLIDER_DEFAULTS[name]
+    _, _, dtype = SLIDER_BOUNDS[name]
+    return 0 if dtype is int else 0.0
 
 
 def clamp_slider(name: str, value: Any) -> Any:
