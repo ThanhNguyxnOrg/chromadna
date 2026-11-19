@@ -1,11 +1,12 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "chromadna",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lightroom and Camera Raw color-profile mining, blending, XMP compilation, photo analysis, and 3D LUT export.",
   "author": {
     "name": "ThanhNguyxnOrg"
   },
+  "repository": "https://github.com/ThanhNguyxnOrg/chromadna",
   "license": "MIT",
-  "repository": "https://github.com/ThanhNguyxnOrg/chromadna"
+  "skills": "./skills/"
 }

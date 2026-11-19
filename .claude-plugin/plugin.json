@@ -1,13 +1,12 @@
 {
   "name": "chromadna",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Extract and blend Lightroom color profiles, analyze photos, compile XMP presets, render approximate previews, and export 3D LUTs.",
   "author": {
     "name": "ThanhNguyxnOrg"
   },
+  "repository": "https://github.com/ThanhNguyxnOrg/chromadna",
   "license": "MIT",
-  "skills": [
-    "./skills/chromadna"
-  ],
+  "skills": "./skills/",
   "mcpServers": "./.mcp.json"
 }
