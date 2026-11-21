@@ -63,10 +63,11 @@ This installs the `chromadna` and `chromadna-mcp` commands with dependencies dec
 ## Quick start
 
 ```bash
-# Optional: extract & deduplicate Color DNA from local .xmp, .dng, and .lrtemplate files
-chromadna mine ./raw_vault --out data/color_dna_catalog.json
+# Optional: mine local presets into a separate catalog, leaving the bundled presets intact
+chromadna mine ./raw_vault --out ./my_catalog.json
+chromadna list --catalog ./my_catalog.json
 
-# List available Color DNA IDs
+# List Color DNA IDs from the bundled catalog
 chromadna list
 
 # Inspect a profile's full sliders and tone curves
