@@ -156,7 +156,11 @@ def main() -> None:
     p_lut.add_argument("--catalog", type=Path, default=DEFAULT_CATALOG)
     args = parser.parse_args()
     if args.command == "mine":
+        if not args.input_dir.is_dir():
+            p_mine.error(f"Input path '{args.input_dir}' is not a directory.")
         profiles = mine_directory(args.input_dir, similarity_threshold=args.threshold)
+        if not profiles:
+            p_mine.error(f"No usable presets found in '{args.input_dir}'; catalog not written.")
         save_catalog(profiles, args.out)
         print(f"Extracted {len(profiles)} unique Color DNA profiles -> {args.out}")
     elif args.command == "list":
