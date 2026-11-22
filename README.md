@@ -118,7 +118,7 @@ Prefer an AI to perform setup? Copy the single prompt in [Install ChromaDNA with
 
 ## Community preset catalog
 
-ChromaDNA includes 451 imported creative commons presets in `data/color_dna_catalog.json`. See [Community Catalog Provenance](docs/COMMUNITY_CATALOG.md) for upstream source details, pinned revision, hashes, and license notices.
+ChromaDNA includes 451 MIT-licensed presets from [peva3/EmulsionPresets](https://github.com/peva3/EmulsionPresets) in `data/color_dna_catalog.json`. The wheel installs the [upstream MIT notice](data/sources/THIRD_PARTY_NOTICES.md) alongside the catalog in `share/chromadna/`. See [Community Catalog Provenance](docs/COMMUNITY_CATALOG.md) for the pinned revision and source hashes.
 
 The catalog is **not refreshed automatically**. Maintainers can review and run the manual workflow in `.github/workflows/community-presets.yml` when they choose to update from upstream.
 
