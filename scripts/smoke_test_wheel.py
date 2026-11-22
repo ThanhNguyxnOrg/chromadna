@@ -33,6 +33,10 @@ def main() -> int:
             check=True,
             env=env,
         )
+        source_notice = Path(__file__).resolve().parents[1] / "data" / "sources" / "THIRD_PARTY_NOTICES.md"
+        installed_notice = environment_dir / "share" / "chromadna" / source_notice.name
+        if not installed_notice.is_file() or installed_notice.read_bytes() != source_notice.read_bytes():
+            raise SystemExit("Installed wheel is missing the complete upstream MIT notice.")
         result = subprocess.run(
             [str(cli), "list"],
             cwd=root,
